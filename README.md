@@ -1,7 +1,7 @@
 # i dunno why i made this
 
 make sure u got npm
-remember to "cd /combatwombatsftc" before running the program
+remember to "cd combatwombatsftc" before running the program
 then run "npm i" to install packages and whatnot
 "npm run dev" to start the server
 then open localhost:3000
