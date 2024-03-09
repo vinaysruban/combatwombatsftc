@@ -1,4 +1,4 @@
-# i dunno why i made this
+# i dunno why i made this - vinay first commit
 
 make sure u got npm
 remember to "cd combatwombatsftc" before running the program
