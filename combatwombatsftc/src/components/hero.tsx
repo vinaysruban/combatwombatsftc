@@ -37,13 +37,13 @@ export default function Hero() {
           <li>
             <Image src="/sitelogo.png" alt="QASMT" height="150" width="150" />
           </li>
-		  <li>
+		      <li>
             <Image src="/sitelogo.png" alt="QASMT" height="150" width="150" />
           </li>
-		  <li>
+		      <li>
             <Image src="/sitelogo.png" alt="QASMT" height="150" width="150" />
           </li>
-		  <li>
+		      <li>
             <Image src="/sitelogo.png" alt="QASMT" height="150" width="150" />
           </li>
         </ul>
