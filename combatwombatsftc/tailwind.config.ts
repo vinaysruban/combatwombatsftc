@@ -19,6 +19,7 @@ const config: Config = {
         transparent: 'transparent',
         current: 'currentColor',
         'beige': '#EBE2D3',
+        'darkbeige': '#1f1e1d',
         'combatgreen': '#8F9853',
         'wombatbrown': '#927748',
       },
