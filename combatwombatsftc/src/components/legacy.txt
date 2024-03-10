@@ -1,0 +1,17 @@
+/*const toggleDarkMode = () => {
+    import { useEffect } from "react";
+  if (localStorage.theme === 'dark') {
+    localStorage.theme = 'light'
+  } else {
+    localStorage.theme = 'dark'
+  }
+  useEffect(() => {
+    // Perform localStorage action
+    if (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      localStorage.theme = 'dark'
+    } else {
+      localStorage.theme = 'light'
+    }
+  }, [])
+      <button onClick={toggleDarkMode}>devdarkmode under consturction</button>
+}*/

@@ -2,6 +2,7 @@ import { fontFamily } from 'tailwindcss/defaultTheme'
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: 'class',
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -17,7 +18,9 @@ const config: Config = {
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
-        'beige': '#EBE2D3'
+        'beige': '#EBE2D3',
+        'combatgreen': '#8F9853',
+        'wombatbrown': '#927748',
       },
       fontFamily: {
         'raleway': ['Raleway', ...fontFamily.sans],

@@ -20,3 +20,17 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.combat { /* Fallback: assume this color ON TOP of image */
+   background: url("../../public/combat.png") repeat 2%;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.bg-wombatbig {
+  background-image: url('../../public/tank.png');
+  background-size: 60%;
+  background-position: 130% -10%;
+  background-repeat: no-repeat;
+}
