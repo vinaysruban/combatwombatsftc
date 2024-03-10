@@ -1,3 +1,4 @@
+import { fontFamily } from 'tailwindcss/defaultTheme'
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -13,8 +14,17 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        transparent: 'transparent',
+        current: 'currentColor',
+        'beige': '#EBE2D3'
+      },
+      fontFamily: {
+        'raleway': ['Raleway', ...fontFamily.sans],
+        'mona': ['Mona Sans', ...fontFamily.sans],
+      },
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-children'),],
 };
 export default config;
