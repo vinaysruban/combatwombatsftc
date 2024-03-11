@@ -29,8 +29,8 @@
 }
 
 .bg-wombatbig {
-  background-image: url('../../public/tank.png');
-  background-size: 60%;
-  background-position: 130% -10%;
+  background-image: url('../../public/robot.png');
+  background-size: 80%;
+  background-position: 220% -140%;
   background-repeat: no-repeat;
 }
