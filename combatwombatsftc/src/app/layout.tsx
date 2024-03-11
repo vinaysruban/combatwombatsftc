@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics } from "@next/third-parties/google";
+import Navbar from "@/components/navbar";
+import Providers from "@/components/providers";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Combat Wombats FTC",
@@ -16,8 +16,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className="">
+      <body suppressHydrationWarning className="">
+        <Providers>
+          <main className="font-mona bg-beige text-black dark:bg-gradient-to-r from-darkbeige to-darkerbeige dark:text-white">
+            <Navbar />
+            {children}
+          </main>
+        </Providers>
+      </body>
       <GoogleAnalytics gaId="G-FWM87P8M7Z" />
     </html>
   );

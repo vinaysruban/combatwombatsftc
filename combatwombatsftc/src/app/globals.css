@@ -4,10 +4,9 @@
 
 @layer base {
   @font-face {
-    font-family: 'Mona Sans';
-    src:
-      url('Mona-Sans.woff2') format('woff2 supports variations'),
-      url('Mona-Sans.woff2') format('woff2-variations');
+    font-family: "Mona Sans";
+    src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+      url("Mona-Sans.woff2") format("woff2-variations");
     font-weight: 200 900;
     font-stretch: 75% 125%;
   }
@@ -19,18 +18,18 @@
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
-
-.combat { /* Fallback: assume this color ON TOP of image */
-   background: url("../../public/combat.png") repeat 2%;
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
+.combat {
+  /* Fallback: assume this color ON TOP of image */
+  background: url("../../public/combat.png") repeat 2%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .bg-wombatbig {
-  background-image: url('../../public/tank.png');
-  background-size: 60%;
-  background-position: 130% -10%;
+  background-image: url("../../public/robot1.png");
+  background-size: 60rem;
+  background-position: 160%;
   background-repeat: no-repeat;
 }

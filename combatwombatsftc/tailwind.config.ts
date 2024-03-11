@@ -1,8 +1,8 @@
-import { fontFamily } from 'tailwindcss/defaultTheme'
+import { fontFamily } from "tailwindcss/defaultTheme";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: 'class',
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -16,19 +16,23 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        transparent: 'transparent',
-        current: 'currentColor',
-        'beige': '#EBE2D3',
-        'darkbeige': '#1f1e1d',
-        'combatgreen': '#8F9853',
-        'wombatbrown': '#927748',
+        transparent: "transparent",
+        current: "currentColor",
+        beige: "#EBE2D3",
+        darkbeige: "#171717",
+        darkerbeige: '#1c1c1c',
+        combatgreen: "#8F9853",
+        wombatbrown: "#927748",
       },
       fontFamily: {
-        'raleway': ['Raleway', ...fontFamily.sans],
-        'mona': ['Mona Sans', ...fontFamily.sans],
+        raleway: ["Raleway", ...fontFamily.sans],
+        mona: ["Mona Sans", ...fontFamily.sans],
       },
     },
   },
-  plugins: [require('tailwind-children'),],
+  plugins: [
+    require("tailwind-children"),
+    require("tailwind-scrollbar")({ nocompatible: true }),
+  ],
 };
 export default config;
