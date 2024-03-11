@@ -14,7 +14,7 @@ export default function Hero() {
           <span className="combat">Combat Wombats</span>
         </h1>
         <article className="font-medium mt-8 ml-2 md:text-xl">
-          We're an Australian team of{" "}
+          We&aposre an Australian team of{" "}
           <span className="text-combatgreen font-bold">driven</span>{" "}
           and <span className="text-wombatbrown font-bold">dedicated</span> STEM students{" "}
           aiming to become <br /> future <span className="text-wombatbrown font-bold">change-makers</span>{" "} 
