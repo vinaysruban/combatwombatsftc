@@ -38,6 +38,15 @@ export default function Hero() {
           <li>
             <Image src="/sitelogo.png" alt="QASMT" height="150" width="150" />
           </li>
+		  <li>
+            <Image src="/sitelogo.png" alt="QASMT" height="150" width="150" />
+          </li>
+		  <li>
+            <Image src="/sitelogo.png" alt="QASMT" height="150" width="150" />
+          </li>
+		  <li>
+            <Image src="/sitelogo.png" alt="QASMT" height="150" width="150" />
+          </li>
         </ul>
       </section>
       <button className=" border-solid border-yellow-600" onClick={tankToggle}>
