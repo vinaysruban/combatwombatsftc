@@ -5,7 +5,7 @@ import DarkMode from "@/components/darkmode";
 
 export default function Navbar() {
     return (
-        <nav className="mx-auto font-bold">
+        <nav className="mx-auto font-bold hidden md:block">
           <ul className="flex flex-row flex-nowrap justify-between items-center child:mx-3 py-3 hover:child:text-zinc-500 child:transition child:ease-linear child:duration-150">
             <li className=" text-xl mx-6"><Link href="https://github.com/vinaysruban/combatwombatsftc"><SiGithub /></Link></li>
             <li>
@@ -20,5 +20,7 @@ export default function Navbar() {
             <DarkMode />
           </ul>
         </nav>
+
+        //Below 768px
     )
 }

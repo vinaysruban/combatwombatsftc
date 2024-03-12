@@ -14,11 +14,11 @@ export default function Hero() {
           Meet the <br />
           <span className="combat">Combat Wombats</span>
         </h1>
-        <article className="font-medium mt-8 ml-2 md:text-xl">
+        <article className="font-medium mt-8 ml-2 md:text-xl max-w-3xl">
           We&apos;re an Australian team of{" "}
           <span className="text-combatgreen font-bold">driven</span>{" "}
           and <span className="text-wombatbrown font-bold">dedicated</span> STEM students{" "}
-          aiming<br />  to become future <span className="text-wombatbrown font-bold">change-makers</span>{" "}
+          aiming to become future <span className="text-wombatbrown font-bold">change-makers</span>{" "}
           and <span className="text-combatgreen font-bold z-10">innovators</span>.
         </article>
         <article className="ml-2">
