@@ -5,9 +5,15 @@ import Link from 'next/link'
 
 
 export default function Hero() {
+  const imageStyle = {
+    position: "absolute",
+    bottom: "0%",
+    right: "0%",
+  } as React.CSSProperties;
 
   return (
-    <div className={"bg-wombatbig"}>
+    <div className={"bg-wombatbi"}>
+      <Image src="/robot2.png" alt="Wombat" width={580} height={0} style={imageStyle} />
       <section className="pl-12 pt-24 mb-80">
         <h1 className="font-bold text-5xl md:text-8xl">
           Meet the <br />
@@ -17,8 +23,8 @@ export default function Hero() {
           We&apos;re an Australian team of{" "}
           <span className="text-combatgreen font-bold">driven</span>{" "}
           and <span className="text-wombatbrown font-bold">dedicated</span> STEM students{" "}
-          aiming to become <br /> future <span className="text-wombatbrown font-bold">change-makers</span>{" "}
-          and <span className="text-combatgreen font-bold">innovators</span> in the world of engineering.
+          aiming<br />  to become future <span className="text-wombatbrown font-bold">change-makers</span>{" "}
+          and <span className="text-combatgreen font-bold z-10">innovators</span>.
         </article>
         <article className="ml-2">
           <ul className="flex flex-row mt-6 child:mx-4 text-2xl">
