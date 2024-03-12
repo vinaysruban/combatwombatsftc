@@ -11,7 +11,7 @@ export default function Hero() {
       <Robot />
       <section className="mx-12 mt-16 mb-24 lg:mb-72 lg:mt-24">
         <h1 className="font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
-          Meet the <br />
+          We&apos;re the<br />
           <span className="combat">Combat Wombats</span>
         </h1>
         <article className="font-medium mt-8 ml-2 md:text-xl max-w-3xl">
@@ -31,9 +31,7 @@ export default function Hero() {
       </section>
       <section className="flex flex-col items-center mx-auto text-xl font-semibold pb-12">
         <span>
-          Thanks to these{" "}
-          <span className="text-combatgreen font-bold">fellows</span> for
-          supporting us:
+          We extend our heartfealt gratitude and love for the support our wonderful sponsors have provided to us!
         </span>
         <ul className="flex justify-start child:mx-12 mt-12">
           <li>
