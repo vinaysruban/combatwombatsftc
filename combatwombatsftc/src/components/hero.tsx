@@ -17,7 +17,7 @@ export default function Hero() {
           We&apos;re an Australian team of{" "}
           <span className="text-combatgreen font-bold">driven</span>{" "}
           and <span className="text-wombatbrown font-bold">dedicated</span> STEM students{" "}
-          aiming to become <br /> future <span className="text-wombatbrown font-bold">change-makers</span>{" "} 
+          aiming to become <br /> future <span className="text-wombatbrown font-bold">change-makers</span>{" "}
           and <span className="text-combatgreen font-bold">innovators</span> in the world of engineering.
         </article>
         <article className="ml-2">
