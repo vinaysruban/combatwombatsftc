@@ -1,21 +1,16 @@
-import Image from "next/image";
 import { FaInstagram, FaYoutube } from "react-icons/fa6";
 import { IoMailOpenOutline } from "react-icons/io5";
 import Link from 'next/link'
+import Robot from "@/components/robot";
+import Image from "next/image";
 
 
 export default function Hero() {
-  const imageStyle = {
-    position: "absolute",
-    bottom: "0%",
-    right: "0%",
-  } as React.CSSProperties;
-
   return (
     <div className={"bg-wombatbi"}>
-      <Image src="/robot2.png" alt="Wombat" width={580} height={0} style={imageStyle} />
-      <section className="pl-12 pt-24 mb-80">
-        <h1 className="font-bold text-5xl md:text-8xl">
+      <Robot />
+      <section className="mx-12 mt-16 mb-24 lg:mb-72 lg:mt-24">
+        <h1 className="font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
           Meet the <br />
           <span className="combat">Combat Wombats</span>
         </h1>

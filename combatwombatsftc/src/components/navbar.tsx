@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { SiGithub } from "react-icons/si";
 import Link from 'next/link';
-import DarkMode from "./darkmode";
+import DarkMode from "@/components/darkmode";
 
 export default function Navbar() {
     return (
