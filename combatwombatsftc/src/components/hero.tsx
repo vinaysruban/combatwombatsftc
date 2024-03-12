@@ -14,18 +14,17 @@ export default function Hero() {
           <span className="combat">Combat Wombats</span>
         </h1>
         <article className="font-medium mt-8 ml-2 md:text-xl">
-          Yap <u>summary</u> about us. u know we <strong>cool</strong> and
-          whatnot. please support us.
-          <br />
-          Some parts gonna be{" "}
-          <span className="text-combatgreen font-bold">green</span> and some
-          gonna be <span className="text-wombatbrown font-bold">brown</span>
+          We&apos;re an Australian team of{" "}
+          <span className="text-combatgreen font-bold">driven</span>{" "}
+          and <span className="text-wombatbrown font-bold">dedicated</span> STEM students{" "}
+          aiming to become <br /> future <span className="text-wombatbrown font-bold">change-makers</span>{" "} 
+          and <span className="text-combatgreen font-bold">innovators</span> in the world of engineering.
         </article>
         <article className="ml-2">
           <ul className="flex flex-row mt-6 child:mx-4 text-2xl">
             <li className="ml-0"><Link href="https://www.instagram.com/combat_wombats_ftc_aus/"><FaInstagram /></Link></li>
             <li><Link href="https://www.youtube.com/@CombatWombats23335"><FaYoutube /></Link></li>
-            <li><Link href="mailto: juant@juant.com"><IoMailOpenOutline /></Link></li>
+            <li><Link href="mailto: combatwombatsftc@gmail.com"><IoMailOpenOutline /></Link></li>
           </ul>
         </article>
       </section>
