@@ -46,6 +46,7 @@ export default function Robot() {
       alt="Wombat"
       width={500}
       height={0}
+      priority={true}
       className="mx-auto"
     />
   ) : width < 1024 ? (
@@ -54,6 +55,7 @@ export default function Robot() {
       alt="Wombat"
       width={580}
       height={0}
+      priority={true}
       className="mx-auto"
     />
   ) : width > 2248 ? (
@@ -62,6 +64,7 @@ export default function Robot() {
       alt="Wombat"
       width={580}
       height={0}
+      priority={true}
       style={imageStyleXL}
     />
   ) : width > 1920 ? (
@@ -70,6 +73,7 @@ export default function Robot() {
       alt="Wombat"
       width={580}
       height={0}
+      priority={true}
       style={imageStyleL}
     />
   ) : (
@@ -78,6 +82,7 @@ export default function Robot() {
       alt="Wombat"
       width={580}
       height={0}
+      priority={true}
       style={imageStyle}
     />
   );

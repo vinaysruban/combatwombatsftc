@@ -16,12 +16,12 @@ export default function Hero() {
     <div className={""}>
       <section className="mx-12 mt-16 mb-24 lg:mb-72 3xl:mb-44 4xl:mb-72 lg:mt-24 relative max-w-7xl">
         <Robot />
-        <h1 className="font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl">
+        <h1 className="font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-center sm:text-left mt-8 sm:mt-0">
           We&apos;re the
           <br />
           <span className="combat">Combat Wombats</span>
         </h1>
-        <article className="mt-8 ml-2 font-medium max-w-3xl text-md md:text-xl 2xl:text-2xl">
+        <article className="mt-8 ml-2 font-medium max-w-3xl text-md md:text-xl 2xl:text-2xl text-center sm:text-left">
           We&apos;re an Australian team of{" "}
           <span className="text-combatgreen font-bold">driven</span> and{" "}
           <span className="text-wombatbrown font-bold">dedicated</span> STEM
@@ -30,7 +30,7 @@ export default function Hero() {
           <span className="text-combatgreen font-bold z-10">innovators</span>.
         </article>
         <article className="ml-2">
-          <ul className="flex flex-row mt-6 child:mx-4 text-2xl">
+          <ul className="flex flex-row mt-6 child:mx-4 text-2xl justify-center sm:justify-normal">
             <li className="ml-0">
               <Link href="https://www.instagram.com/combat_wombats_ftc_aus/">
                 <FaInstagram />
@@ -49,7 +49,7 @@ export default function Hero() {
           </ul>
         </article>
       </section>
-      <section className="flex flex-col items-center text-md md:text-xl font-medium pb-12 mx-auto px-12">
+      <section className="flex flex-col items-center text-md md:text-xl font-medium pb-12 mx-auto px-12 text-center sm:text-left">
         <span>
           We extend our{" "}
           <span className="text-combatgreen font-bold z-10">heartfealt</span>{" "}
