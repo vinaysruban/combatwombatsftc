@@ -8,18 +8,26 @@ function chooseImage(mount: boolean, width: number) {}
 export default function Robot() {
   const imageStyle = {
     position: "absolute",
-    bottom: "0%",
-    right: "0%",
+    bottom: "-14.5rem",
+    right: "-3rem",
+    marginRight: "1rem",
   } as React.CSSProperties;
 
-  const imagePropped = {} as React.CSSProperties;
+  const imageStyleXL = {
+    position: "absolute",
+    bottom: "-14rem",
+    right: "-56rem",
+    width: "68rem",
+  } as React.CSSProperties;
+
+  const imageStyleL = {
+    position: "absolute",
+    bottom: "-6rem",
+    right: "-36rem",
+    width: "46rem",
+  } as React.CSSProperties;
 
   const [width, setWidth] = useState<number>(0);
-  const [mount, setMount] = useState<boolean>(false);
-
-  useEffect(() => {
-    setMount(true);
-  }, []);
 
   useEffect(() => {
     function handleResize() {
@@ -32,15 +40,7 @@ export default function Robot() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  return mount === false ? (
-    <Image
-      src="/robot2.png"
-      alt="Wombat"
-      width={580}
-      height={0}
-      style={imageStyle}
-    />
-  ) : width < 768 ? (
+  return width < 768 ? (
     <Image
       src="/robot2.png"
       alt="Wombat"
@@ -54,8 +54,23 @@ export default function Robot() {
       alt="Wombat"
       width={580}
       height={0}
-      style={imagePropped}
       className="mx-auto"
+    />
+  ) : width > 2248 ? (
+    <Image
+      src="/robot2.png"
+      alt="Wombat"
+      width={580}
+      height={0}
+      style={imageStyleXL}
+    />
+  ) : width > 1920 ? (
+    <Image
+      src="/robot2.png"
+      alt="Wombat"
+      width={580}
+      height={0}
+      style={imageStyleL}
     />
   ) : (
     <Image

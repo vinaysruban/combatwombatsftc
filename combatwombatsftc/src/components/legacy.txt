@@ -15,3 +15,25 @@
   }, [])
       <button onClick={toggleDarkMode}>devdarkmode under consturction</button>
 }*/
+
+//*<Image
+          src="/robot2.png"
+          alt="Wombat"
+          width={580}
+          height={0}
+          style={imageStyle}
+        />*/
+
+        const imageStyle = {
+    position: "absolute",
+    bottom: "-10rem",
+    right: "-54rem",
+    width: "64rem",
+  } as React.CSSProperties;
+
+  const imageStyle = {
+    position: "absolute",
+    bottom: "-6rem",
+    right: "-36rem",
+    width: "48rem",
+  } as React.CSSProperties;
