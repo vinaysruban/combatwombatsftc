@@ -27,7 +27,7 @@ export default function Hero() {
           <span className="text-wombatbrown font-bold">dedicated</span> STEM
           students aiming to become future{" "}
           <span className="text-wombatbrown font-bold">change-makers</span> and{" "}
-          <span className="text-combatgreen font-bold z-10">innovators</span>.
+          <span className="text-combatgreen font-bold">innovators</span>.
         </article>
         <article className="ml-2">
           <ul className="flex flex-row mt-6 child:mx-4 text-2xl justify-center sm:justify-normal">
@@ -52,7 +52,7 @@ export default function Hero() {
       <section className="flex flex-col items-center text-md md:text-xl font-medium pb-12 mx-auto px-12 text-center sm:text-left">
         <span>
           We extend our{" "}
-          <span className="text-combatgreen font-bold z-10">heartfealt</span>{" "}
+          <span className="text-combatgreen font-bold">heartfealt</span>{" "}
           gratitude and love for the support our wonderful sponsors have
           provided to us!
         </span>

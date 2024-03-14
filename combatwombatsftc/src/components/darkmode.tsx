@@ -6,24 +6,17 @@ import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 
 export default function DarkMode() {
-    const { setTheme, resolvedTheme, systemTheme } = useTheme()
+    const { setTheme, resolvedTheme } = useTheme()
     const [mount, setMount] = useState(false)
 
     useEffect(() => {
       setMount(true)
-
-      if (systemTheme) {
-        setTheme(systemTheme)
-      }
     }, [])
 
-    console.log(useTheme())
-
     return (
-        <div>
-        <li className="mx-6">{
+        <div>{
                 mount ? resolvedTheme === "light" ? <FaMoon onClick={() => setTheme("dark")} /> : <FaSun onClick={() => setTheme("light")} /> : <CiNoWaitingSign />
-            }</li>
+            }
         </div>
     );
 }
