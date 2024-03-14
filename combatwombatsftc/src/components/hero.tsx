@@ -49,7 +49,7 @@ export default function Hero() {
           </ul>
         </article>
       </section>
-      <section className="flex flex-col items-center text-md md:text-xl font-medium pb-12 mx-auto px-12 text-center sm:text-left">
+      <section className="flex flex-col items-center text-md md:text-xl 2xl:text-2xl font-medium pb-12 mx-auto px-12 text-center sm:text-left">
         <span>
           We extend our{" "}
           <span className="text-combatgreen font-bold">heartfealt</span>{" "}
