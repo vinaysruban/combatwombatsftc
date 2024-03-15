@@ -13,8 +13,8 @@ export default function Hero() {
   } as React.CSSProperties;
 
   return (
-    <div className={""}>
-      <section className="mx-12 mt-16 mb-24 lg:mb-72 3xl:mb-44 4xl:mb-72 lg:mt-24 relative max-w-7xl">
+    <div className={"bg-nuts"}>
+      <section className="pl-12 mr-12 pt-18 mb-24 lg:mb-72 3xl:mb-44 4xl:mb-72 lg:mt-24 relative max-w-7xl">
         <Robot />
         <h1 className="font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-center sm:text-left mt-8 sm:mt-0">
           We&apos;re the

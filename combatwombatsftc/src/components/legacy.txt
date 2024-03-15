@@ -37,3 +37,38 @@
     right: "-36rem",
     width: "48rem",
   } as React.CSSProperties;
+
+  <div className="grid grid-flow-col auto-cols-max justify-evenly    ">
+        <div className="max-w-lg border-black rounded-2xl px-12 py-6 child:mx-auto break-words">
+          <Image
+            alt={"A placeholder"}
+            src={"/imadsage.png"}
+            width={"100"}
+            height={600}
+            className="w-full h-auto"
+          />
+          <h2 className="text-3xl mx-auto font-bold my-4">Motivate Award</h2>
+          <p>
+            blach lac blach lac blach lac
+            blachasdddddddddddddddddddddddddddddddddddddddddddddddd lac blach
+            lac blach lac{" "}
+          </p>
+        </div>
+        <div className="max-w-lg border-4 border-black rounded-2xl px-12 py-6 child:mx-auto break-words">
+          <Image
+            alt={"A placeholder"}
+            src={"/team_name.png"}
+            width={"100"}
+            height={600}
+            className="w-full h-60"
+          />
+          <h2 className="text-3xl mx-auto font-bold my-4">
+            Something Choice's Award
+          </h2>
+          <p>
+            Some other award some choice smth this to u juan lac blach lac blach
+            lac blachasddddddddddddddddddddddddddddddddddddddddd lac blach lac
+            blach lac blachasddddddddddddddddddddddddddddddddddddddddd
+          </p>
+        </div>
+      </div>

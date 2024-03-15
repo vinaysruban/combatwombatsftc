@@ -16,14 +16,14 @@ export default function Robot() {
   const imageStyleXL = {
     position: "absolute",
     bottom: "-14rem",
-    right: "-56rem",
+    right: "-58rem",
     width: "68rem",
   } as React.CSSProperties;
 
   const imageStyleL = {
     position: "absolute",
     bottom: "-6rem",
-    right: "-36rem",
+    right: "-38rem",
     width: "46rem",
   } as React.CSSProperties;
 

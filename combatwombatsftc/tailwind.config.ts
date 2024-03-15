@@ -19,6 +19,7 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "screwdrivering": "url('/screwdriver.png')",
       },
       colors: {
         transparent: "transparent",
@@ -28,9 +29,10 @@ const config: Config = {
         darkerbeige: '#1c1c1c',
         combatgreen: "#8F9853",
         wombatbrown: "#927748",
+        backgreen: '#AFAE75',
+        midbeige: '#c7bfb3',
       },
       fontFamily: {
-        raleway: ["Raleway", ...fontFamily.sans],
         mona: ["Mona Sans", ...fontFamily.sans],
       },
     },
