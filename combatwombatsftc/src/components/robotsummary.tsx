@@ -1,7 +1,7 @@
 export default function RobotSummary() {
   return (
     <section className="bg-combatgreen px-12 py-16">
-      <video width="1024px" autoPlay muted controls preload="none" className="rounded-lg mx-auto">
+      <video width="1024px" autoPlay muted preload="none" className="rounded-3xl mx-auto">
         <source src="/sheep.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
