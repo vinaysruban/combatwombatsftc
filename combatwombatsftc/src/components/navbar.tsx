@@ -2,7 +2,7 @@ import Image from "next/image";
 import { SiGithub } from "react-icons/si";
 import Link from 'next/link';
 import DarkMode from "@/components/darkmode";
-import SideNav from "@/components/sidenav";
+import SideNav from "@/components/sidebar";
 
 export default function Navbar() {
     return (

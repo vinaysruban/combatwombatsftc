@@ -1,7 +1,7 @@
 import { FaInstagram, FaYoutube } from "react-icons/fa6";
 import { IoMailOpenOutline } from "react-icons/io5";
 import Link from "next/link";
-import Robot from "@/components/robot";
+import { Robot, Line } from "@/components/client";
 import Image from "next/image";
 
 export default function Hero() {
@@ -13,7 +13,7 @@ export default function Hero() {
   } as React.CSSProperties;
 
   return (
-    <div className={"bg-nuts"}>
+    <div className={""}>
       <section className="pl-12 mr-12 pt-18 mb-24 lg:mb-72 3xl:mb-44 4xl:mb-72 lg:mt-24 relative max-w-7xl">
         <Robot />
         <h1 className="font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-center sm:text-left mt-8 sm:mt-0">
@@ -21,7 +21,7 @@ export default function Hero() {
           <br />
           <span className="combat">Combat Wombats</span>
         </h1>
-        <article className="mt-8 ml-2 font-medium max-w-3xl text-md md:text-xl 2xl:text-2xl text-center sm:text-left">
+        <article className="mt-8 ml-2 font-medium 2xl:max-w-3xl max-w-2xl text-md md:text-xl 2xl:text-2xl text-center sm:text-left">
           We&apos;re an Australian team of{" "}
           <span className="text-combatgreen font-bold">driven</span> and{" "}
           <span className="text-wombatbrown font-bold">dedicated</span> STEM
@@ -49,12 +49,13 @@ export default function Hero() {
           </ul>
         </article>
       </section>
-      <section className="flex flex-col items-center text-md md:text-xl 2xl:text-2xl font-medium pb-12 mx-auto px-12 text-center sm:text-left">
+      <section className="flex flex-col items-center text-md md:text-xl 2xl:text-2xl font-medium pb-12 mx-auto px-12 text-center sm:text-left relative">
+        <Line />
         <span>
           We extend our{" "}
           <span className="text-combatgreen font-bold">heartfealt</span>{" "}
           gratitude and love for the support our wonderful sponsors have
-          provided to us!
+          provided to us: 👇
         </span>
         <ul className="flex justify-start child:mx-12 mt-12">
           <li>

@@ -2,10 +2,21 @@
 
 import Image from "next/image";
 import { useEffect, useState, useCallback } from "react";
+import { useInView } from "react-intersection-observer";
 
-function chooseImage(mount: boolean, width: number) {}
+export function Line() {
+  const [ref, inView, entry] = useInView();
 
-export default function Robot() {
+  useEffect(() => {
+    if (inView) {
+      console.log("In view");
+    }
+  }, [inView]);
+
+  return <hr ref={ref} className={`h-1 w-8/12 mx-auto mb-6 bg-combatgreen after:content-[''] after:w-2 after:h-2 after:rounded-full after:bg-combatgreen after:absolute after:-top-0.5 ${inView ? "in-screen" : ""}`} />;
+}
+
+export function Robot() {
   const imageStyle = {
     position: "absolute",
     bottom: "-14.5rem",

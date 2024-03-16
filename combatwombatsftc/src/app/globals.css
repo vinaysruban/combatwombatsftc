@@ -13,8 +13,8 @@
 @layer base {
   @font-face {
     font-family: "Mona Sans";
-    src: url("Mona-Sans.woff2") format("woff2 supports variations"),
-      url("Mona-Sans.woff2") format("woff2-variations");
+    src: url("/Mona-Sans.woff2") format("woff2 supports variations"),
+      url("/Mona-Sans.woff2") format("woff2-variations");
     font-weight: 200 900;
     font-stretch: 75% 125%;
   }
@@ -35,6 +35,13 @@
   -webkit-text-fill-color: transparent;
 }
 
+.combatsmall {
+  /* Fallback: assume this color ON TOP of image */
+  background: url("/combat.png") repeat 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .bg-wombatbig {
   background-image: url("/robot1.png");
   background-size: 60rem;
@@ -48,7 +55,34 @@
   background-repeat: no-repeat;
 }
 
+.in-screen::after {
+  
+  animation: slidin 2.5s ease-in forwards;
+  animation-delay: 1s;
+}
 
+.in-screen {
+  text-align: left;
+  animation: movin 1s ease-out forwards;
+}
+
+@keyframes movin {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 66.666%;
+  }
+}
+
+@keyframes slidin {
+  0% {
+    left: calc((33.333% / 2) + 25px);
+  }
+  100% {
+    left: calc(83.3333265% - 38px);
+  }
+}
 
 *,
 *:before,
