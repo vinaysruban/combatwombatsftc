@@ -1,21 +1,22 @@
 import { FaInstagram, FaYoutube } from "react-icons/fa6";
 import { IoMailOpenOutline } from "react-icons/io5";
 import Link from "next/link";
-import { Robot, Line } from "@/components/client";
+import { Line } from "@/components/client";
 import Image from "next/image";
 
 export default function Hero() {
-  const imageStyle = {
-    position: "absolute",
-    bottom: "-6rem",
-    right: "-36rem",
-    width: "48rem",
-  } as React.CSSProperties;
-
   return (
     <div className={""}>
-      <section className="pl-12 mr-12 pt-18 mb-24 lg:mb-72 3xl:mb-44 4xl:mb-72 lg:mt-24 relative max-w-7xl">
-        <Robot />
+      <section className="pl-12 mr-12 pt-18 mb-12 lg:mb-72 3xl:mb-44 4xl:mb-72 lg:mt-24 relative max-w-7xl">
+        <Image
+          src="/robot2.png"
+          alt="An image of the robot"
+          sizes="(max-width: 768px) 31rem, (max-width: 1024px) 36rem, (min-width: 2248px) 68rem, (min-width: 1920px) 48rem, 31rem"
+          priority
+          width={1000}
+          height={0}
+          className="mx-auto w-small md:mx-auto md:w-medium lg:absolute lg:-bottom-58 lg:-right-12 lg:mr-4 lg:w-medium 3xl:absolute 3xl:-bottom-24 3xl:-right-xmoderate 3xl:w-large 4xl:-bottom-56 4xl:-right-moderate 4xl:w-xlarge"
+        />
         <h1 className="font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-center sm:text-left mt-8 sm:mt-0">
           We&apos;re the
           <br />

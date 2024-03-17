@@ -10,8 +10,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      spacing: {
+        'small': '32rem',
+        'medium': '36rem',
+        'moderate': '58rem',
+        'xmoderate': '40rem',
+        'large': '48rem',
+        'xlarge': '68rem',
+        '58': '14.5rem',
+      },
       screens: {
-        'xs': '420px',
         '3xl': '1920px',
         '4xl': '2248px',
       },

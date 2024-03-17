@@ -72,3 +72,88 @@
           </p>
         </div>
       </div>
+
+      export function Robot() {
+  const [mount, setMount] = useState<boolean>(false);
+
+  useEffect(() => {
+    setMount(true);
+  }, []);
+
+  const imageStyle = {
+    position: "absolute",
+    bottom: "-14.5rem",
+    right: "-3rem",
+    marginRight: "1rem",
+  } as React.CSSProperties;
+
+  const imageStyleXL = {
+    position: "absolute",
+    bottom: "-14rem",
+    right: "-58rem",
+  } as React.CSSProperties;
+
+  const imageStyleL = {
+    position: "absolute",
+    bottom: "-6rem",
+    right: "-38rem",
+  } as React.CSSProperties;
+
+  const imageStyleM = {
+    marginLeft: "auto",
+    marginRight: "auto",
+  } as React.CSSProperties;
+
+  const [width, setWidth] = useState<number>(0);
+
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    console.log(width);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  function widthGiven(width: number) {
+    if (width < 768) {
+      return 500;
+    } else if (width < 1024) {
+      return 580;
+    } else if (width > 2248) {
+      return 1088;
+    } else if (width > 1920) {
+      return 768;
+    } else {
+      return 580;
+    }
+  }
+
+  function classGiven(widths: number) {
+    if (widths < 768) {
+      return imageStyleM;
+    } else if (widths < 1024) {
+      return imageStyleM
+    } else if (widths > 2248) {
+      return imageStyleXL;
+    } else if (widths > 1920) {
+      return imageStyleL;
+    } else {
+      return imageStyle;
+    }
+  }
+
+  return (
+      <Image
+        src="/robot2.png"
+        alt="An image of the robot"
+        sizes="(max-width: 768px) 31rem, (max-width: 1024px) 36rem, (min-width: 2248px) 68rem, (min-width: 1920px) 48rem, 31rem"
+        priority
+        width={0}
+        height={0}
+        className="widths"
+      />
+  );
+}

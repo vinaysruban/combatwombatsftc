@@ -17,6 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
       <body suppressHydrationWarning className="">
         <Providers>
           <main className="font-mona bg-beige text-black dark:bg-gradient-to-r from-darkbeige to-darkerbeige dark:text-white">

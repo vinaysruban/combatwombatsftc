@@ -1,4 +1,4 @@
-export default function RobotSummary() {
+export default function Summary() {
   return (
     <section className=" bg-midbeige px-12 py-16 text-black xl:bg-screwdrivering bg-screwdriver">
       {/*<video width="1024px" muted loop preload="none" className="rounded-3xl mx-auto">
