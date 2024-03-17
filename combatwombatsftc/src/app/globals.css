@@ -88,58 +88,6 @@
   }
 }
 
-@media (width < 768px) {
-  .bigon {
-    margin-left: auto;
-    margin-right: auto;
-    width: 500px;
-  }
-}
-
-/* mx-auto w-small */
-
-@media (768 <= width < 1024px) {
-  .bigon {
-    margin-left: auto;
-    margin-right: auto;
-    width: 580px;
-  }
-}
-
-/*  */
-
-@media (2560px > width >= 1920px) {
-  .bigon {
-    position: absolute;
-    bottom: -14rem;
-    right: -58rem;
-    width: 768px;
-  }
-}
-
-/* 3xl:absolute 3xl:-bottom-24 3xl-right-xmoderate 3xl:w-large*/
-
-@media (width >= 2560px) {
-  .bigon {
-    position: absolute;
-    bottom: -6rem;
-    right: -38rem;
-    width: 1088px;
-  }
-}
-
-/* absolute 4xl:-bottom-56 4xl:-right-moderate 4xl:w-xlarge*/
-
-.bigon {
-  position: absolute;
-  bottom: -14.5rem;
-  right: -3rem;
-  margin-right: 1rem;
-  width: 580px;
-}
-
-/* lg:absolute lg:-bottom-58 lg:-right-12 lg:mr-4 lg:w-medium*/
-
 *,
 *:before,
 *:after {

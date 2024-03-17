@@ -39,6 +39,7 @@ const config: Config = {
         wombatbrown: "#927748",
         backgreen: '#AFAE75',
         midbeige: '#c7bfb3',
+        darkmidbeige: '#2b2a28',
       },
       fontFamily: {
         mona: ["Mona Sans", ...fontFamily.sans],
