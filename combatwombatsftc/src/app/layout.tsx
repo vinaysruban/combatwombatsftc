@@ -29,7 +29,7 @@ export default function RootLayout({
           </main>
         </Providers>
       </body>
-      <SpeedInsights />
+
       <GoogleAnalytics gaId="G-FWM87P8M7Z" />
     </html>
   );
