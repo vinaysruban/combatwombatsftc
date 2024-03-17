@@ -4,17 +4,6 @@ import Image from "next/image";
 import { useEffect, useState, useCallback } from "react";
 import { useInView } from "react-intersection-observer";
 
-function checkView() {
-  const [ref, inView, entry] = useInView();
-  const [animated, setAnimated] = useState(false);
-
-  useEffect(() => {
-    if (inView) {
-      setAnimated(true);
-    }
-  }, [inView]);
-}
-
 export function Line() {
   const [ref, inView, entry] = useInView();
   const [animated, setAnimated] = useState<boolean>();
