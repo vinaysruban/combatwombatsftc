@@ -3,6 +3,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import Navbar from "@/components/navbar";
 import Providers from "@/components/providers";
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
 export const metadata: Metadata = {
@@ -28,6 +29,7 @@ export default function RootLayout({
           </main>
         </Providers>
       </body>
+      <SpeedInsights />
       <GoogleAnalytics gaId="G-FWM87P8M7Z" />
     </html>
   );
