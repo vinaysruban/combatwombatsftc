@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <div className={""}>
-      <section className="pl-12 mr-12 pt-18 mb-12 lg:mb-72 3xl:mb-44 4xl:mb-72 lg:mt-24 relative max-w-7xl">
+      <section className="pl-12 mr-12 pt-18 mb-12 lg:mb-44 3xl:mb-6 4xl:mb-48 lg:mt-24 relative max-w-7xl">
         <Image
           src="/robot2.png"
           alt="An image of the robot"
@@ -15,7 +15,7 @@ export default function Hero() {
           priority
           width={1000}
           height={0}
-          className="mx-auto w-small md:mx-auto md:w-medium lg:absolute lg:-bottom-58 lg:-right-12 lg:mr-4 lg:w-medium 3xl:absolute 3xl:-bottom-24 3xl:-right-xmoderate 3xl:w-large 4xl:-bottom-56 4xl:-right-moderate 4xl:w-xlarge"
+          className="mx-auto w-small md:mx-auto md:w-medium lg:absolute lg:-bottom-52 lg:-right-12 lg:mr-4 lg:w-medium 3xl:absolute 3xl:-bottom-24 3xl:-right-xmoderate 3xl:w-large 4xl:-bottom-56 4xl:-right-moderate 4xl:w-xlarge"
         />
         <h1 className="font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-center sm:text-left mt-8 sm:mt-0">
           We&apos;re the
@@ -28,9 +28,12 @@ export default function Hero() {
           <span className="text-wombatbrown font-bold">dedicated</span> STEM
           students aiming to become future{" "}
           <span className="text-wombatbrown font-bold">change-makers</span> and{" "}
-          <span className="text-combatgreen font-bold">innovators</span>.
+          <br className="block xl:hidden" /><span className="text-combatgreen font-bold">innovators</span>.
         </article>
         <article className="ml-2">
+          <hr
+            className={`h-1 rounded-xl border-0 w-0 my-6 bg-combatgreen after:content-[''] after:w-2 after:h-2 after:rounded-full after:bg-combatgreen after:absolute animation-line text-center hidden  md:block`}
+          />
           <ul className="flex flex-row mt-6 child:mx-4 text-2xl justify-center sm:justify-normal">
             <li className="ml-0">
               <Link href="https://www.instagram.com/combat_wombats_ftc_aus/">
@@ -50,9 +53,9 @@ export default function Hero() {
           </ul>
         </article>
       </section>
-      <section className="flex flex-col items-center text-md md:text-xl 2xl:text-2xl font-medium pb-12 mx-auto px-12 text-center sm:text-left relative">
-        <Line />
-        <span>
+      <hr className="spacer" />
+      <section className="flex flex-col items-center text-md md:text-xl 2xl:text-2xl 4xl:text-3xl font-medium pb-12 mx-auto px-12 text-center lg:text-left relative">
+        <span className="">
           We extend our{" "}
           <span className="text-combatgreen font-bold">heartfealt</span>{" "}
           gratitude and love for the support our wonderful sponsors have

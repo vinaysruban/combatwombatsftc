@@ -30,7 +30,7 @@ export default function SideNav() {
         </li>
       </ul>
       <nav
-        className={`fixed right-0 top-0 bg-gradient-to-r from-darkbeige to-darkerbeige text-white transition-all ${
+        className={`fixed right-0 top-0 bg-gradient-to-r from-darkgrey to-lightgrey text-white transition-all ${
           open ? "w-56" : "w-0"
         } h-full z-10 overflow-hidden`}
       >

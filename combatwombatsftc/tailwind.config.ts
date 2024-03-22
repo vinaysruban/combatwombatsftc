@@ -28,18 +28,22 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "screwdrivering": "url('/screwdriver.png')",
+        "wave": "url('/wave.svg')",
+      },
+      backgroundPosition: {
+        "bottom-top": "center 28rem",
       },
       colors: {
         transparent: "transparent",
         current: "currentColor",
         beige: "#EBE2D3",
-        darkbeige: "#171717",
-        darkerbeige: '#1c1c1c',
+        darkgrey: "#171717",
+        lightgrey: '#1c1c1c',
         combatgreen: "#8F9853",
         wombatbrown: "#927748",
-        backgreen: '#AFAE75',
+        lightgreen: '#AFAE75',
         midbeige: '#c7bfb3',
-        darkmidbeige: '#2b2a28',
+        mutegrey: '#2b2a28',
       },
       fontFamily: {
         mona: ["Mona Sans", ...fontFamily.sans],

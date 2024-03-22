@@ -23,7 +23,7 @@ export default function RootLayout({
       </head>
       <body suppressHydrationWarning className="">
         <Providers>
-          <main className="font-mona bg-beige text-black dark:bg-gradient-to-r from-darkbeige to-darkerbeige dark:text-white">
+          <main className="font-mona bg-beige text-black dark:bg-gradient-to-r from-darkgrey to-lightgrey dark:text-white">
             <Navbar />
             {children}
           </main>

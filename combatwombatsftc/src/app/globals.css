@@ -55,19 +55,31 @@
   background-repeat: no-repeat;
 }
 
-.in-screen::after {
-  animation: slidin 2.5s ease-in forwards;
+.animation-line::after {
+  bottom: 2.88rem;
+  left: 3.5rem;
+  animation: slidin 1s ease-out forwards;
   animation-delay: 1s;
 }
 
-.in-screen {
+.animation-line {
+  width: 20%;
   text-align: left;
   animation: movin 1s ease-out forwards;
 }
 
-.out-screen::after {
-  text-align: left;
-  left: calc(75% - 1.75rem);
+.spacer {
+  z-index: -1;
+  aspect-ratio: 1020/200;
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: none;
+  background-color: transparent;
+  background-image: url("/wave.svg");
+  margin-bottom: 2rem;
 }
 
 @keyframes movin {
@@ -75,16 +87,16 @@
     width: 0;
   }
   100% {
-    width: 50%;
+    width: 20%;
   }
 }
 
 @keyframes slidin {
   0% {
-    left: calc((50% / 2) + 1.5rem);
+    left: 3.5rem;
   }
   100% {
-    left: calc(75% - 1.75rem);
+    left: calc(20% + 2.5rem);
   }
 }
 

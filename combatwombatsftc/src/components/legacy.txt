@@ -157,3 +157,28 @@
       />
   );
 }
+
+const [ref, inView, entry] = useInView();
+  const [animated, setAnimated] = useState<boolean>();
+
+  function checkView() {
+    if (inView && !animated) {
+      return "in-screen";
+    } else if (inView && animated) {
+      return "out-screen";
+    } else {
+      return "";
+    }
+  }
+
+  function sleep(ms: number) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
+  useEffect(() => {
+    if (inView) {
+      sleep(6500).then(() => {
+        setAnimated(true);
+      });
+    }
+  }, [inView]);
