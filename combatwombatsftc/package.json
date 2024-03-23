@@ -24,7 +24,8 @@
     "react-icons": "^5.0.1",
     "react-intersection-observer": "^9.8.1",
     "react-scroll-motion": "^0.3.3",
-    "tailwind-children": "^0.5.0"
+    "tailwind-children": "^0.5.0",
+    "webgl-fluid-enhanced": "^0.6.0"
   },
   "devDependencies": {
     "@types/aos": "^3.0.7",
