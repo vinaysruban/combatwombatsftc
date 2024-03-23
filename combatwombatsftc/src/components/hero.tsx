@@ -57,7 +57,7 @@ export default function Hero() {
       <section className="flex flex-col items-center text-md md:text-xl 2xl:text-2xl 4xl:text-3xl font-medium pb-12 mx-auto px-12 text-center lg:text-left relative">
         <span className="">
           We extend our{" "}
-          <span className="text-combatgreen font-bold">heartfealt</span>{" "}
+          <span className="text-combatgreen font-bold">heartfelt</span>{" "}
           gratitude and love for the support our wonderful sponsors have
           provided to us: 👇
         </span>

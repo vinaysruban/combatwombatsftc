@@ -3,20 +3,20 @@ import { Si1Password } from "react-icons/si";
 
 const achievements = [
   [
-    "Free Trial",
-    "We give you a free trial to our subscription service for 30 days. Don't like it? Just cancel. That Easy.",
+    "2023-2024 Centerstage Queensland Regionals Motivate Award",
+    // "At our regional event, we were fortunate to receive FTC's Motivate award as a rookie team. Our team dynamics and management styles were highly commended, which enabled us to represent QLD at the AU Nationals Competition.",
   ],
   [
-    "Damage Repair",
-    "Damage your game files? Don't worry! We got you sorted, with an easy repair tool that comes with all our games.",
+    "2023-2024 Centerstage Australian National Championship Judge's All-Rounder Award",
+    // "Our team then received the Judge's All-Rounder Award at the Nationals competition. The team received this for exuding contagious courage and energy at the competition, to empower others to go further.",
   ],
+  // [
+  //   "2023-2024 Asia-Pacific Championship Inspire Award",
+  //   // "We're setting our sights and rangefinding for the target that is the Inspire Award at the upcoming Asia-Pacific Championship. GO BIG OR GO HOME FELLAS!",
+  // ],
   [
-    "Suggestions",
-    "We accept suggestions as well! Found a topic that we haven't covered yet? Submit it to our system and we'll look into it.",
-  ],
-  [
-    "Schools",
-    "If you're an educator, you may be eligible to purchase a group package. All the same games for a discounted price!",
+    "Raising Funds and Awareness for Multiple Charities",
+    // "We're Change-makers. And we're devoted to raising a better community to inspire the next generation of engineers. We have raised funds for the Riseup charity, and are working hard to ensure that FIRST's impact is felt all across QLD.",
   ],
 ];
 
@@ -39,7 +39,7 @@ export default function Achievements() {
         Our Achievements
       </h1>
       <section id="services">
-        <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-4 ">
+        <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 ">
           {achievementsList}
         </div>
       </section>
