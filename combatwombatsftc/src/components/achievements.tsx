@@ -34,7 +34,7 @@ const styles = ["md:col-start-2", "md:col-start-3"];
 
 const achievementsList = achievements.map((achievement, key, style) => (
   <div
-    className={`dark:bg-mutegrey h-72 px-4 py-4 rounded-xl text-white border-combatgreen border-4 w-4/5 lg:max-w-96 xl:max-w-small 3xl:max-w-moderate ${achievement[2]} bg-blend-multiply bg-black bg-opacity-70 font-semibold text-xl hover:bg-opacity-0 transition-all child:transition-all bg-cover child:hover:opacity-0 bg-center`}
+    className={` h-72 px-4 py-4 rounded-xl text-white border-combatgreen border-4 w-4/5 lg:max-w-96 xl:max-w-small 3xl:max-w-moderate ${achievement[2]} bg-blend-multiply bg-black bg-opacity-70 font-semibold text-xl hover:bg-opacity-0 transition-all child:transition-all bg-cover child:hover:opacity-0 bg-center`}
     key={achievement[1]}
   >
     <h4 className="mb-2">
