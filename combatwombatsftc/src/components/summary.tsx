@@ -6,7 +6,7 @@ export default function Summary() {
         Your browser does not support the video tag.
   </video>*/}
       <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl my-8">
-        The <span className="text-combatgreen font-bold">'Wombat'</span>
+        The <span className="text-combatgreen font-bold">&apos;Wombat&apos;</span>
       </h1>
       <p className="font-medium md:text-xl 2xl:text-2xl max-w-screen-lg">
         In the past year as a rookie team, we have re-iterated our robot design four times and{" "}
