@@ -9,12 +9,12 @@ export default function Summary() {
         The <span className="text-combatgreen font-bold">&apos;Wombat&apos;</span>
       </h1>
       <p className="font-medium md:text-xl 2xl:text-2xl max-w-screen-lg">
-        In the past year as a rookie team, we have re-iterated our robot design four times and{" "}
+        In the past year as a rookie team, we have re-iterated our robot design<br /> four times and{" "}
         have looked at many different approaches.
         <br />
         <br />
-        But now, we&apos;re setting our optics to the SEPv2 testbed, which is the amalgamation of{" "}
-        all our learnings, and will epitomise our team&apos;s devotion, dedication and motivations.
+        But now, we&apos;re setting our optics to the SEPv2 testbed, which is the <br />amalgamation of{" "}
+        all our learnings, and will epitomise our team&apos;s devotion, dedication and motivation.
       </p>
       <div className="buttons mt-6">
         <button className="blob-btn font-bold md:text:md xl:text-xl 2xl:text-2xl text-wombatbrown before:border-2 before:border-solid before:border-wombatbrown">

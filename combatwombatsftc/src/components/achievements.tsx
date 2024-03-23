@@ -3,17 +3,17 @@ import { Si1Password } from "react-icons/si";
 
 const achievements = [
   [
-    "2024 Centerstage Queensland Regionals Motivate Award",
+    "2023-2024 Centerstage Queensland Regionals Motivate Award",
     // "At our regional event, we were fortunate to receive FTC's Motivate award as a rookie team. Our team dynamics and management styles were highly commended, which enabled us to represent QLD at the AU Nationals Competition.",
   ],
   [
-    "2024 Centerstage Australian National Championship Judge's All-Rounder Award",
+    "2023-2024 Centerstage Australian National Championship Judge's All-Rounder Award",
     // "Our team then received the Judge's All-Rounder Award at the Nationals competition. The team received this for exuding contagious courage and energy at the competition, to empower others to go further.",
   ],
-  [
-    "2024 Asia-Pacific Championship Inspire Award",
-    // "We're setting our sights and rangefinding for the target that is the Inspire Award at the upcoming Asia-Pacific Championship. GO BIG OR GO HOME FELLAS!",
-  ],
+  // [
+  //   "2023-2024 Asia-Pacific Championship Inspire Award",
+  //   // "We're setting our sights and rangefinding for the target that is the Inspire Award at the upcoming Asia-Pacific Championship. GO BIG OR GO HOME FELLAS!",
+  // ],
   [
     "Raising Funds and Awareness for Multiple Charities",
     // "We're Change-makers. And we're devoted to raising a better community to inspire the next generation of engineers. We have raised funds for the Riseup charity, and are working hard to ensure that FIRST's impact is felt all across QLD.",
@@ -39,7 +39,7 @@ export default function Achievements() {
         Our Achievements
       </h1>
       <section id="services">
-        <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-4 ">
+        <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 ">
           {achievementsList}
         </div>
       </section>
