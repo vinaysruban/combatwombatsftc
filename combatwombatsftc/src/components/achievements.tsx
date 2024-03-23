@@ -23,7 +23,7 @@ const achievements = [
 const keys = [1, 2, 3, 4];
 
 const achievementsList = achievements.map((achievement, key) => (
-  <div className="bg-lightgreen dark:bg-mutegrey h-60 px-4 py-4 rounded-xl" key={key}>
+  <div className="bg-darkgrey dark:bg-mutegrey h-60 px-4 py-4 rounded-xl text-white" key={key}>
     <Si1Password className="mt-8 mb-2" />
     <h4 className="my-2">{achievement[0]}</h4>
     <span className="my-2">{achievement[1]}</span>
