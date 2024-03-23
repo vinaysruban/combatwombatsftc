@@ -6,15 +6,15 @@ export default function Summary() {
         Your browser does not support the video tag.
   </video>*/}
       <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl my-8">
-        No{" "}
-        <span className="text-darkgreen font-bold">
-          more <span className="text-combatgreen font-bold">video</span> only
-          robot
-        </span>
+        The <span className="text-combatgreen font-bold">'Wombat'</span>
       </h1>
       <p className="font-medium md:text-xl 2xl:text-2xl max-w-screen-lg">
-        Yappity yappity yap. you gotta talk about the robot here juan. engage
-        the audeince
+        In the past year as a rookie team, we have re-iterated our robot design four times and{" "}
+        have looked at many different approaches.
+        <br />
+        <br />
+        But now, we&apos;re setting our optics to the SEPv2 testbed, which is the amalgamation of{" "}
+        all our learnings, and will epitomise our team&apos;s devotion, dedication and motivations.
       </p>
       <div className="buttons mt-6">
         <button className="blob-btn font-bold md:text:md xl:text-xl 2xl:text-2xl text-wombatbrown before:border-2 before:border-solid before:border-wombatbrown">
