@@ -39,7 +39,7 @@ export default function SideNav() {
             <RxCross1 />
           </li>
           <li>About Us</li>
-          <li>Our Robot</li>
+          <li>Robot Docs</li>
           <li>Sponsors</li>
           <li className="mb-auto">Contact Us</li>
           <li className="border-none w-full">

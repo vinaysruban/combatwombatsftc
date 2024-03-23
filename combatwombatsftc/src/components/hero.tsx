@@ -32,7 +32,7 @@ export default function Hero() {
         </article>
         <article className="ml-2">
           <hr
-            className={`h-1 rounded-xl border-0 w-0 my-6 bg-combatgreen after:content-[''] after:w-2 after:h-2 after:rounded-full after:bg-combatgreen after:absolute animation-line text-center hidden  md:block`}
+            className={`h-1 rounded-xl border-0 w-0 my-6 bg-combatgreen after:content-[''] after:w-2 after:h-2 after:rounded-full after:bg-combatgreen after:absolute animation-line text-center hidden   md:block`}
           />
           <ul className="flex flex-row mt-6 child:mx-4 text-2xl justify-center sm:justify-normal">
             <li className="ml-0">

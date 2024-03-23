@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/layouts/navbar";
 import Providers from "@/components/providers";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next"
