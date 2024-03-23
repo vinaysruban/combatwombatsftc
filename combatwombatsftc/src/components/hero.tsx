@@ -17,7 +17,7 @@ export default function Hero() {
           height={0}
           className="mx-auto w-small md:mx-auto md:w-medium lg:absolute lg:-bottom-52 lg:-right-12 lg:mr-4 lg:w-medium 3xl:absolute 3xl:-bottom-24 3xl:-right-xmoderate 3xl:w-large 4xl:-bottom-56 4xl:-right-moderate 4xl:w-xlarge"
         />
-        <h1 className="font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-center sm:text-left mt-8 sm:mt-0">
+        <h1 className="font-bold text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-center sm:text-left mt-8 sm:mt-0">
           We&apos;re the
           <br />
           <span className="combat">Combat Wombats</span>
