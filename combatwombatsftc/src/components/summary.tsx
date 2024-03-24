@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Summary() {
   return (
     <section className=" bg-midbeige dark:bg-mutegrey px-12 py-16 ">
@@ -16,19 +18,21 @@ export default function Summary() {
         But now, we&apos;re setting our optics 👀 to the SEPv2 testbed, which is the <br />amalgamation of{" "}
         all our learnings 📚, and will epitomise our team&apos;s devotion, dedication and motivation 🤞.
       </p>
-      <div className="buttons mt-6">
-        <button className="blob-btn font-bold md:text:md xl:text-xl 2xl:text-2xl text-wombatbrown before:border-2 before:border-solid before:border-wombatbrown">
-          Learn More
-          <span className="blob-btn__inner dark:bg-mutegrey">
-            <span className="blob-btn__blobs child:bg-wombatbrown">
-              <span className="blob-btn__blob"></span>
-              <span className="blob-btn__blob"></span>
-              <span className="blob-btn__blob"></span>
-              <span className="blob-btn__blob"></span>
+      <Link href={"/docs"}>
+        <div className="buttons mt-6">
+          <button className="blob-btn font-bold md:text:md xl:text-xl 2xl:text-2xl text-wombatbrown before:border-2 before:border-solid before:border-wombatbrown">
+            Learn More
+            <span className="blob-btn__inner dark:bg-mutegrey">
+              <span className="blob-btn__blobs child:bg-wombatbrown">
+                <span className="blob-btn__blob"></span>
+                <span className="blob-btn__blob"></span>
+                <span className="blob-btn__blob"></span>
+                <span className="blob-btn__blob"></span>
+              </span>
             </span>
-          </span>
-        </button>
-      </div>
+          </button>
+        </div>
+      </Link>
       <svg xmlns="http://www.w3.org/2000/svg" version="1.1" className="hidden">
         <defs>
           <filter id="goo">
