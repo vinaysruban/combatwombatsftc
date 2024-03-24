@@ -4,6 +4,7 @@ import Navbar from "@/components/layouts/navbar";
 import Providers from "@/components/providers";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import Footer from "@/components/layouts/footer";
 
 
 export const metadata: Metadata = {
@@ -26,6 +27,7 @@ export default function RootLayout({
           <main className="font-mona bg-beige text-black dark:bg-gradient-to-r from-darkgrey to-lightgrey dark:text-white">
             <Navbar />
             {children}
+            <Footer />
           </main>
         </Providers>
       </body>

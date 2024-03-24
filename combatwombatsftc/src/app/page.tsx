@@ -12,10 +12,9 @@ export default function Home() {
         <Hero />
         <Summary />
         <Achievements />
-        <Goals />
+        {/*<Goals />
         <Us />
-        <CTA />
-        <Footer />
+  <CTA />*/}
     </div>
   );
 }
