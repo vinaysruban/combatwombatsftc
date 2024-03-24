@@ -5,7 +5,7 @@ const testFolder = "./contrans/";
 fs.readdir(testFolder, (err: any, files: any) => {
   files.forEach((file: any) => {
     console.log("./contrans/" + file)
-    fs.rename("./contrans/" + file, "./combatwombatsftc/public/content/" + file, (err) => {
+    fs.rename("./contrans/" + file, "./combatwombatsftc/public/content/" + file, (err: any) => {
       if (err) {
         console.log(err);
       }
