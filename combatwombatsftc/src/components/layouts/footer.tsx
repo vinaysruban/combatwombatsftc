@@ -47,8 +47,8 @@ export default function Footer() {
         <hr className="my-6 border-combatgreen sm:mx-autolg:my-8" />
         <span className="block text-sm text-gray-500 text-center dark:text-gray-400">
           © 2024{" "}
-          <Link href="https://github.com/vinaysruban/combatwombatsftc" className="hover:underline">
-            The Combat Wombats
+          <Link href="https://github.com/vinaysruban" className="hover:underline">
+            Vinay Saravana Ruban
           </Link>
           . All Rights Reserved.
         </span>
