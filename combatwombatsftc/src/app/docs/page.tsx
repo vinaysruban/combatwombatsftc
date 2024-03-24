@@ -10,7 +10,6 @@ async function getFiles() {
   try {
     const files = await fs.readdir(configDirectory);
     for (const file of files) {
-      console.log(file);
       pages.push(file);
     }
   } catch (err) {

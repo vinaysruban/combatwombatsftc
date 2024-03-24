@@ -13,8 +13,8 @@
 @layer base {
   @font-face {
     font-family: "Mona Sans";
-    src: url("/Mona-Sans.woff2") format("woff2 supports variations"),
-      url("/Mona-Sans.woff2") format("woff2-variations");
+    src: url("/fonts/Mona-Sans.woff2") format("woff2 supports variations"),
+      url("/fonts/Mona-Sans.woff2") format("woff2-variations");
     font-weight: 200 900;
     font-stretch: 75% 125%;
   }
@@ -30,20 +30,20 @@
 
 .combat {
   /* Fallback: assume this color ON TOP of image */
-  background: url("/combat.png") repeat 2%;
+  background: url("/images/combat.png") repeat 2%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .combatsmall {
   /* Fallback: assume this color ON TOP of image */
-  background: url("/combat.png") repeat 100%;
+  background: url("/images/combat.png") repeat 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .bg-wombatbig {
-  background-image: url("/robot1.png");
+  background-image: url("/images/robot2.png");
   background-size: 60rem;
   background-position: 160%;
   background-repeat: no-repeat;
@@ -78,7 +78,7 @@
   background-size: cover;
   border: none;
   background-color: transparent;
-  background-image: url("/wave.svg");
+  background-image: url("/images/wave.svg");
   margin-bottom: 2rem;
 }
 

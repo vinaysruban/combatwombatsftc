@@ -46,8 +46,6 @@ const achievementsList = achievements.map((achievement, key, style) => (
 ));
 
 export default function Achievements() {
-  console.log(achievementsList);
-
   return (
     <section className="my-24 mx-6 bg-blob bg-no-repeat bg-right-bottom lg:bg-right-top bg-[length:200px] 2xl:bg-[length:400px]">
       <h1 className="text-2xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl font-bold mx-auto max-w-fit my-12 px-2 text-center underline decoration-combatgreen ">

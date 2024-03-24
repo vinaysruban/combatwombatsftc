@@ -17,7 +17,7 @@ export default function SideNav() {
         <li>
           <a href="/">
             <Image
-              src={"/image-transformed.webp"}
+              src={"/images/image-transformed.webp"}
               alt="Team logo of a wombat"
               width="40"
               height="40"

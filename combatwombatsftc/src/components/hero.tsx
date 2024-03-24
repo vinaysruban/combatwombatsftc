@@ -9,7 +9,7 @@ export default function Hero() {
     <div className={""}>
       <section className="pl-12 mr-12 pt-18 mb-12 lg:mb-44 3xl:mb-6 4xl:mb-48 lg:mt-24 relative max-w-7xl">
         <Image
-          src="/robot2.png"
+          src="/images/robot2.png"
           alt="An image of the robot"
           sizes="(max-width: 768px) 31rem, (max-width: 1024px) 36rem, (min-width: 2248px) 68rem, (min-width: 1920px) 48rem, 31rem"
           priority
@@ -63,7 +63,7 @@ export default function Hero() {
         </span>
         <ul className="flex justify-start child:mx-12 mt-12">
           <li>
-            <Image src="/sitelogo.png" alt="QASMT" height="150" width="150" />
+            <Image src="/images/sitelogo.png" alt="QASMT" height="150" width="150" />
           </li>
         </ul>
       </section>
