@@ -2,6 +2,7 @@ import Link from "next/link";
 import { sql } from "@vercel/postgres";
 import path from "path";
 import { promises as fs } from "fs";
+import { capitalizeFirstLetter } from "@/utils/utils";
 
 async function getFiles() {
   const configDirectory = path.resolve(process.cwd(), "public/content");
@@ -25,7 +26,7 @@ export default async function Page() {
   const list = pages.map((page) => {
     return (
       <li key={page.slice(0, -3)}>
-        <Link href={`/docs/${page.slice(0, -3)}`}>{page.slice(0, -3)}</Link>
+        <Link href={`/docs/${page.slice(0, -3)}`}>{capitalizeFirstLetter(page.slice(0, -3).split('%')[0].replace(/-/g, ' ') + ".")}</Link>
       </li>
     );
   });
