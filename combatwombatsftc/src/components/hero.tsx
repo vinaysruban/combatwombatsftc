@@ -22,7 +22,7 @@ export default function Hero() {
           <br />
           <span className="combat">Combat Wombats</span>
         </h1>
-        <article className="mt-8 ml-2 font-medium 2xl:max-w-3xl max-w-2xl text-md md:text-xl 2xl:text-2xl text-center sm:text-left">
+        <article className="mt-8 ml-2 font-medium 2xl:max-w-3xl max-w-2xl text-base md:text-xl 2xl:text-2xl text-center sm:text-left">
           We&apos;re an Australian team of{" "}
           <span className="text-combatgreen font-bold">driven</span> and{" "}
           <span className="text-wombatbrown font-bold">dedicated</span> STEM
@@ -54,7 +54,7 @@ export default function Hero() {
         </article>
       </section>
       <hr className="spacer" />
-      <section className="flex flex-col items-center text-md md:text-xl 2xl:text-2xl 4xl:text-3xl font-medium pb-12 mx-auto px-12 text-center lg:text-left relative">
+      <section className="flex flex-col items-center text-base md:text-xl 2xl:text-2xl 4xl:text-3xl font-medium pb-12 mx-auto px-12 text-center lg:text-left relative">
         <span className="">
           We extend our{" "}
           <span className="text-combatgreen font-bold">heartfelt</span>{" "}
