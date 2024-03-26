@@ -31,7 +31,7 @@ const goalsElement = goalsList.map((goal) => {
 export default function Goals() {
     return (
         <section className="my-12">
-            <h1 className="font-bold text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl w-max mx-auto my-12 text-wrap">What's <span className="bg-gradient-to-r from-combatgreen to-wombatbrown rounded-md px-2 pb-1 text-white">ahead...</span></h1>
+            <h1 className="font-bold text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl w-max mx-auto my-12 text-wrap">What&apos;s <span className="bg-gradient-to-r from-combatgreen to-wombatbrown rounded-md px-2 pb-1 text-white">ahead...</span></h1>
             <div className="lg:grid-cols-4 pb-8 px-4 mx-auto grid gap-4">
                 {goalsElement}
             </div>
