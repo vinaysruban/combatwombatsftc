@@ -4,11 +4,12 @@ import { Roboto_Mono } from "next/font/google";
 import matter from "gray-matter";
 import getPostMetadata from "@/utils/getPosts";
 import GoBack from "@/utils/goBack";
+import path from "path";
 
 const roboto = Roboto_Mono({ subsets: ["latin"] });
 
 const getPostContent = (slug: string) => {
-  const folder = "src/content/";
+  const folder = path.join("public/content/");
   const file = `${folder}${slug}.md`;
   const content = fs.readFileSync(file, "utf8");
   const matterResult = matter(content);
