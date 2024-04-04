@@ -26,7 +26,7 @@ fs.readdir(testFolder, (err, files) => {
       let currentDate = `${day}-${month}-${year}`;
       fs.rename(
         "./contrans/" + file,
-        "./combatwombatsftc/public/content/" + str + "@" + currentDate + ".md",
+        "./combatwombatsftc/public/content/" + str + "~" + currentDate + ".md",
         (err) => {
           if (err) {
             console.log(err);

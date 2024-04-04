@@ -58,14 +58,15 @@
 .animation-line::after {
   bottom: 2.88rem;
   left: 3.5rem;
-  animation: slidin 1s ease-out forwards;
-  animation-delay: 1s;
+  animation: slidin 1.5s ease-in-out forwards 1.7s, pulse 1s infinite alternate;
+  box-shadow: 0px 0px 8px 4px #8F9853;
 }
 
 .animation-line {
-  width: 20%;
+  width: 0;
   text-align: left;
-  animation: movin 1s ease-out forwards;
+  animation: movin 1.2s ease-in-out forwards;
+  animation-delay: 0.5s;
 }
 
 .spacer {
@@ -98,6 +99,31 @@
   100% {
     left: calc(20% + 2.5rem);
   }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0px 0px 16px 8px #8F9853;
+  }
+  100% {
+    box-shadow: 0px 0px 8px 4px #8F9853;
+  }
+}
+
+.dot::before {
+  content: '';
+  display: inline-block;
+  width: 4px; /* Adjust size as needed */
+  height: 4px; /* Adjust size as needed */
+  border-radius: 50%;
+  background-color: black;
+  margin: 0 10px; /* Adjust margin as needed */
+}
+
+/* Hide dot if adjacent items are not present */
+.item:first-child + .dot,
+.item:last-child + .dot {
+  display: none;
 }
 
 *,
