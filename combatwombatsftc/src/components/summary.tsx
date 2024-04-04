@@ -2,20 +2,14 @@ import Link from "next/link";
 
 export default function Summary() {
   return (
-    <section className=" bg-midbeige dark:bg-mutegrey px-12 py-16 ">
-      {/*<video width="1024px" muted loop preload="none" className="rounded-3xl mx-auto">
-        <source src="/tem.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-  </video>*/}
+    <section className=" bg-midbeige dark:bg-mutegrey px-12 py-16 bg-scatter bg-contain bg-right transition-all hover:bg-[right_-1rem_top_1rem] bg-no-repeat">
       <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl my-8">
         Meet the the <span className="text-combatgreen font-bold">&apos;Wombats&apos;</span>
       </h1>
       <p className="font-medium md:text-xl 2xl:text-2xl max-w-screen-lg">
-        In the past year as a rookie team, we have re-iterated our robot 🤖 design<br /> four times and{" "}
+        In the past year as a rookie team, we have re-iterated our robot 🤖 design four times and{" "}
         have looked at many different approaches.
-        <br />
-        <br />
-        But now, we&apos;re setting our optics 👀 to the SEPv2 testbed, which is the <br />amalgamation of{" "}
+        But now, we&apos;re setting our optics 👀 to the SEPv2 testbed, which is the amalgamation of{" "}
         all our learnings 📚, and will epitomise our team&apos;s devotion, dedication and motivation 🤞.
       </p>
       <Link href={"/docs"}>
