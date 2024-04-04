@@ -290,3 +290,42 @@
   }
 }
 /**[5px_5px_#739954,_10px_10px_#8F9853,_15px_15px_#998B54]*/
+
+@media screen and (min-width: 1024px) {
+  .isus:nth-of-type(5) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .isus:nth-of-type(6) {
+    grid-column-start: 4;
+    grid-column-end: 6;
+  }
+
+  .isus:nth-of-type(7) {
+    grid-column-start: 6;
+    grid-column-end: 8;
+  }
+}
+
+.popup::before {
+  content: '';
+  background: linear-gradient(to right, #739954e6, #998B54e6);
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  width: 105%;
+  left: -2.5%;
+  bottom: 0;
+  transition: all .3s ease-in-out;
+  z-index: -1;
+}
+
+.popup:hover::before {
+  bottom: 0;
+  height: 100%;
+}
+
+.popup {
+  z-index: 1;
+}

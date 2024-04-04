@@ -13,8 +13,8 @@ export default function Home() {
         <Summary />
         <Achievements />
         <Goals />
-        {/*<Us />
-  <CTA />*/}
+        <Us />
+  {/*<CTA />*/}
     </div>
   );
 }
