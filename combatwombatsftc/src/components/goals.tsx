@@ -10,7 +10,7 @@ const goalsList = [
 
 const goalsElement = goalsList.map((goal) => {
     return (
-        <div className="card lg:first-of-type:col-start-1 lg:first-of-type:col-end-4 bg-midbeige dark:bg-mutegrey rounded-2xl p-4 transition-all  hover:shadow-md hover:shadow-combatgreen" key={goal[-1]}>
+        <div className="card mask lg:first-of-type:col-start-1 lg:first-of-type:col-end-4 bg-midbeige dark:bg-mutegrey rounded-2xl p-4 transition-all hover:scale-[1.02] hover:border-combatgreen " key={goal[-1]}>
             <div className="flex items-center">
                 <div className="">
                     <Image className=" h-10 w-10 border-2 border-black dark:border-white rounded-full object-cover" width={100} height={100} src={goal[0]} alt={goal[1]} />
@@ -33,7 +33,7 @@ export default function Goals() {
     return (
         <section className="my-12">
             <h1 className="font-bold text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl w-max mx-auto my-12 text-wrap">What&apos;s <span className="bg-gradient-to-r from-combatgreen to-wombatbrown rounded-md px-2 pb-1 text-white">ahead...</span></h1>
-            <div className="lg:grid-cols-7 pb-8 px-4 mx-auto grid gap-4 max-w-screen-3xl">
+            <div className="lg:grid-cols-7 pb-8 px-4 mx-auto w-5/6 lg:w-auto grid gap-4 3xl:gap-6 max-w-screen-3xl">
                 {goalsElement}
             </div>
         </section>
