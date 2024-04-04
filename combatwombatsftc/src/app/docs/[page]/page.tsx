@@ -34,7 +34,7 @@ export default async function Page(params: any) {
     <section className={`px-2 sm:px-6 md:px-12 py-12 h-full w-4/5 max-w-screen-3xl mx-auto ${mdstyles} ${roboto.className} `}>
       <GoBack path="/docs" />
       <h1>{post.data.title}</h1>
-      <hr className=" border-t-2 mb-3 border-black dark:border-white"></hr>
+      <hr className=" border-t-2 xl:border-t-4 mb-3 border-black dark:border-white"></hr>
       <span className="flex justify-between">
         <i>{post.data.date}</i>
         <p>{post.data.tags.join(" | ")}</p>

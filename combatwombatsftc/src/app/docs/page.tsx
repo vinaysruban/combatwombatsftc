@@ -11,11 +11,11 @@ export default async function Page() {
       <Link href={`/docs/${post.slug}`} key={post.slug}>
         <li
           
-          className="border-2 border-black dark:border-white px-3 py-2 rounded-xl"
+          className="border-2 2xl:border-4 border-black dark:border-white px-3 py-2 rounded-xl"
         >
-          <h1 className="text-xl font-semibold my-2">{post.title}</h1>
-          <p className="my-2">{post.date}</p>
-          <p className="my-2">{post.description}</p>
+          <h1 className="text-xl lg:text-2xl 2xl:text-3xl 4xl:text-4xl font-semibold my-2 md:my-3 xl:my-4">{post.title}</h1>
+          <p className="my-2 md:my-3 xl:my-4">{post.date}</p>
+          <p className="my-2 md:my-3 xl:my-4">{post.description}</p>
         </li>
       </Link>
     );
@@ -30,11 +30,11 @@ export default async function Page() {
     >
       <GoBack path="../" />
       <h1 className="">Our Docs</h1>
-      <hr className=" border-t-2 mb-3 border-black dark:border-white"></hr>
+      <hr className=" border-t-2 2xl:border-t-4 mb-3 border-black dark:border-white"></hr>
       <p className="font-semibold">
         Check out our extensive (soon) documentation to get you started
       </p>
-      <ul className="flex flex-col gap-2">{list}</ul>
+      <ul className="flex flex-col gap-2 2xl:gap-6">{list}</ul>
     </section>
   );
 }
