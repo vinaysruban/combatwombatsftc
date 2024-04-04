@@ -30,7 +30,7 @@ export default async function Page() {
     >
       <GoBack path="../" />
       <h1 className="">Our Docs</h1>
-      <hr className=" border-t-2 2xl:border-t-4 mb-3 border-black dark:border-white"></hr>
+      <hr className=" border-t-2 xl:border-t-4 mb-3 border-black dark:border-white"></hr>
       <p className="font-semibold">
         Check out our extensive (soon) documentation to get you started
       </p>

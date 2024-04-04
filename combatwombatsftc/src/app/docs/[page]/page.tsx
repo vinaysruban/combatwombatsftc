@@ -9,7 +9,7 @@ import path from "path";
 const roboto = Roboto_Mono({ subsets: ["latin"] });
 
 const getPostContent = (slug: string) => {
-  const folder = path.join("public/content/");
+  const folder = path.join("src/content/");
   const file = `${folder}${slug}.md`;
   const content = fs.readFileSync(file, "utf8");
   const matterResult = matter(content);
