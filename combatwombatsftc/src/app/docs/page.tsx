@@ -34,7 +34,7 @@ export default async function Page() {
       <p className="font-semibold">
         Check out our extensive (soon) documentation to get you started
       </p>
-      <ul className="flex flex-col gap-2 2xl:gap-6">{list}</ul>
+      <ul className="flex flex-col gap-6 2xl:gap-8">{list}</ul>
     </section>
   );
 }
