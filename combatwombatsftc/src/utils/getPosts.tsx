@@ -9,15 +9,17 @@ const getPostMetadata = (): PageMetadata[] => {
   const markdownPages = files.filter((file) => file.endsWith(".md"));
 
 
-  console.log(process.cwd())
-  console.log(files)
-  console.log(folder)
+  //console.log(process.cwd())
+  //console.log(files)
+  //console.log(folder)
 
   const posts = markdownPages.map((fileName) => {
     const fileContents = fs.readFileSync(path.join(process.cwd(), `src/content/${fileName}`), "utf8");
     const result = matter(fileContents);
     return {
       title: result.data.title,
+      author: result.data.author,
+      image: result.data.image,
       description: result.data.description,
       date: result.data.date,
       tags: result.data.tags,
@@ -25,7 +27,7 @@ const getPostMetadata = (): PageMetadata[] => {
     };
   });
 
-  console.log(posts);
+  //console.log(posts);
   return posts;
 };
 
