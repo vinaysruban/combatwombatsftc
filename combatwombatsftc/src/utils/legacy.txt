@@ -355,3 +355,12 @@ fs.readdir(testFolder, (err, files) => {
     });
   });
 });
+
+//!IMPORTANT
+
+let response = await fetch(path.join(`/api/${slug}`), {
+    method: "GET",
+  });
+
+  let post = await response.json();
+  console.log(post);

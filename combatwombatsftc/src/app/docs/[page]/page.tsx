@@ -3,8 +3,19 @@ import { Roboto_Mono } from "next/font/google";
 import getPostMetadata from "@/utils/getPosts";
 import GoBack from "@/utils/goBack";
 import Image from "next/image";
+import fs from "fs";
+import matter from "gray-matter";
+import path from "path";
 
 const roboto = Roboto_Mono({ subsets: ["latin"] });
+
+const getPostContent = async (slug: string) => {
+  const folder = path.join(process.cwd(), "/src/content/");
+  const file = `${folder}${slug}.md`;
+  const content = fs.readFileSync(file, "utf8");
+  const matterResult = matter(content);
+  return matterResult;
+};
 
 export const generateStaticParams = async () => {
   const posts = getPostMetadata();
@@ -15,16 +26,7 @@ export const generateStaticParams = async () => {
 
 export default async function Page(params: any) {
   const slug = params.params.page;
-  let response = await fetch(`http://localhost:3000/api/${slug}`, {
-    method: "GET",
-  });
-
-  if (!response.ok) {
-    throw new Error("Network response was not ok");
-  }
-
-  let post = await response.json();
-  console.log(post);
+  const post = await getPostContent(slug);
 
   const mdstyles =
     "descendant:text-wrap descendant:break-words child-h1:text-2xl sm:child-h1:text-4xl md:child-h1:text-6xl child-h1:font-bold child-h1:mt-8 child-h2:text-2xl child-h2:font-extrabold child-h2:my-6 child-p:my-4 child-p:text-base descendant-img:my-8 child-ul:list-disc child-blockquote:max-w-small child-blockquote:italic child-blockquote:px-4 child-blockquote:border-l-4 child-blockquote:border-black dark:child-blockquote:border-white child-pre:bg-midbeige dark:child-pre:bg-mutegrey child-pre:pl-4 child-pre:py-2 child-pre:rounded-md child-pre:text-wrap descendant-h3:font-bold descendant-h3:text-lg";
