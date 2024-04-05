@@ -48,7 +48,7 @@ export default function SideNav() {
                 <DarkMode />
               </li>
               <li className="border-none">
-                <Link href="https://github.com/vinaysruban/combatwombatsftc">
+                <Link href="https://github.com/vinaysruban/combatwombatsftc" aria-label="The project's Github">
                   <SiGithub />
                 </Link>
               </li>

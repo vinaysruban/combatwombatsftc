@@ -69,17 +69,17 @@ export default function Hero() {
           />
           <ul className="flex flex-row mt-6 child:mx-4 text-2xl justify-center sm:justify-normal">
             <li className="ml-0">
-              <Link href="https://www.instagram.com/combat_wombats_ftc_aus/">
+              <Link href="https://www.instagram.com/combat_wombats_ftc_aus/" aria-label="Check out our Instagram.">
                 <FaInstagram />
               </Link>
             </li>
             <li>
-              <Link href="https://www.youtube.com/@CombatWombats23335">
+              <Link href="https://www.youtube.com/@CombatWombats23335" aria-label="Check out our Youtube.">
                 <FaYoutube />
               </Link>
             </li>
             <li>
-              <Link href="mailto: combatwombatsftc@gmail.com">
+              <Link href="mailto: combatwombatsftc@gmail.com" aria-label="Get in touch via email.">
                 <IoMailOpenOutline />
               </Link>
             </li>
