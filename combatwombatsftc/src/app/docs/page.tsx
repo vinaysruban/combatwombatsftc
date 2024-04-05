@@ -16,13 +16,13 @@ export default async function Page() {
         <li
           className="border-2 md:border-4 border-black dark:border-white px-6 py-2 rounded-xl"
         >
-          <h1 className="sm:text-xl md:text-xl lg:text-2xl 2xl:text-3xl font-semibold my-2 md:my-3 xl:my-4">{post.title}</h1>
+          <h1 className="sm:text-xl md:text-xl lg:text-2xl 2xl:text-3xl font-semibold my-1 md:my-2 xl:my-3">{post.title}</h1>
           <span className="flex items-center">
-            <Image alt={"Icon"} height={100} width={100} src={post.image} className="w-8 h-8 md:h-16 md:w-16 object-cover rounded-full" />
-            <p className="ml-4 text-xs xs:text-sm ms:text-base md:text-lg lg:text-xl">{post.author}</p>
+            <Image alt={"Icon"} height={100} width={100} src={post.image} className="w-8 h-8 md:h-12 md:w-12 object-cover rounded-full" />
+            <p className="ml-4 text-xs xs:text-sm ms:text-base 2xl:text-lg 4xl:text-xl">{post.author}</p>
           </span>
-          <i className="my-2 md:my-3 xl:my-4 block md:text-lg lg:text-xl">{post.date}</i>
-          <p className="my-2 md:my-3 xl:my-4 md:text-lg lg:text-xl">{post.description}</p>
+          <i className="my-1 md:my-2 lg:my-3 block md:text-sm lg:text-base">{post.date}</i>
+          <p className="my-1 md:my-2 lg:my-3 md:text-sm lg:text-base">{post.description}</p>
         </li>
       </Link>
     );
