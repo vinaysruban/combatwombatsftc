@@ -35,6 +35,7 @@ const config: Config = {
         "team-award": "url('/images/team-award.jpg')",
         "team": "url('/images/teams.jpg')",
         "scatter": "url('/images/circle-scatter-haikei1.svg')",
+        "plain": "url('/images/image-plain.webp')",	
         },
       backgroundPosition: {
         "bottom-top": "center 28rem",

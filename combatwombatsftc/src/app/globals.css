@@ -329,3 +329,11 @@
 .popup {
   z-index: 1;
 }
+
+.bg-slide {
+  background-position: 0rem -0.6rem;
+}
+
+.bg-slide:hover {
+  background-position: 1rem -0.8rem;
+}
