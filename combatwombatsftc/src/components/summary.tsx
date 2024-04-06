@@ -4,16 +4,18 @@ export default function Summary() {
   return (
     <section className=" bg-midbeige dark:bg-mutegrey px-12 py-16 bg-scatter bg-contain bg-right transition-all hover:bg-[right_-1rem_top_1rem] bg-no-repeat">
       <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl my-8">
-        Meet the the <span className="text-combatgreen font-bold">&apos;Wombats&apos;</span>
+        Meet the the{" "}
+        <span className="text-combatgreen font-bold">&apos;Wombats&apos;</span>
       </h1>
       <p className="font-medium md:text-xl 2xl:text-2xl max-w-screen-lg 2xl:max-w-screen-xl 4xl:max-w-screen-3xl">
-        In the past year as a rookie team, we have re-iterated our robot 🤖 design four times and{" "}
-        have looked at many different approaches.
-        But now, we&apos;re setting our sights 👀 to the SEPv2 testbed, which is the amalgamation of{" "}
-        all our learnings 📚, demonstrating our devotion, dedication and motivation 🤞.
+        In the past year as a rookie team, we have re-iterated our robot 🤖
+        design four times and have looked at many different approaches. But now,
+        we&apos;re setting our sights 👀 to the SEPv2 testbed, which is the
+        amalgamation of all our learnings 📚, demonstrating our devotion,
+        dedication and motivation 🤞.
       </p>
-      <Link href={"/docs"}>
-        <div className="buttons mt-6">
+      <div className="buttons mt-6">
+        <Link href={"/docs"}>
           <button className="blob-btn font-bold md:text:md xl:text-xl 2xl:text-2xl text-wombatbrown before:border-2 before:border-solid before:border-wombatbrown">
             Learn More
             <span className="blob-btn__inner dark:bg-mutegrey">
@@ -25,8 +27,8 @@ export default function Summary() {
               </span>
             </span>
           </button>
-        </div>
-      </Link>
+        </Link>
+      </div>
       <svg xmlns="http://www.w3.org/2000/svg" version="1.1" className="hidden">
         <defs>
           <filter id="goo">
