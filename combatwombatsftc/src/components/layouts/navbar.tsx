@@ -13,7 +13,7 @@ export default function Navbar() {
               <ul className="flex flex-row flex-nowrap justify-center items-center child:mx-3 hover:child:text-combatgreen child:transition child:ease-linear child:duration-150">
                 <li><Link href="/about">About Us</Link></li>
                 <li><Link href="/docs">Robot Docs</Link></li>
-                <li className="mx-8"><Link href="/"><Image src={"/images/image-transformed.webp"} alt="Team logo of a wombat" width="40" height="40" className="dark:invert" /></Link></li>
+                <li className="mx-8"><Link href="/"><Image src={"/images/image-transformed.webp"} alt="Team logo of a wombat" width="40" height="40" className="dark:invert aspect-[96/77]" /></Link></li>
                 <li>Sponsors</li>
                 <li><Link href="/contact">Contact Us</Link></li>
               </ul>
