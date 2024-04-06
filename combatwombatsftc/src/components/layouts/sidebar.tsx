@@ -38,10 +38,10 @@ export default function SideNav() {
           <li className="border-none ml-auto text-2xl mt-3" onClick={() => setOpen(false)}>
             <RxCross1 />
           </li>
-          <li><Link href="/about" prefetch={false}>About Us</Link></li>
-          <li><Link href="/docs" className="cursor-pointer">Robot Docs</Link></li>
+          <li><Link href="/about">About Us</Link></li>
+          <li><Link href="/docs">Robot Docs</Link></li>
           <li>Sponsors</li>
-          <li className="mb-auto">Contact Us</li>
+          <li className="mb-auto"><Link href="/contact">Contact Us</Link></li>
           <li className="border-none w-full">
             <ul className="flex flex-row justify-evenly text-2xl">
               <li className="">

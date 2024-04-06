@@ -33,9 +33,9 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <a href="#" className="hover:underline me-4 md:me-6">
-                Sponsors
-              </a>
+              <Link href="contact" className="hover:underline me-4 md:me-6">
+                Contact Us
+              </Link>
             </li>
             <li>
               <a href="#" className="hover:underline">
@@ -47,7 +47,10 @@ export default function Footer() {
         <hr className="my-6 border-combatgreen sm:mx-autolg:my-8" />
         <span className="block text-sm text-gray-500 text-center dark:text-gray-400">
           © 2024{" "}
-          <Link href="https://github.com/vinaysruban" className="hover:underline">
+          <Link
+            href="https://github.com/vinaysruban"
+            className="hover:underline"
+          >
             Vinay Saravana Ruban
           </Link>
           . All Rights Reserved.

@@ -14,7 +14,7 @@ export default function Home() {
         <Achievements />
         <Goals />
         <Us />
-  {/*<CTA />*/}
+        <CTA />
     </div>
   );
 }
