@@ -6,6 +6,20 @@ import Image from "next/image";
 import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
+import type { Metadata, ResolvingMetadata } from 'next'
+
+export async function generateMetadata(
+  params: any,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const slug = params.params.page;
+  const post = await getPostContent(slug);
+
+  return {
+    title: post.title,
+    description: post.description + " | " + "Discover cutting-edge robotics programming and FIRST Tech Challenge (FTC) insights with the Combat Wombats. Access a wealth of pre-written documentation, coding blueprints, and technical guides designed specifically for FTC enthusiasts. Delve into advanced robotics strategies, innovative design concepts, and efficient coding methods. Elevate your skills and excel in FTC competitions with the Combat Wombats' exclusive resources and expertise. FTC #23335's Website",
+  }
+}
 
 const roboto = Roboto_Mono({ subsets: ["latin"] });
 
