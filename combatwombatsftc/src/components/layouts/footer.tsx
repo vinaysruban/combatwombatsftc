@@ -23,24 +23,24 @@ export default function Footer() {
           </Link>
           <ul className="flex flex-wrap items-center mb-6 text-sm font-semibold sm:mb-0 justify-center">
             <li>
-              <Link href="about" className="hover:underline me-4 md:me-6">
+              <Link href="/about" className="hover:underline me-4 md:me-6">
                 About
               </Link>
             </li>
             <li>
-              <Link href="docs" className="hover:underline me-4 md:me-6">
+              <Link href="/docs" className="hover:underline me-4 md:me-6">
                 Robot Docs
               </Link>
             </li>
             <li>
-              <Link href="contact" className="hover:underline me-4 md:me-6">
-                Contact Us
+              <Link href="/sponsors" className="hover:underline me-4 md:me-6">
+                Sponsors
               </Link>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <Link href="/contact" className="hover:underline me-4 md:me-6">
                 Contact Us
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
