@@ -26,8 +26,6 @@
   }
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
-
 .combat {
   /* Fallback: assume this color ON TOP of image */
   background: url("/images/combat.png") repeat 2%;
