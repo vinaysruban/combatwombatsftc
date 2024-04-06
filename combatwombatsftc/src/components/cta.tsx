@@ -13,11 +13,11 @@ export default function CTA() {
           A message from our captain:
         </h1>
         <p className="px-4 my-8 text-sm ms:text-base lg:text-lg 2xl:text-xl mx-auto text-center ms:max-w-96 sm:max-w-small lg:max-w-screen-sm">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dui
-          quam, fringilla sit amet mauris vitae, blandit porttitor nisi. Nulla
-          molestie orci a velit sagittis, quis vulputate diam bibendum. Lorem
-          ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat porta
-          nibh, non varius risus hendrerit eu. In quam justo, tempus.
+          We are committed to empowering aspiring engineers, problem solvers,
+          and changemakers by fostering a culture of involvement, collaboration,
+          and gracious professionalism. We cannot wait to see how we can play a
+          small role in making a giant impact! Together, we strive to create a
+          community where everybody can thrive and have a fair go.
           <i className="text-left my-8 block">- Hugo Lawler</i>
         </p>
         <div className="flex items-center sm:justify-center flex-col sm:flex-row">
