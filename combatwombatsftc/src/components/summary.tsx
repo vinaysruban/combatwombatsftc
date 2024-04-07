@@ -5,9 +5,9 @@ export default function Summary() {
     <div data-aos="fade-up">
       <section className=" bg-midbeige dark:bg-mutegrey px-12 py-16 bg-scatter bg-contain bg-right transition-all hover:bg-[right_-1rem_top_1rem] bg-no-repeat">
         <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl my-8">
-          Meet the the{" "}
+          Meet the{" "}
           <span className="text-combatgreen font-bold">
-            &apos;Wombats&apos;
+            &apos;Wombat&apos;
           </span>
         </h1>
         <p className="font-medium md:text-xl 2xl:text-2xl max-w-screen-lg 2xl:max-w-screen-xl 4xl:max-w-screen-3xl">
