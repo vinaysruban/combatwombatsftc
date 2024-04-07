@@ -40,7 +40,7 @@ export async function dynamicBlurDataUrl(url: string) {
 
 export default function Hero() {
   return (
-    <div className={""}>
+    <div className={""} data-aos="fade-up">
       <section className="pl-12 mr-12 pt-18 mb-12 lg:mb-44 3xl:mb-6 4xl:mb-48 lg:pt-24 relative max-w-7xl bg-parent">
         <Image
           src={Robot}
