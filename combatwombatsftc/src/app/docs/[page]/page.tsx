@@ -80,7 +80,7 @@ export default async function Page(params: any) {
         <p>{post.tags.join(' | ')}</p>
       </span>
       {post.latex ? <Markdown><MDXRemote source={post.content} /></Markdown> : <MDXRemote source={post.content} />}
-      <code className="italic">Designed and Programmed by Vinay Saravana Ruban.</code>
+      <code className="italic">Courtesy of The Combat Wombats.</code>
     </section>
   );
 }
