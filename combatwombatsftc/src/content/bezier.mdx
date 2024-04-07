@@ -36,14 +36,16 @@ Before applying these curves to your robot's movement, I recommend you visualise
 Now that you hopefully have a basic idea behind how b&eacute;zier curves are generated (you don't necessarily need to understand the theory, just how to make them by using the above equations given a set of control points), we can begin implementing this into a Java program for FTC.
 
 We'll begin by defining our set of control points which we'll store as an an ArrayList.
-```
+
+```java
 ArrayList<Point> points = new ArrayList<>();
 ```
+
 Now we can add all of our control points to `points` using `points.add(point)`. Note that the `Point` class here can be any basic point class with $x$ and $y$ coordinates or even your own custom one.
 
 Once we have the complete set of control points, we can start constructing our b&eacute;zier curve function. We start by defining our variable `n` to be equal to the number of items in `points`, or in other words the total number of control points. Then, we iterate over `n` with iterator variable `i`, each iteration adding $\{n \choose i\}(1-t)^\{n-1\}t^\{i\}\mathbf\{P\}_i$ to some variable we can call `sum` which we initially set equal to $(0, 0)$;
 
-```
+```java
 Point sum = new Point(0, 0);
 int n = points.size();
 
@@ -58,7 +60,7 @@ This example uses a custom `Point` class with methods to multiply and add two po
 
 Now we can place this inside a function with input $t$ to complete our b&eacute;zier curve generation code.
 
-```
+```java
 public Point interpolate(double t) {
     Point sum = new Point(0, 0);
     int n = points.size();

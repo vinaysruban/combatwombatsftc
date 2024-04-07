@@ -344,6 +344,15 @@
   display: block !important;
   margin-left: auto;
 }*/
+@media (min-width: 1536px) {
+  .language-java {
+    font-size: 1.125rem !important;
+  }
+}
 
-
+@media (min-width: 1920px) {
+  .language-java {
+    font-size: 1.25rem !important;
+  }
+}
 

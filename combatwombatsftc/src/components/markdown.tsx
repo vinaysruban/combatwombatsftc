@@ -4,6 +4,7 @@ import renderMathInElement from "katex/contrib/auto-render/auto-render.js";
 import "katex/dist/katex.min.css"
 import React, { useRef, useEffect } from "react";
 
+
 export default function Markdown({
   children,
 }: Readonly<{
@@ -22,6 +23,8 @@ export default function Markdown({
       });
     }
   }, []);
+
+ 
 
   return <div ref={katexTextRef}>{children}</div>;
 }
