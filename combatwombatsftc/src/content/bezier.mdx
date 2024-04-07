@@ -47,9 +47,9 @@ Once we have the complete set of control points, we can start constructing our b
 Point sum = new Point(0, 0);
 int n = points.size();
 
-for (int i = 0; i < n; i++) \{
+for (int i = 0; i < n; i++) {
     sum = sum.add(points.get(i).scalarMultiply(nCr(n, i) * Math.pow((1 - t), n - i) * Math.pow(t, i)));
-\}
+}
 
 return sum;
 ```
@@ -59,17 +59,17 @@ This example uses a custom `Point` class with methods to multiply and add two po
 Now we can place this inside a function with input $t$ to complete our b&eacute;zier curve generation code.
 
 ```
-public Point interpolate(double t) \{
+public Point interpolate(double t) {
     Point sum = new Point(0, 0);
-    int n = points.size();  
+    int n = points.size();
 
-    for (int i = 0; i < n; i++) \{  
+    for (int i = 0; i < n; i++) { 
         sum = sum.add(points.get(i).scalarMultiply(
             nCr(n, i) * Math.pow((1 - t), n - i) * Math.pow(t, i)
         ));
-    \}
+    }
     return sum;
-\}
+}
 ```
 
 As you can see, this is a code implementation of Eq. (1) as it works directly with the points and returns a point, however you can adapt this code to use Eq. (2.1) and Eq. (2.2) if you so wish.

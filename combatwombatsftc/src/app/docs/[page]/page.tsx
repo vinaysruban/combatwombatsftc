@@ -78,8 +78,7 @@ export default async function Page(params: any) {
         <p>{post.tags.join(' | ')}</p>
       </span>
       {post.latex ? <Markdown><MDXRemote source={post.content} /></Markdown> : <MDXRemote source={post.content} />}
-      <code className="italic">postorig:</code>
-      <code className="italic">origin:author-vsr:assume(code:200)</code>
+      <code className="italic">Designed and Programmed by Vinay Saravana Ruban.</code>
     </section>
   );
 }
