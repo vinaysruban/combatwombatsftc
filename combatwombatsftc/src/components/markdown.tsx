@@ -1,7 +1,7 @@
 "use client";
 
-import renderMathInElement from "https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.mjs";
-import "katex/dist/katex.min.css";
+import renderMathInElement from "katex/contrib/auto-render/auto-render.js";
+import "katex/dist/katex.min.css"
 import React, { useRef, useEffect } from "react";
 
 export default function Markdown({
@@ -16,7 +16,9 @@ export default function Markdown({
         delimiters: [
           { left: "$$", right: "$$", display: true },
           { left: "$", right: "$", display: false },
-        ],
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+      ],
       });
     }
   }, []);

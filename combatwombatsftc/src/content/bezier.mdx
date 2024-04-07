@@ -1,0 +1,79 @@
+---
+title: "How to Construct Bézier Curves for Path Generation"
+author: "Juan Santhosh"
+image: "/icons/juan.jfif"
+description: "A unique and effective method of autonomous path creation."
+date: "2024-04-05"
+tags: ["software", "autonomy", "mathematics", "theory"]
+latex: true
+---
+
+## What are B&eacute;zier Curves?
+
+While typically used in computer graphics and design, b&eacute;zier curves can prove to be an effective method of path generation given a series of points. These curves are formed by recursive linear interpolation between a set of given control points resulting in a smooth, continuous curve to the target point.
+
+## The Math
+
+The formula to generate a bezier curve can be expressed as follows:
+
+$$\mathbf\{B\}(t)=\displaystyle\sum_\{i=0\}^\{n\}\{n \choose i\}(1-t)^\{n-i\}t^i\mathbf\{P\}_i,\:\:\:\:0 \leqslant t \leqslant 1\:\:\:\:(1)$$
+
+This formula can also be written in the following forms to find the $x$ and $y$ coordinates of the b&eacute;zier curve corresponding to the value of $t$.
+
+$$x(t)=\displaystyle\sum_\{i=0\}^\{n\}\{n \choose i\}(1-t)^\{n-i\}t^ix_i\:\:\:\:(2.1)$$
+$$y(t)=\displaystyle\sum_\{i=0\}^\{n\}\{n \choose i\}(1-t)^\{n-i\}t^iy_i\:\:\:\:\:(2.2)$$
+
+Both forms are valid methods of expressing a b&eacute;zier curve and you are free to choose either of them, however for conciseness I will use Eq. (1) from now.
+
+*Note that the $n \choose i$ does not represent a coordinate or vector rather it is the number of [combinations](https://en.wikipedia.org/wiki/Combination), also written as $nCr$*
+
+With this equation we can begin to generate b&eacute;zier curves for our desired path, however first we must define the set of control points the curve is shaped by. In a curve with order $n$ (the order of the curve is equal to the number of control points - 1), $\mathbf\{P\}_0$ represents the initial point, $\mathbf\{P\}_n$ represents the final point and the remaining points in between can be used to shape the curve to your liking.
+
+Before applying these curves to your robot's movement, I recommend you visualise them first using a tool such as Desmos to ensure the curve is of the correct shape. For this purpose, I have created a Desmos that plots a b&eacute;zier curve given a list of control points which you can find [here](https://www.desmos.com/calculator/midaxwpsdf). If this is your first time using b&eacute;zier curves, I encourage you to move the points around and experiment to see how the shape of the curve can be altered to your needs. You can also add/remove points if you wish, just remember to update the $\mathbf\{P\}$ list accordingly. If you encounter any problems or require assistance, feel free to contact me on my Discord which can be found at the bottom of this page.
+
+## Implementation
+
+Now that you hopefully have a basic idea behind how b&eacute;zier curves are generated (you don't necessarily need to understand the theory, just how to make them by using the above equations given a set of control points), we can begin implementing this into a Java program for FTC.
+
+We'll begin by defining our set of control points which we'll store as an an ArrayList.
+```
+ArrayList<Point> points = new ArrayList<>();
+```
+Now we can add all of our control points to `points` using `points.add(point)`. Note that the `Point` class here can be any basic point class with $x$ and $y$ coordinates or even your own custom one.
+
+Once we have the complete set of control points, we can start constructing our b&eacute;zier curve function. We start by defining our variable `n` to be equal to the number of items in `points`, or in other words the total number of control points. Then, we iterate over `n` with iterator variable `i`, each iteration adding $\{n \choose i\}(1-t)^\{n-1\}t^\{i\}\mathbf\{P\}_i$ to some variable we can call `sum` which we initially set equal to $(0, 0)$;
+
+```
+Point sum = new Point(0, 0);
+int n = points.size();
+
+for (int i = 0; i < n; i++) \{
+    sum = sum.add(points.get(i).scalarMultiply(nCr(n, i) * Math.pow((1 - t), n - i) * Math.pow(t, i)));
+\}
+
+return sum;
+```
+
+This example uses a custom `Point` class with methods to multiply and add two points together and a custom function to compute $nCr$.
+
+Now we can place this inside a function with input $t$ to complete our b&eacute;zier curve generation code.
+
+```
+public Point interpolate(double t) \{
+    Point sum = new Point(0, 0);
+    int n = points.size();  
+
+    for (int i = 0; i < n; i++) \{  
+        sum = sum.add(points.get(i).scalarMultiply(
+            nCr(n, i) * Math.pow((1 - t), n - i) * Math.pow(t, i)
+        ));
+    \}
+    return sum;
+\}
+```
+
+As you can see, this is a code implementation of Eq. (1) as it works directly with the points and returns a point, however you can adapt this code to use Eq. (2.1) and Eq. (2.2) if you so wish.
+
+Now you can generate b&eacute;zier curves for any set of points to allow for the creation of fully customisable paths that can be used in your robot's autonomous routines.
+
+If you need any help or further explanation on these topics or would like to make an improvement or correction to this page, contact me on my Discord: `.arachnix`.

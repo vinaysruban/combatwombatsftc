@@ -5,5 +5,6 @@ export interface PageMetadata {
     description: string;
     date: string;
     tags: string[];
+    latex: boolean;
     slug: string;
   }

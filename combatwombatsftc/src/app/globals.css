@@ -57,7 +57,7 @@
   bottom: 2.88rem;
   left: 3.5rem;
   animation: slidin 1.5s ease-in-out forwards 1.7s, pulse 1s infinite alternate;
-  box-shadow: 0px 0px 8px 4px #8F9853;
+  box-shadow: 0px 0px 8px 4px #8f9853;
 }
 
 .animation-line {
@@ -101,15 +101,15 @@
 
 @keyframes pulse {
   0% {
-    box-shadow: 0px 0px 16px 8px #8F9853;
+    box-shadow: 0px 0px 16px 8px #8f9853;
   }
   100% {
-    box-shadow: 0px 0px 8px 4px #8F9853;
+    box-shadow: 0px 0px 8px 4px #8f9853;
   }
 }
 
 .dot::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 4px; /* Adjust size as needed */
   height: 4px; /* Adjust size as needed */
@@ -307,15 +307,15 @@
 }
 
 .popup::before {
-  content: '';
-  background: linear-gradient(to right, #739954e6, #998B54e6);
+  content: "";
+  background: linear-gradient(to right, #739954e6, #998b54e6);
   position: absolute;
   margin-left: auto;
   margin-right: auto;
   width: 105%;
   left: -2.5%;
   bottom: 0;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   z-index: -1;
 }
 
@@ -335,3 +335,15 @@
 .bg-slide:hover {
   background-position: 1rem -0.8rem;
 }
+
+.base {
+  display: inline !important;
+}
+
+/*.base:last-of-type:not(:only-child) {
+  display: block !important;
+  margin-left: auto;
+}*/
+
+
+

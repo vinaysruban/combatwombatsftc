@@ -6,7 +6,7 @@ import path from "path";
 const getPostMetadata = (): PageMetadata[] => {
   const folder = path.join(process.cwd(), "/src/content/");
   const files = fs.readdirSync(folder);
-  const markdownPages = files.filter((file) => file.endsWith(".md"));
+  const markdownPages = files.filter((file) => file.endsWith(".mdx"));
 
 
   //console.log(process.cwd())
@@ -23,7 +23,8 @@ const getPostMetadata = (): PageMetadata[] => {
       description: result.data.description,
       date: result.data.date,
       tags: result.data.tags,
-      slug: fileName.replace(".md", ""),
+      latex: result.data.latex,
+      slug: fileName.replace(".mdx", ""),
     };
   });
 
