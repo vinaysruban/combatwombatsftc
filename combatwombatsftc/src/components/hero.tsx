@@ -96,7 +96,7 @@ export default function Hero() {
         </span>
         <ul className="flex justify-start child:mx-12 mt-12">
           <li>
-            <Image src="/images/sitelogo.png" alt="QASMT" height="150" width="150" />
+            <Image src="/images/sitelogo.png" alt="QASMT" height="150" width="150" className="w-auto" />
           </li>
         </ul>
       </section>

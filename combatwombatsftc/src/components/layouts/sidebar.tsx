@@ -21,7 +21,7 @@ export default function SideNav() {
               alt="Team logo of a wombat"
               width="40"
               height="40"
-              className="dark:invert aspect-[96/77]"
+              className="dark:invert aspect-[96/77] w-auto"
             />
           </a>
         </li>
