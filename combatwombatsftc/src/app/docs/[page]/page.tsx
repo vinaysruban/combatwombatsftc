@@ -77,7 +77,7 @@ export default async function Page(params: any) {
         <i>{post.date}</i>
         <p>{post.tags.join(' | ')}</p>
       </span>
-      {post.latex ? <Markdown children={<MDXRemote source={post.content} />} /> : <MDXRemote source={post.content} />}
+      {post.latex ? <Markdown><MDXRemote source={post.content} /></Markdown> : <MDXRemote source={post.content} />}
       <code className="italic">postorig:</code>
       <code className="italic">origin:author-vsr:assume(code:200)</code>
     </section>
