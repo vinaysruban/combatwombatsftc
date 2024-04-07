@@ -10,8 +10,8 @@ export default function Summary() {
       <p className="font-medium md:text-xl 2xl:text-2xl max-w-screen-lg 2xl:max-w-screen-xl 4xl:max-w-screen-3xl">
         In the past year as a rookie team, we have re-iterated our robot 🤖
         design four times and have looked at many different approaches. But now,
-        we&apos;re setting our sights 👀 to the SEPv2 testbed, which is the
-        amalgamation of all our learnings 📚, demonstrating our devotion,
+        we&apos;re setting our sights 👀 to our newest design, SEPv2, a paragon which is the
+        culmination of all our learnings 📚, demonstrating our devotion,
         dedication and motivation 🤞.
       </p>
       <div className="buttons mt-6">
