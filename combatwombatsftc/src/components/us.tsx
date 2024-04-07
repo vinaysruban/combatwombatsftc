@@ -16,7 +16,7 @@ export default function Us() {
       ];
 
   return (
-    <section className="py-12 px-8">
+    <section className="py-12 px-8" data-aos="fade-up">
       <div className="mx-auto">
         <h1 className="font-bold text-3xl ms:text-4xl before:h-2 sm:text-5xl sm:before:h-2 md:text-6xl md:before:h-3 lg:text-7xl lg:before:h-4 mx-auto block w-fit mb-12 popup relative">Meet our team!</h1>
         <div className="grid grid-cols-4 lg:grid-cols-8">

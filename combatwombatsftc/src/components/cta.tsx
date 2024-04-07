@@ -5,7 +5,7 @@ const roboto = Roboto_Mono({ subsets: ["latin"] });
 
 export default function CTA() {
   return (
-    <div>
+    <div data-aos="fade-up">
       <hr className=" bg-multi w-full h-min bg-cover aspect-[510/100] md:aspect-[1020/100] bg-center border-none" />
       <hr className=" bg-multi-rev w-full h-min bg-cover aspect-[510/100] md:aspect-[1020/100] bg-center border-none" />
       <section className="px-8 py-12">

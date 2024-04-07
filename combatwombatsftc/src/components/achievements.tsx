@@ -8,15 +8,15 @@ const achievements = [
     0,
     "bg-team-award",
     `Motivate Award`,
-    '2023-2024',
+    "2023-2024",
   ],
   [
     " Centerstage Australian National Championship",
     // "Our team then received the Judge's All-Rounder Award at the Nationals competition. The team received this for exuding contagious courage and energy at the competition, to empower others to go further.",
     1,
     "bg-team",
-    'Judge\'s All-Rounder Award',
-    '2023-2024',
+    "Judge's All-Rounder Award",
+    "2023-2024",
   ],
   // [
   //   "2023-2024 Asia-Pacific Championship Inspire Award",
@@ -38,25 +38,33 @@ const achievementsList = achievements.map((achievement, key, style) => (
     key={achievement[1]}
   >
     <h4 className="mb-2">
-      <span className="font-medium  text-sm">{achievement[4]}</span><br />
+      <span className="font-medium  text-sm">{achievement[4]}</span>
+      <br />
       {achievement[0]} <br />
-      <span className="combat font-black text-2xl">{" " + achievement[3]}</span> <br />
+      <span className="combat font-black text-2xl">
+        {" " + achievement[3]}
+      </span>{" "}
+      <br />
     </h4>
   </div>
 ));
 
 export default function Achievements() {
   return (
-    <section className="my-24 mx-6 bg-blob bg-no-repeat bg-right-bottom lg:hover:bg-[right_-1rem_top_1rem] transition-all lg:bg-right-top bg-[length:200px] 2xl:bg-[length:400px]">
-      <h1 className="text-2xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl font-bold mx-auto max-w-fit my-12 px-2 text-center underline decoration-combatgreen ">
-        Our Achievements
-      </h1>
-      <section id="services">
-        <div className="flex flex-col justify-evenly items-center lg:flex-row child:my-4 lg:my-0">
-          {achievementsList}
-        </div>
+    <div data-aos="fade-up">
+      <section
+        className="my-24 mx-6 bg-blob bg-no-repeat bg-right-bottom lg:hover:bg-[right_-1rem_top_1rem] transition-all lg:bg-right-top bg-[length:200px] 2xl:bg-[length:400px]"
+      >
+        <h1 className="text-2xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl font-bold mx-auto max-w-fit my-12 px-2 text-center underline decoration-combatgreen ">
+          Our Achievements
+        </h1>
+        <section id="services">
+          <div className="flex flex-col justify-evenly items-center lg:flex-row child:my-4 lg:my-0">
+            {achievementsList}
+          </div>
+        </section>
       </section>
-    </section>
+    </div>
   );
 }
 

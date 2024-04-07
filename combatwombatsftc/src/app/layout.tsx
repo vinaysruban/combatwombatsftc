@@ -5,6 +5,7 @@ import Providers from "@/components/providers";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "@/components/layouts/footer";
+import { AOSInit } from "@/components/aos";
 
 export const metadata: Metadata = {
   title: {
@@ -32,6 +33,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body className="">
+        <AOSInit />
         <Providers>
           <main className="font-mona bg-beige text-black dark:bg-gradient-to-r from-darkgrey to-lightgrey dark:text-white">
             <Navbar />
