@@ -38,6 +38,8 @@ const config: Config = {
         "plain": "url('/images/image-plain.webp')",
         "multi": "url('/images/multi-waves.svg')",
         "multi-rev": "url('/images/waves-rev.svg')",
+        'github': 'url(/images/github.svg)',
+        'github-dark': 'url(/images/github-dark.svg)',
         },
       backgroundPosition: {
         "bottom-top": "center 28rem",
@@ -57,6 +59,10 @@ const config: Config = {
       fontFamily: {
         mona: ["Mona Sans", ...fontFamily.sans],
       },
+      cursor: {
+        'github': 'url(/images/github.svg), pointer',
+        'github-dark': 'url(/images/github-dark.svg), pointer',
+      }
     },
   },
   plugins: [

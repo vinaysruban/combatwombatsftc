@@ -364,3 +364,43 @@ let response = await fetch(path.join(`/api/${slug}`), {
 
   let post = await response.json();
   console.log(post);
+
+  <div
+                  id="trailer"
+                  ref={trailer as React.RefObject<HTMLDivElement>}
+                  className="w-10 h-10 fixed block left-0 top-0 rounded-full bg-red-800"
+                >
+                  <i id="trailer-icon" className=""></i>
+                </div>
+
+                onMouseMove={(e) => hello(e)}
+
+                 const trailer = useRef<HTMLElement>();
+
+  const animateTrailer = (e: any, interacting: any) => {
+    if (trailer.current) {
+      const x = e.clientX - trailer.current.offsetHeight / 2,
+        y = e.clientY - trailer.current.offsetWidth / 2;
+
+      const keyframes = {
+        transform: `translate(${x}px, ${y}px) scale(${interacting ? 8 : 1})`,
+      };
+
+      trailer.current.animate(keyframes, {
+        duration: 800,
+        fill: "forwards",
+      });
+    }
+  };
+
+  function hello(e: any) {
+    const interactable = e.target.closest(".interactable"),
+      interacting = interactable !== null;
+
+    if (trailer.current) {
+      trailer.current.style.position = "fixed";
+    }
+    animateTrailer(e, interacting);
+  }
+
+  import { useState, useEffect, useRef } from "react";
