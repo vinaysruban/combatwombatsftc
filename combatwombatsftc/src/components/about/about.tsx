@@ -14,19 +14,19 @@ export default function About() {
           your own path to a greater victory.
         </p>
         <article className="my-6 sm:mt-12 2xl:mt-16 flex flex-col items-center sm:items-start sm:flex-row justify-evenly child:2/5 md:child:w-1/5 child:max-w-64 child:text-center child:px-4 md:child:px-0">
-          <p className="text-base 2xl:text-xl text-gray-700 sm:mb-6 sheen">
+          <p className="text-base 2xl:text-xl sm:mb-6">
             4{" "}
             <span className="block text-sm 2xl:text-lg mb-4 sm:mb-8">
               iterations of our robot, the Wombat
             </span>
           </p>
-          <p className="text-base 2xl:text-xl text-gray-700 mb-4 sm:mb-8">
+          <p className="text-base 2xl:text-xl mb-4 sm:mb-8">
             2{" "}
             <span className="block text-sm 2xl:text-lg">
               awards from official FTC competitions
             </span>
           </p>
-          <p className="text-base 2xl:text-xl text-gray-700 mb-4 sm:mb-8 hidden md:block">
+          <p className="text-base 2xl:text-xl mb-4 sm:mb-8 hidden md:block">
             11{" "}
             <span className="block text-sm 2xl:text-lg">
               devoted team members
