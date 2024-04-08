@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import About from "@/components/about/about";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -8,6 +9,6 @@ export const metadata: Metadata = {
 
 export default function AboutUs() {
   return (
-    <div>hello</div>
+    <About />
   );
 }

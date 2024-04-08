@@ -32,6 +32,7 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
+      <AOSInit />
       <body className="">
         <Providers>
           <main className="font-mona bg-beige text-black dark:bg-gradient-to-r from-darkgrey to-lightgrey dark:text-white">

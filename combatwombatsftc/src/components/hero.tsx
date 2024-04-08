@@ -40,7 +40,7 @@ export async function dynamicBlurDataUrl(url: string) {
 
 export default function Hero() {
   return (
-    <div className={""} data-aos="fade-up">
+    <div className={""}>
       <section className="pl-12 mr-12 pt-18 mb-12 lg:mb-44 3xl:mb-6 4xl:mb-48 lg:pt-24 relative max-w-7xl bg-parent">
         <Image
           src={Robot}
@@ -67,7 +67,7 @@ export default function Hero() {
           <hr
             className={`h-1 rounded-xl border-0 w-0 my-6 bg-combatgreen after:content-[''] after:w-2 after:h-2 after:rounded-full after:bg-combatgreen after:absolute animation-line text-center hidden   md:block`}
           />
-          <ul className="flex flex-row mt-6 child:mx-4 text-2xl justify-center sm:justify-normal">
+          <ul className="flex flex-row mt-6 child:mx-4 text-2xl justify-center sm:justify-normal" data-aos="fade-up">
             <li className="ml-0">
               <Link href="https://www.instagram.com/combat_wombats_ftc_aus/" aria-label="Check out our Instagram.">
                 <FaInstagram />
@@ -87,16 +87,16 @@ export default function Hero() {
         </article>
       </section>
       <hr className="spacer" />
-      <section className="flex flex-col items-center text-base md:text-xl 2xl:text-2xl 4xl:text-3xl font-medium pb-12 mx-auto px-12 text-center lg:text-left relative">
+      <section className="flex flex-col items-center text-base md:text-xl 2xl:text-2xl 4xl:text-3xl font-medium mb-16 mx-auto px-12 text-center lg:text-left relative">
         <span className="">
           We extend our{" "}
           <span className="text-combatgreen font-bold">heartfelt</span>{" "}
           gratitude and love for the support our wonderful sponsors have
           provided to us: 👇
         </span>
-        <ul className="flex justify-start child:mx-12 mt-12">
-          <li>
-            <Image src="/images/sitelogo.png" alt="QASMT" height="150" width="150" className="w-auto" />
+        <ul className="flex justify-start child:mx-12 mt-16">
+          <li data-aos="zoom-in-up">
+            <Image src="/images/sitelogo.png" alt="QASMT" height="250" width="250" className="w-auto h-16 grayscale hover:grayscale-0 transition-all" />
           </li>
         </ul>
       </section>

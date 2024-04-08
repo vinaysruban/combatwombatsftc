@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Summary() {
   return (
-    <div data-aos="fade-up">
-      <section className=" bg-midbeige dark:bg-mutegrey px-12 py-16 bg-scatter bg-contain bg-right transition-all hover:bg-[right_-1rem_top_1rem] bg-no-repeat">
+    <div data-aos="fade-up" className="bg-midbeige">
+      <section className=" dark:bg-mutegrey px-12 py-16 bg-scatter bg-contain bg-right transition-all hover:bg-[right_-1rem_top_1rem] bg-no-repeat">
         <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl my-8">
           Meet the{" "}
           <span className="text-combatgreen font-bold">

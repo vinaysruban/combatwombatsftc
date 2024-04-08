@@ -4,7 +4,7 @@ import { Roboto_Mono } from "next/font/google";
 
 const roboto = Roboto_Mono({ subsets: ["latin"] });
 
-export default function goBack(props: any) {
+export default function GoBack(props: any) {
   return (
     <button className={`italic transition-all hover:font-semibold flex items-center hover:-translate-x-2 md:w-36 w-auto ${roboto.className}`}>
       <FaArrowLeft className="inline text-sm" />
