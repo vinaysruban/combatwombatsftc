@@ -1,3 +1,5 @@
+import 'server-only'
+
 import Link from "next/link";
 import getPostMetadata from "@/utils/getPosts";
 import GoBack from "@/utils/goBack";

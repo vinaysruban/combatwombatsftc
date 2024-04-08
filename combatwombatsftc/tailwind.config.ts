@@ -62,6 +62,26 @@ const config: Config = {
       cursor: {
         'github': 'url(/images/github.svg), pointer',
         'github-dark': 'url(/images/github-dark.svg), pointer',
+      },
+
+      keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(calc(-250px * 7))' },
+        },
+        scrollLong: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(calc(-500px * 7))' },
+        },
+        scrollShort: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(calc(-187.5px * 7))' },
+        }
+      },
+      animation: {
+        'scrolling': 'scroll 40s linear infinite',
+        'scrolling-long': 'scrollLong 40s linear infinite',
+        'scrolling-short': 'scrollShort 40s linear infinite',
       }
     },
   },

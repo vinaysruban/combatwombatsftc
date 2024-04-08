@@ -1,3 +1,5 @@
+import 'server-only'
+
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { Roboto_Mono } from "next/font/google";
 import getPostMetadata from "@/utils/getPosts";
