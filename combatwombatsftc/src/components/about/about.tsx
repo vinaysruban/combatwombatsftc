@@ -72,7 +72,7 @@ export default function About() {
           Where are we?
         </h2>
         <p className="text-base md:text-lg 2xl:text-xl 2xl:leading-8 my-6 text-center">
-          We're located at the 📍 Queensland Academy for Science Mathematics and
+          We&apos;re located at the 📍 Queensland Academy for Science Mathematics and
           Technology, <br />
           78 Bywong St, Toowong QLD 4066
         </p>
