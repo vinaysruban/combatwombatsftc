@@ -3,23 +3,62 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import Navbar from "@/components/layouts/navbar";
 import Providers from "@/components/providers";
 import "./globals.css";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "@/components/layouts/footer";
 import { AOSInit } from "@/components/aos";
+import type { Viewport } from "next";
+
+const APP_NAME = "Combat Wombats";
+const APP_DEFAULT_TITLE =
+  "Combat Wombats - An upcoming First Tech Challenge team";
+const APP_TITLE_TEMPLATE = "%s | Combat Wombats";
+const APP_DESCRIPTION =
+  "Discover cutting-edge robotics programming and FIRST Tech Challenge (FTC) insights with the Combat Wombats. Access a wealth of pre-written documentation, coding blueprints, and technical guides designed specifically for FTC enthusiasts. Delve into advanced robotics strategies, innovative design concepts, and efficient coding methods. Elevate your skills and excel in FTC competitions with the Combat Wombats' exclusive resources and expertise. FTC #23335's Website";
+
+export const viewport: Viewport = {
+  themeColor: "#8f9853",
+};
 
 export const metadata: Metadata = {
+  applicationName: APP_NAME,
   title: {
-    default: "Combat Wombats - An upcoming First Tech Challenge team",
-    template: "%s | Combat Wombats",
+    default: APP_DEFAULT_TITLE,
+    template: APP_TITLE_TEMPLATE,
   },
-  description:
-    "Discover cutting-edge robotics programming and FIRST Tech Challenge (FTC) insights with the Combat Wombats. Access a wealth of pre-written documentation, coding blueprints, and technical guides designed specifically for FTC enthusiasts. Delve into advanced robotics strategies, innovative design concepts, and efficient coding methods. Elevate your skills and excel in FTC competitions with the Combat Wombats' exclusive resources and expertise. FTC #23335's Website",
+  description: APP_DESCRIPTION,
   alternates: {
-      canonical: 'https://combatwombats.vercel.app',
-      languages: {
-        'en-US': '/en-US',
-      },
+    canonical: "https://combatwombats.vercel.app",
+    languages: {
+      "en-US": "/en-US",
     },
+  },
+  manifest: "/manifest.json",
+  appleWebApp: {
+    title: APP_DEFAULT_TITLE,
+    statusBarStyle: "default",
+    capable: true,
+  },
+  formatDetection: {
+    telephone: true,
+  },
+  openGraph: {
+    type: "website",
+    siteName: APP_NAME,
+    title: {
+      default: APP_DEFAULT_TITLE,
+      template: APP_TITLE_TEMPLATE,
+    },
+    description: APP_DESCRIPTION,
+    images: ["/images/image-transformed.webp"],
+  },
+  twitter: {
+    card: "summary",
+    title: {
+      default: APP_DEFAULT_TITLE,
+      template: APP_TITLE_TEMPLATE,
+    },
+    description: APP_DESCRIPTION,
+    images: ["/images/image-transformed.webp"],
+  },
 };
 
 export default function RootLayout({
