@@ -38,8 +38,8 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:underline me-4 md:me-6">
-                Contact Us
+              <Link href="/outreach" className="hover:underline me-4 md:me-6">
+                Outreach
               </Link>
             </li>
           </ul>

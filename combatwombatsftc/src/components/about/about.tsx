@@ -1,6 +1,15 @@
-import GoBack from "@/utils/goBack";
 import Image from "next/image";
 import Link from "next/link";
+import { FaInstagram, FaYoutube } from "react-icons/fa6";
+import { IoMailOpenOutline } from "react-icons/io5";
+
+function Social({ children, link }: { children: React.ReactNode, link: string }) {
+  return (
+    <Link href={link} className="align-sub border-2 border-black dark:border-white rounded-3xl px-2 py-1 mx-1 md:mx-2 text-sm md:text-base items-center inline-flex gap-1">
+      {children}
+    </Link>
+  );
+}
 
 export default function About() {
   return (
@@ -47,33 +56,43 @@ export default function About() {
                 height="100"
                 width="250"
                 alt=""
-                className="object-cover w-full h-full aspect-[250/187.5]"
+                className="object-cover aspect-[250/187.5] h-auto w-auto"
               />
             </div>
           ))}
         </div>
       </div>
-      <section className="w-4/5 max-w-screen-xl mx-auto my-12 md:my-24">
+      <section className="w-4/5 max-w-screen-xl mx-auto my-12 md:mt-24">
         <h2 className="font-semibold text-2xl ms:text-3xl md:text-4xl xl:text-5xl 3xl:text-6xl text-center">
-          Who are we?
+          Get in touch with us!
         </h2>
         <p className="text-base md:text-lg 2xl:text-xl 2xl:leading-8 my-12">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris luctus
           interdum arcu, at cursus arcu malesuada non. Phasellus eget sapien id
           lacus cursus bibendum commodo non dui. Sed luctus lacus non justo
           viverra condimentum. Donec venenatis commodo magna, aliquet convallis
-          justo commodo vel. Mauris porta, nibh id vulputate mattis, tellus ex
-          vehicula purus, sed ornare leo lacus vel lectus. Duis quis porta
-          lorem. Nam nisl justo, tincidunt ac venenatis eget, aliquet at sem.
-          Quisque faucibus finibus sapien, eu efficitur magna dignissim sed.
-          Nullam in lectus nec metus blandit efficitur nec ut enim.
+          justo commodo vel.
+        </p>
+        <p className="font-semibold my-12 text-base md:text-lg text-center leading-8">
+          Come contact us on {" "}
+          <Social link="https://www.instagram.com/combat_wombats_ftc_aus/">
+            <FaInstagram className="inline h-4 w-4" /> Instagram
+          </Social>
+          or maybe our{" "}
+          <Social link="https://www.youtube.com/@CombatWombats23335">
+            <FaYoutube className="inline h-4 w-4" /> Youtube
+          </Social>
+          or perhaps even send us some{" "}
+          <Social link="mailto: combatwombatsftc@gmail.com">
+            <IoMailOpenOutline className="inline h-4 w-4" /> Mail
+          </Social>
         </p>
         <h2 className="font-semibold text-2xl ms:text-3xl md:text-4xl xl:text-5xl 3xl:text-6xl text-center">
           Where are we?
         </h2>
         <p className="text-base md:text-lg 2xl:text-xl 2xl:leading-8 my-6 text-center">
-          We&apos;re located at the 📍 Queensland Academy for Science Mathematics and
-          Technology, <br />
+          We&apos;re located at the 📍 Queensland Academy for Science
+          Mathematics and Technology, <br />
           78 Bywong St, Toowong QLD 4066
         </p>
         <iframe
@@ -89,7 +108,10 @@ export default function About() {
         <h3 className="font-semibold text-xl ms:text-2xl md:text-3xl xl:text-4xl 3xl:text-5xl text-center">
           Get in touch with the website creator.
         </h3>
-        <section id="developer" className="text-base md:text-lg 2xl:text-xl 2xl:leading-8 my-6 text-center">
+        <section
+          id="developer"
+          className="text-base md:text-lg 2xl:text-xl 2xl:leading-8 my-6 text-center"
+        >
           <div className="flex justify-center items-center gap-2 ">
             <Image
               alt="Website Developer"
@@ -98,7 +120,9 @@ export default function About() {
               height={100}
               className="w-10 h-10 object-cover rounded-full"
             />
-            <p className="font-medium ms:font-semibold text-ms ms:text-base">Vinay Saravana Ruban</p>
+            <p className="font-medium ms:font-semibold text-ms ms:text-base">
+              Vinay Saravana Ruban
+            </p>
           </div>
           <p className="text-base md:text-lg 2xl:text-xl text-left my-6">
             The website was developed using NextJS (TypeScript) + TailwindCSS,
@@ -106,12 +130,16 @@ export default function About() {
             MarkDown, formatted through Gray Matter, with the use of KaTeX for
             LaTeX and PrismJS for syntax highlighting.
           </p>
-          <p className="text-base md:text-lg 2xl:text-xl mt-6 font-bold">For any bugs, issues, copyright issues and enquiries,</p>
-          <Link href="/contact#developer">
+          <p className="text-base md:text-lg 2xl:text-xl mt-6 font-bold">
+            For any bugs, issues, copyright issues and enquiries, contact us
+            through mail:
+          </p>
+          <Link href="mailto: combatwombatsftc@gmail.com">
             <button
               className={`xs:text-lg font-bold mt-6 py-3 px-6 rounded-3xl bg-combatgreen tracking-tighter hover:-translate-y-1 transition-all`}
             >
-              Contact Me
+              <IoMailOpenOutline className="inline w-6 h-6 align-middle child:stroke-[3rem]" />{" "}
+              <span className="inline align-middle ml-2">combatwombats</span>
             </button>
           </Link>
         </section>

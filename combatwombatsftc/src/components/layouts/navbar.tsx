@@ -15,7 +15,7 @@ export default function Navbar() {
                 <li><Link href="/docs">Robot Docs</Link></li>
                 <li className="mx-8"><Link href="/"><Image src={"/images/image-transformed.webp"} alt="Team logo of a wombat" width="40" height="40" className="dark:invert aspect-[96/77] w-auto" /></Link></li>
                 <li><Link href="/sponsors">Sponsors</Link></li>
-                <li><Link href="/contact">Contact Us</Link></li>
+                <li><Link href="/outreach">Outreach</Link></li>
               </ul>
             </li>
             <li className="mx-8"><DarkMode /></li>

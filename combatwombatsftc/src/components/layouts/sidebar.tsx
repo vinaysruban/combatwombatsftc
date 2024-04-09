@@ -41,7 +41,7 @@ export default function SideNav() {
           <li><Link href="/about">About Us</Link></li>
           <li><Link href="/docs">Robot Docs</Link></li>
           <li><Link href="/sponsors">Robot Docs</Link></li>
-          <li className="mb-auto"><Link href="/contact">Contact Us</Link></li>
+          <li className="mb-auto"><Link href="/outreach">Outreach</Link></li>
           <li className="border-none w-full">
             <ul className="flex flex-row justify-evenly text-2xl">
               <li className="">
