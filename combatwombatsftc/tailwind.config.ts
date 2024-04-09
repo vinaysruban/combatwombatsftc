@@ -71,7 +71,7 @@ const config: Config = {
         },
         scrollLong: {
           '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(calc(-500px * 7))' },
+          '100%': { transform: 'translateX(calc(-375px * 7))' },
         },
         scrollShort: {
           '0%': { transform: 'translateX(0)' },
