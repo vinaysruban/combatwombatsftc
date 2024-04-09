@@ -56,7 +56,7 @@ export default function About() {
                 height="100"
                 width="250"
                 alt=""
-                className="object-cover aspect-[250/187.5] h-auto w-auto"
+                className="object-cover aspect-[250/187.5] h-full w-full"
               />
             </div>
           ))}
