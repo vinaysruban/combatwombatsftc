@@ -66,7 +66,7 @@ export default function Us() {
       name: "Jack White",
       role: "Engineer",
       description: "Neque porro quisquam est, consectetur, adipisci velit...",
-      image: "/icons/bhasu.jfif",
+      image: "/icons/jack.jfif",
     },
     {
       name: "Daniel Laine",
