@@ -112,8 +112,10 @@ export default function Us() {
             Meet our team!
           </h1>
           <div className="grid grid-cols-4 lg:grid-cols-8">
-            {teamMembers.map((member, index) => (
-                <Link href="/about#developer"
+            {teamMembers.map((member, index) =>
+              index === 10 ? (
+                <Link
+                  href="/about#developer"
                   key={index}
                   className={`sm:p-4 py-12 text-center col-span-2 isus`}
                   data-aos="fade-up"
@@ -123,11 +125,7 @@ export default function Us() {
                     alt={member.name}
                     width={100}
                     height={100}
-                    className={`mx-auto h-24 w-24 sm:h-32 sm:w-32 2xl:w-44 2xl:h-44 4xl:h-64 4xl:w-64 rounded-full mb-4 object-cover transition-shadow hover:shadow-[0px_0px_0px_0.5rem_#8F9853] ${
-                      index === 10
-                        ? "hover:shadow-[0px_0px_0px_0.5rem_#8F9853,0px_0px_0px_1rem_#998B54]"
-                        : ""
-                    } `}
+                    className={`mx-auto h-24 w-24 sm:h-32 sm:w-32 2xl:w-44 2xl:h-44 4xl:h-64 4xl:w-64 rounded-full mb-4 object-cover transition-shadow hover:shadow-[0px_0px_0px_0.5rem_#8F9853,0px_0px_0px_1rem_#998B54] `}
                   />
                   <h3 className="text-lg 2xl:text-2xl font-semibold">
                     {member.name}
@@ -139,7 +137,31 @@ export default function Us() {
                     {member.description}
                   </p>
                 </Link>
-            ))}
+              ) : (
+                <div
+                  key={index}
+                  className={`sm:p-4 py-12 text-center col-span-2 isus`}
+                  data-aos="fade-up"
+                >
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    width={100}
+                    height={100}
+                    className={`mx-auto h-24 w-24 sm:h-32 sm:w-32 2xl:w-44 2xl:h-44 4xl:h-64 4xl:w-64 rounded-full mb-4 object-cover transition-shadow hover:shadow-[0px_0px_0px_0.5rem_#8F9853]`}
+                  />
+                  <h3 className="text-lg 2xl:text-2xl font-semibold">
+                    {member.name}
+                  </h3>
+                  <p className="text-gray-600 text-sm xs:text-base 2xl:text-xl">
+                    {member.role}
+                  </p>
+                  <p className="text-xs xs:text-base 2xl:text-lg">
+                    {member.description}
+                  </p>
+                </div>
+              )
+            )}
           </div>
         </div>
       </section>
