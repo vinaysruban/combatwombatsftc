@@ -10,6 +10,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        "10xl": "10rem",
+      },
       spacing: {
         'small': '32rem',
         'medium': '36rem',

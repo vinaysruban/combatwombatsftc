@@ -32,7 +32,7 @@ export default function SideNav() {
       <nav
         className={`fixed right-0 top-0 bg-gradient-to-r from-darkgrey to-lightgrey text-white transition-all ${
           open ? "w-56" : "w-0"
-        } h-full z-10 overflow-hidden`}
+        } h-full z-50 overflow-hidden`}
       >
         <ul className="flex flex-col child:my-2 child:py-1 items-center child:px-6 child:border-solid child:border-b-2 h-full">
           <li className="border-none ml-auto text-2xl mt-3" onClick={() => setOpen(false)}>
