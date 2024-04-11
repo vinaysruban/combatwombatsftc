@@ -105,7 +105,7 @@ export default function Outreach() {
           as one of the essential parts of FTC.
         </p>
       </main>
-      <hr className="bg-waves-brown w-full h-24 xl:h-48 4xl:h-64 bg-cover mt-36 sm:mt-24 xl:mt-48" />
+      <hr className="bg-waves-brown w-full h-24 xl:h-48 4xl:h-64 bg-cover mt-24 md:mt-0 xl:mt-24 3xl:mt-48" />
       <section className="py-12 sm:py-48 px-4 xl:px-6 3xl:px-12">
         <article data-aos="fade-up" className="sm:w-2/3 mb-24 md:mb-48 relative">
           <Image
