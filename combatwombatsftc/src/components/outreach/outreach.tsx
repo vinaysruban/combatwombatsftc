@@ -243,7 +243,7 @@ export default function Outreach() {
           just about winning competitions; it&apos;s about making a meaningful
           difference and leaving a lasting impact on those around us. If you
           want to collaborate with us or learn more about our outreach
-          initiatives, we'&apos; love to hear from you!
+          initiatives, we&apos;d love to hear from you!
           <i className="text-left my-8 block">- Hugo Lawler</i>
         </p>
         <div
