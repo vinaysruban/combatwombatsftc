@@ -1,6 +1,10 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { Roboto_Mono } from "next/font/google";
+
+const roboto = Roboto_Mono({ subsets: ["latin"] });
 
 function normalise(
   n: number,
@@ -66,7 +70,10 @@ export default function Outreach() {
 
   return (
     <div className="">
-      <main data-aos="fade-up" className="mx-auto container py-36 3xl:py-64 4xl:py-80 sm:py-24 md:pt-36 xl:pt-48 3xl:pt-60 pb-24 md:pb-48 lg:pb-64 px-4">
+      <main
+        data-aos="fade-up"
+        className="mx-auto container py-36 3xl:py-64 4xl:py-80 sm:py-24 md:pt-36 xl:pt-48 3xl:pt-60 pb-24 md:pb-48 lg:pb-64 px-4"
+      >
         <h1 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl 3xl:text-9xl 4xl:text-10xl font-bold text-center z-10 relative">
           <Image
             ref={image1Ref as React.LegacyRef<HTMLImageElement>}
@@ -106,8 +113,11 @@ export default function Outreach() {
         </p>
       </main>
       <hr className="bg-waves-brown w-full h-24 xl:h-48 4xl:h-64 bg-cover mt-24 md:mt-0 xl:mt-0 3xl:mt-48 border-0" />
-      <section className="py-12 sm:py-24 px-4 xl:px-6 3xl:px-12">
-        <article data-aos="fade-up" className="sm:w-2/3 mb-24 md:mb-48 relative">
+      <section className="pt-12 sm:pt-24 px-4 xl:px-6 3xl:px-12">
+        <article
+          data-aos="fade-up"
+          className="sm:w-2/3 mb-24 md:mb-48 relative"
+        >
           <Image
             src="/images/comptemp.webp"
             alt="robot"
@@ -130,7 +140,8 @@ export default function Outreach() {
             <p className="mx-2 font-bold">Theo Sun</p>
           </span>
           <p className="font-medium  3xl:text-lg my-4 italic">
-            In his initiative &apos;Theo&apos;s Day Out&apos;, Theo Sun aimed to...
+            In his initiative &apos;Theo&apos;s Day Out&apos;, Theo Sun aimed
+            to...
           </p>
           <p className="sm:w-4/5 3xl:w-1/2 md:text-lg 3xl:text-xl 4xl:text-2xl text- my-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
@@ -142,7 +153,10 @@ export default function Outreach() {
             vitae consectetur velit sollicitudin.
           </p>
         </article>
-        <article data-aos="fade-up" className="sm:w-2/3 ml-auto my-24 md:my-48 relative">
+        <article
+          data-aos="fade-up"
+          className="sm:w-2/3 ml-auto my-24 md:my-48 relative"
+        >
           <Image
             src="/images/stpeters.jpg"
             alt="robot"
@@ -178,7 +192,10 @@ export default function Outreach() {
             vitae consectetur velit sollicitudin.
           </p>
         </article>
-        <article data-aos="fade-up" className="sm:w-2/3 my-24 md:my-48 relative">
+        <article
+          data-aos="fade-up"
+          className="sm:w-2/3 my-24 md:my-48 relative"
+        >
           <Image
             src="/images/insta.png"
             alt="robot"
@@ -214,6 +231,31 @@ export default function Outreach() {
           </p>
         </article>
       </section>
+      <hr className="bg-waves-brown w-full h-24 xl:h-48 4xl:h-64 bg-cover border-0" />
+      <footer data-aos="fade-up" className="px-8 py-12">
+        <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl my-8 text-center">
+          <span className="text-combatgreen">L</span>et&apos;s reach out togethe<span className="text-combatgreen">r!</span>
+        </h1>
+        <p className="px-4 my-8 text-sm ms:text-base lg:text-lg 2xl:text-xl mx-auto text-center ms:max-w-96 sm:max-w-small lg:max-w-screen-sm">
+          Engaging in outreach activities through FTC allows us
+          to connect with our local community, inspire the next generation of
+          innovators, and showcase the incredible work we do as a team. It's not
+          just about winning competitions; it's about making a meaningful
+          difference and leaving a lasting impact on those around us. If you
+          want to collaborate with us or learn more about our outreach
+          initiatives, we'd love to hear from you!
+          <i className="text-left my-8 block">- Hugo Lawler</i>
+        </p>
+        <div
+          className="flex items-center sm:justify-center flex-col sm:flex-row"
+        >
+          <Link href="/about">
+            <button className="xs:text-lg font-bold my-2 sm:my-0 mx-4 py-3 px-6 2xl:px-8 hover:bg-combatgreen rounded-3xl hover:-translate-y-1 transition-all border-combatgreen border-2 hover:text-white">
+              Get in touch
+            </button>
+          </Link>
+        </div>
+      </footer>
     </div>
   );
 }

@@ -22,13 +22,13 @@ export default function CTA() {
         </p>
         <div className="flex items-center sm:justify-center flex-col sm:flex-row" data-aos="zoom-in-down">
           <Link href="/about">
-            <button className="xs:text-lg font-bold my-2 sm:my-0 mx-4 py-3 px-6 2xl:px-8 bg-combatgreen rounded-3xl hover:-translate-y-1 transition-all">
+            <button className="text-slate-200 xs:text-lg font-bold my-2 sm:my-0 mx-4 py-3 px-6 2xl:px-8 bg-combatgreen rounded-3xl hover:-translate-y-1 transition-all">
               Get in touch
             </button>
           </Link>
           <Link href="/docs">
             <button
-              className={`xs:text-lg font-bold my-2 sm:my-0 mx-4 py-3 px-6 rounded-3xl bg-wombatbrown ${roboto.className} tracking-tighter hover:-translate-y-1 transition-all`}
+              className={`text-slate-200 xs:text-lg font-bold my-2 sm:my-0 mx-4 py-3 px-6 rounded-3xl bg-wombatbrown ${roboto.className} tracking-tighter hover:-translate-y-1 transition-all`}
             >
               View our docs
             </button>
