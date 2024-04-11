@@ -22,4 +22,4 @@ const withPWA = withPWAInit({
   dest: "public",
 });
 
-export default nextConfig;
+export default withPWA(nextConfig);

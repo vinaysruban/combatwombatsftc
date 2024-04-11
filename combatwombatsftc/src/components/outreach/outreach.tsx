@@ -66,7 +66,7 @@ export default function Outreach() {
 
   return (
     <div className="">
-      <main className="mx-auto container py-36 3xl:py-64 4xl:py-80 sm:py-24 md:pt-36 xl:pt-48 3xl:pt-60 pb-36 md:pb-64 px-4">
+      <main data-aos="fade-up" className="mx-auto container py-36 3xl:py-64 4xl:py-80 sm:py-24 md:pt-36 xl:pt-48 3xl:pt-60 pb-36 md:pb-64 px-4">
         <h1 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl 3xl:text-9xl 4xl:text-10xl font-bold text-center z-10 relative">
           <Image
             ref={image1Ref as React.LegacyRef<HTMLImageElement>}
@@ -107,7 +107,7 @@ export default function Outreach() {
       </main>
       <hr className="bg-waves-brown w-full h-24 xl:h-48 4xl:h-64 bg-cover mt-36 sm:mt-24 xl:mt-48" />
       <section className="py-12 sm:py-48 px-4 xl:px-6 3xl:px-12">
-        <article className="sm:w-2/3 mb-24 md:mb-48 relative">
+        <article data-aos="fade-up" className="sm:w-2/3 mb-24 md:mb-48 relative">
           <Image
             src="https://placehold.co/600x400"
             alt="robot"
@@ -142,7 +142,7 @@ export default function Outreach() {
             vitae consectetur velit sollicitudin.
           </p>
         </article>
-        <article className="sm:w-2/3 ml-auto my-24 md:my-48 relative">
+        <article data-aos="fade-up" className="sm:w-2/3 ml-auto my-24 md:my-48 relative">
           <Image
             src="https://placehold.co/600x400"
             alt="robot"
@@ -178,7 +178,7 @@ export default function Outreach() {
             vitae consectetur velit sollicitudin.
           </p>
         </article>
-        <article className="sm:w-2/3 my-24 md:my-48 relative">
+        <article data-aos="fade-up" className="sm:w-2/3 my-24 md:my-48 relative">
           <Image
             src="https://placehold.co/600x400"
             alt="robot"
