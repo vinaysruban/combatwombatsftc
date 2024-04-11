@@ -75,7 +75,7 @@ export default function About() {
         </div>
       </div>
       <section className="w-4/5 max-w-screen-xl mx-auto my-12 md:mt-24">
-        <div data-aos="fade-up">
+        <div id="contact" data-aos="fade-up">
           <h2 className="font-semibold text-2xl ms:text-3xl md:text-4xl xl:text-5xl 3xl:text-6xl text-center">
             Get in touch with us!
           </h2>

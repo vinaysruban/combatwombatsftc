@@ -239,17 +239,17 @@ export default function Outreach() {
         <p className="px-4 my-8 text-sm ms:text-base lg:text-lg 2xl:text-xl mx-auto text-center ms:max-w-96 sm:max-w-small lg:max-w-screen-sm">
           Engaging in outreach activities through FTC allows us
           to connect with our local community, inspire the next generation of
-          innovators, and showcase the incredible work we do as a team. It's not
-          just about winning competitions; it's about making a meaningful
+          innovators, and showcase the incredible work we do as a team. It&apos;s not
+          just about winning competitions; it&apos;s about making a meaningful
           difference and leaving a lasting impact on those around us. If you
           want to collaborate with us or learn more about our outreach
-          initiatives, we'd love to hear from you!
+          initiatives, we'&apos; love to hear from you!
           <i className="text-left my-8 block">- Hugo Lawler</i>
         </p>
         <div
           className="flex items-center sm:justify-center flex-col sm:flex-row"
         >
-          <Link href="/about">
+          <Link href="/about#contact">
             <button className="xs:text-lg font-bold my-2 sm:my-0 mx-4 py-3 px-6 2xl:px-8 hover:bg-combatgreen rounded-3xl hover:-translate-y-1 transition-all border-combatgreen border-2 hover:text-white">
               Get in touch
             </button>
