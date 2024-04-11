@@ -66,7 +66,7 @@ export default function Outreach() {
 
   return (
     <div className="">
-      <main data-aos="fade-up" className="mx-auto container py-36 3xl:py-64 4xl:py-80 sm:py-24 md:pt-36 xl:pt-48 3xl:pt-60 pb-36 md:pb-64 px-4">
+      <main data-aos="fade-up" className="mx-auto container py-36 3xl:py-64 4xl:py-80 sm:py-24 md:pt-36 xl:pt-48 3xl:pt-60 pb-24 md:pb-48 lg:pb-64 px-4">
         <h1 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl 3xl:text-9xl 4xl:text-10xl font-bold text-center z-10 relative">
           <Image
             ref={image1Ref as React.LegacyRef<HTMLImageElement>}
@@ -105,8 +105,8 @@ export default function Outreach() {
           as one of the essential parts of FTC.
         </p>
       </main>
-      <hr className="bg-waves-brown w-full h-24 xl:h-48 4xl:h-64 bg-cover mt-24 md:mt-0 xl:mt-24 3xl:mt-48 border-0" />
-      <section className="py-12 sm:py-48 px-4 xl:px-6 3xl:px-12">
+      <hr className="bg-waves-brown w-full h-24 xl:h-48 4xl:h-64 bg-cover mt-24 md:mt-0 xl:mt-0 3xl:mt-48 border-0" />
+      <section className="py-12 sm:py-24 px-4 xl:px-6 3xl:px-12">
         <article data-aos="fade-up" className="sm:w-2/3 mb-24 md:mb-48 relative">
           <Image
             src="/images/comptemp.webp"
@@ -148,7 +148,7 @@ export default function Outreach() {
             alt="robot"
             width={500}
             height={500}
-            className="object-cover rounded-3xl -rotate-12 w-[40%] my-8 mx-auto sm:w-44 md:w-52 lg:w-64 3xl:w-80 4xl:w-96 aspect-[2/3] relative sm:absolute top-[25%] lg:top-[20%] 3xl:top-[15%] 4xl:top-[10%] sm:right-[100%] brightness-75"
+            className="object-cover rounded-3xl -rotate-[6deg] w-[50%] md:w-auto my-8 mx-auto sm:h-44 md:h-52 lg:h-64 3xl:h-80 4xl:h-96 aspect-[3/2] relative sm:absolute top-[25%] lg:top-[20%] 3xl:top-[15%] 4xl:top-[10%] sm:right-[85%] xl:right-[100%] brightness-75"
           />
           <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl 3xl:text-8xl 4xl:text-9xl font-bold sm:w-4/5 text-right ml-auto">
             <span className="text-combatgreen">s</span>howcasing and
