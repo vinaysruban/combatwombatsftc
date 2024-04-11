@@ -130,7 +130,7 @@ export default function Outreach() {
             <p className="mx-2 font-bold">Theo Sun</p>
           </span>
           <p className="font-medium  3xl:text-lg my-4 italic">
-            In his initiative 'Theo's Day Out', Theo Sun aimed to...
+            In his initiative &apos;Theo&apos;s Day Out&apos;, Theo Sun aimed to...
           </p>
           <p className="sm:w-4/5 3xl:w-1/2 md:text-lg 3xl:text-xl 4xl:text-2xl text- my-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
@@ -166,7 +166,7 @@ export default function Outreach() {
             <p className="mx-2 font-bold">Hugo Lawler</p>
           </span>
           <p className="font-medium 3xl:text-lg my-4 text-right ml-auto italic">
-            In his initiative Hugo's initiative, he aimed to...
+            In his initiative Hugo&apos;s initiative, he aimed to...
           </p>
           <p className="sm:w-4/5 3xl:w-1/2 md:text-lg 3xl:text-xl 4xl:text-2xl text- my-2 text-right ml-auto">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
@@ -201,7 +201,7 @@ export default function Outreach() {
             <p className="mx-2 font-bold">Shainthra Birabaharan</p>
           </span>
           <p className="font-medium  3xl:text-lg my-4 italic">
-            To promote the team's ventures, Shainthra...
+            To promote the team&apos;s ventures, Shainthra...
           </p>
           <p className="sm:w-4/5 3xl:w-1/2 md:text-lg 3xl:text-xl 4xl:text-2xl text- my-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
