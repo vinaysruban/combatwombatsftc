@@ -34,7 +34,7 @@ const styles = ["md:col-start-2", "md:col-start-3"];
 
 const achievementsList = achievements.map((achievement, key, style) => (
   <div
-    className={` h-72 px-4 py-4 rounded-xl text-white border-combatgreen border-4 hover:border-0 w-4/5 lg:max-w-96 xl:max-w-small 3xl:max-w-3xl 4xl:max-w-moderate ${achievement[2]} bg-blend-multiply bg-black bg-opacity-70 font-semibold text-xl hover:bg-opacity-0 transition-all child:transition-all bg-cover child:hover:opacity-0 bg-center hover:scale-110 hover:-translate-y-2 hover:shadow-[5px_5px_#739954,_10px_10px_#8F9853,_15px_15px_#998B54]`}
+    className={`aspect-[5/3] px-4 py-4 rounded-xl text-white border-combatgreen border-4 hover:border-0 w-4/5 sm:w-2/3 lg:max-w-md xl:max-w-small 2xl:max-w-2xl 3xl:max-w-3xl 4xl:max-w-moderate ${achievement[2]} bg-blend-multiply bg-black bg-opacity-70 font-semibold text-xl hover:bg-opacity-0 transition-all child:transition-all bg-cover child:hover:opacity-0 bg-center hover:scale-110 hover:-translate-y-2 hover:shadow-[5px_5px_#739954,_10px_10px_#8F9853,_15px_15px_#998B54] 3xl:hover:shadow-[5px_5px_#739954,_15px_15px_#8F9853,_25px_25px_#998B54]`}
     key={achievement[1]}
   >
     <h4 className="mb-2">
@@ -53,7 +53,7 @@ export default function Achievements() {
   return (
     <div data-aos="fade-up">
       <section
-        className="my-24 mx-6 bg-blob bg-no-repeat bg-right-bottom lg:hover:bg-[right_-1rem_top_1rem] transition-all lg:bg-right-top bg-[length:200px] 2xl:bg-[length:400px]"
+        className="my-24 xl:my-48 mx-6 bg-blob bg-no-repeat bg-right-bottom lg:hover:bg-[right_-1rem_top_1rem] transition-all lg:bg-right-top bg-[length:200px] 2xl:bg-[length:400px]"
       >
         <h1 className="text-2xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl font-bold mx-auto max-w-fit my-12 px-2 text-center underline decoration-combatgreen ">
           Our Achievements

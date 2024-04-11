@@ -40,7 +40,7 @@ export async function dynamicBlurDataUrl(url: string) {
 
 export default function Hero() {
   return (
-    <div className={""}>
+    <div className={"pb-12"}>
       <section className="pl-12 mr-12 pt-18 mb-12 lg:mb-44 3xl:mb-6 4xl:mb-48 lg:pt-24 relative max-w-7xl bg-parent">
         <Image
           src={Robot}
@@ -48,7 +48,7 @@ export default function Hero() {
           sizes="(max-width: 768px) 31rem, (max-width: 1024px) 36rem, (min-width: 2248px) 68rem, (min-width: 1920px) 48rem, 31rem"
           priority
           placeholder={`${blururl}`}
-          className="mx-auto w-small md:mx-auto md:w-medium lg:absolute lg:-bottom-52 lg:-right-12 lg:mr-4 lg:w-medium 3xl:absolute 3xl:-bottom-24 3xl:-right-xmoderate 3xl:w-large 4xl:-bottom-56 4xl:-right-moderate 4xl:w-xlarge bg-plain bg-no-repeat bg-contain bg-slide transition-all"
+          className="mx-auto w-small md:mx-auto md:w-medium lg:absolute lg:-bottom-52 lg:-right-12 lg:mr-4 lg:w-medium 3xl:absolute 3xl:-bottom-24 3xl:-right-xmoderate 3xl:w-large 4xl:-bottom-56 4xl:right-[-60rem] 4xl:w-xlarge bg-plain bg-no-repeat bg-contain bg-slide transition-all"
         />
         <h1 className="font-bold text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-center sm:text-left mt-8 sm:mt-0">
           We&apos;re the
@@ -96,7 +96,7 @@ export default function Hero() {
         </span>
         <ul className="flex justify-start child:mx-12 mt-16">
           <li data-aos="zoom-in-up">
-            <Image src="/images/sitelogo.png" alt="QASMT" height="250" width="250" className="w-auto h-16 grayscale hover:grayscale-0 transition-all" />
+            <Image src="/images/sitelogo.png" alt="QASMT" height="250" width="250" className="w-auto h-16 grayscale hover:grayscale-0 transition-all object-cover" />
           </li>
         </ul>
       </section>

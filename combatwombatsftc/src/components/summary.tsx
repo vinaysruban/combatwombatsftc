@@ -2,26 +2,28 @@ import Link from "next/link";
 
 export default function Summary() {
   return (
-    <div data-aos="fade-up" className="bg-midbeige">
-      <section className=" dark:bg-mutegrey px-12 py-16 bg-scatter bg-contain bg-right transition-all hover:bg-[right_-1rem_top_1rem] bg-no-repeat">
-        <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl my-8">
+    <div data-aos="fade-up" className="">
+      <hr className=" bg-[url('/images/svgs/2.svg')] w-full h-min bg-cover aspect-[510/100] md:aspect-[1020/100] bg-center border-none" />
+      <hr className=" bg-[url('/images/svgs/1.svg')] w-full h-min bg-cover aspect-[510/100] md:aspect-[1020/100] bg-center border-none rotate-180" />
+      <section className="px-12 py-16 bg-contain bg-right transition-all hover:bg-[right_-1rem_top_1rem] bg-no-repeat">
+        <h1 className="font-bold text-4xl ms:text-6xl md:text-7xl xl:text-8xl 3xl:text-9xl my-8 text-center">
           Meet the{" "}
-          <span className="text-combatgreen font-bold">
-            &apos;Wombat&apos;
+          <span className="text-combatgreen combat font-bold">
+            &apos;Wombat&apos;!
           </span>
         </h1>
-        <p className="font-medium md:text-xl 2xl:text-2xl max-w-screen-lg 2xl:max-w-screen-xl 4xl:max-w-screen-3xl">
+        <p className="font-medium text-lg md:text-xl xl:text-2xl 3xl:text-3xl max-w-screen-lg 2xl:max-w-screen-xl 4xl:max-w-screen-3xl text-center mx-auto my-12">
           In the past year as a rookie team, we have re-iterated our robot 🤖
           design four times and have looked at many different approaches. But
           now, we&apos;re setting our sights 👀 to our newest design, SEPv2, a
           paragon which is the culmination of all our learnings 📚,
           demonstrating our devotion, dedication and motivation 🤞.
         </p>
-        <div className="buttons mt-6">
+        <div className="buttons w-fit mx-auto">
           <Link href={"/docs"}>
-            <button className="blob-btn font-bold md:text:md xl:text-xl 2xl:text-2xl text-wombatbrown before:border-2 before:border-solid before:border-wombatbrown">
+            <button className="blob-btn font-bold text-lg md:text-xl xl:text-2xl 3xl:text-3xl text-wombatbrown before:border-2 before:border-solid before:border-wombatbrown">
               Learn More
-              <span className="blob-btn__inner dark:bg-mutegrey">
+              <span className="blob-btn__inner dark:bg-darkgrey">
                 <span className="blob-btn__blobs child:bg-wombatbrown">
                   <span className="blob-btn__blob"></span>
                   <span className="blob-btn__blob"></span>
@@ -55,6 +57,8 @@ export default function Summary() {
           </defs>
         </svg>
       </section>
+      <hr className=" bg-[url('/images/svgs/3.svg')] w-full h-min bg-cover aspect-[510/100] md:aspect-[1020/100] bg-center border-none" />
+      <hr className=" bg-[url('/images/svgs/4.svg')] w-full h-min bg-cover aspect-[510/100] md:aspect-[1020/100] bg-center border-none rotate-180" />
     </div>
   );
 }
