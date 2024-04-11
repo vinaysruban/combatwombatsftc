@@ -87,15 +87,15 @@ export default function Hero() {
         </article>
       </section>
       <hr className="spacer" />
-      <section className="flex flex-col items-center text-base md:text-xl 2xl:text-2xl 4xl:text-3xl font-medium mb-16 mx-auto px-12 text-center lg:text-left relative">
-        <span className="">
+      <section data-aos="fade-up" className="flex flex-col items-center text-base md:text-xl 2xl:text-2xl 4xl:text-3xl font-medium mb-16 mx-auto px-12 text-center lg:text-left relative">
+        <span className="mt-12">
           We extend our{" "}
           <span className="text-combatgreen font-bold">heartfelt</span>{" "}
           gratitude and love for the support our wonderful sponsors have
           provided to us: 👇
         </span>
-        <ul className="flex justify-start child:mx-12 mt-16">
-          <li data-aos="zoom-in-up">
+        <ul data-aos="fade-up" className="flex justify-start child:mx-12 mt-20">
+          <li>
             <Image src="/images/sitelogo.png" alt="QASMT" height="250" width="250" className="w-auto h-16 grayscale hover:grayscale-0 transition-all object-cover" />
           </li>
         </ul>

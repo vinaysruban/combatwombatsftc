@@ -9,7 +9,7 @@ export default function Sponsors() {
       <p className="text-center italic my-6 text-base sm:text-lg md:text-xl xl:text-2xl 3xl:text-3xl">Once we get some.</p>
       <hr className="mt-12 border-t-4 border-black dark:border-white" />
       <div className="flex flex-col items-center justify-center min-h-full py-12">
-        <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
+        <main className="flex flex-col items-center justify-center w-full flex-1 md:px-20 text-center">
           <h1 className="text-2xl sm:text-3xl md:text-4xl 3xl:text-5xl font-bold mb-4">
             Contact Us for Sponsorship
           </h1>

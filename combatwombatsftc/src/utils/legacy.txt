@@ -404,3 +404,9 @@ let response = await fetch(path.join(`/api/${slug}`), {
   }
 
   import { useState, useEffect, useRef } from "react";
+
+  <hr className=" bg-[url('/images/svgLarge/3.svg')] w-full h-min bg-cover aspect-[600/50] md:aspect-[1800/100] bg-center border-none" />
+        <hr className=" bg-[url('/images/svgLarge/4.svg')] w-full h-min bg-cover aspect-[600/50] md:aspect-[1800/100] bg-center border-none rotate-180" />
+
+        <hr className=" text-[0] bg-[url('/images/svgLarge/1.svg')] w-full h-min bg-cover aspect-[600/50] md:aspect-[1800/100] bg-bottom border-none" />
+        <hr className=" bg-[url('/images/svgLarge/2.svg')] w-full h-min bg-cover aspect-[600/50] md:aspect-[1800/100] border-none rotate-180" />
