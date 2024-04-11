@@ -14,7 +14,6 @@ function normalise(
 ): number {
   const result = (direction * (n - max / 2)) / (max / magnitude);
   const normalised = result / 10 + 1;
-  console.log(result);
   return normalised;
 }
 
@@ -69,7 +68,7 @@ export default function Outreach() {
   }, [position]);
 
   return (
-    <div className="">
+    <div>
       <main
         data-aos="fade-up"
         className="mx-auto container py-36 3xl:py-64 4xl:py-80 sm:py-24 md:pt-36 xl:pt-48 3xl:pt-60 pb-24 md:pb-48 lg:pb-64 px-4"
