@@ -4,7 +4,7 @@ export default function Sponsors() {
   return (
     <div className="container mx-auto px-4 pt-24">
       <h1 className="text-3xl ms:text-4xl md:text-5xl xl:text-6xl 3xl:text-7xl font-bold text-center">
-        We're dedicated to our sponsors!
+        We&apos;re dedicated to our sponsors!
       </h1>
       <p className="text-center italic my-6 text-base sm:text-lg md:text-xl xl:text-2xl 3xl:text-3xl">Once we get some.</p>
       <hr className="mt-12 border-t-4 border-black dark:border-white" />
