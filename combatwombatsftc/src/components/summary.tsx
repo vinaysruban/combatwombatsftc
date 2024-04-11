@@ -1,10 +1,13 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Summary() {
   return (
     <div data-aos="fade-up" className="">
-      <hr className=" bg-[url('/images/svgs/2.svg')] w-full h-min bg-cover aspect-[510/100] md:aspect-[1020/100] bg-center border-none" />
-      <hr className=" bg-[url('/images/svgs/1.svg')] w-full h-min bg-cover aspect-[510/100] md:aspect-[1020/100] bg-center border-none rotate-180" />
+      <div className="flex flex-col items-start">
+        <hr className=" text-[0] bg-[url('/images/svgs/2.svg')] w-full h-min bg-cover aspect-[510/100] md:aspect-[1020/100] bg-bottom border-none" />
+        <hr className=" bg-[url('/images/svgs/1.svg')] w-full h-min bg-cover aspect-[510/100] md:aspect-[1020/100] border-none rotate-180" />
+      </div>
       <section className="px-12 py-16 bg-contain bg-right transition-all hover:bg-[right_-1rem_top_1rem] bg-no-repeat">
         <h1 className="font-bold text-4xl ms:text-6xl md:text-7xl xl:text-8xl 3xl:text-9xl my-8 text-center">
           Meet the{" "}
@@ -57,8 +60,10 @@ export default function Summary() {
           </defs>
         </svg>
       </section>
-      <hr className=" bg-[url('/images/svgs/3.svg')] w-full h-min bg-cover aspect-[510/100] md:aspect-[1020/100] bg-center border-none" />
-      <hr className=" bg-[url('/images/svgs/4.svg')] w-full h-min bg-cover aspect-[510/100] md:aspect-[1020/100] bg-center border-none rotate-180" />
+      <div>
+        <hr className=" bg-[url('/images/svgs/3.svg')] w-full h-min bg-cover aspect-[510/100] md:aspect-[1020/100] bg-center border-none" />
+        <hr className=" bg-[url('/images/svgs/4.svg')] w-full h-min bg-cover aspect-[510/100] md:aspect-[1020/100] bg-center border-none rotate-180" />
+      </div>
     </div>
   );
 }
