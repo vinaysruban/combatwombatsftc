@@ -30,12 +30,16 @@ const roboto = Roboto_Mono({ subsets: ["latin"] });
 const getPostContent = async (slug: string) => {
   const folder = path.join(process.cwd(), "/src/content/");
   const file = `${folder}${slug}.mdx`;
+  try {
   const content = fs.readFileSync(file, "utf8");
   const matterResult = matter(content);
   return {
     slug,
     content: matterResult.content,
     ...(matterResult.data as { title: string; author: string, image: string, description: string, date: string, tags: string[], latex: boolean}),
+  };
+  } catch (e) {
+    throw new Error("Post not found: " + e);
   };
 };
 
