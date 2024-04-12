@@ -405,3 +405,50 @@
   -moz-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mini-card-grid {
+  max-width: 120rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3rem 1rem;
+  display: flex;
+  overflow: hidden;
+}
+
+.mini-card:focus-within, .mini-card:hover {
+  -webkit-transform: translate(0,-1rem);
+  transform: translate(0,-1rem);
+}
+.mini-card:focus-within~.mini-card, .mini-card:hover~.mini-card {
+  -webkit-transform: translateX(130px);
+  transform: translateX(130px);
+}
+.mini-card:not(:first-child) {
+  margin-left: -130px;
+}
+
+
+
+
+
+
+
+
+
+
+

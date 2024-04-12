@@ -26,6 +26,7 @@ const config: Config = {
         'xs': '320px',
         'ms': '380px',
         '3xl': '1920px',
+        'rand': '2151px',
         '4xl': '2248px',
         '5xl': '2520px',
       },
