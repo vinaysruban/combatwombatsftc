@@ -3,7 +3,7 @@ import { Si1Password } from "react-icons/si";
 
 const achievements = [
   [
-    ` Centerstage Queensland Regionals`,
+    `Centerstage Queensland Regionals`,
     // "At our regional event, we were fortunate to receive FTC's Motivate award as a rookie team. Our team dynamics and management styles were highly commended, which enabled us to represent QLD at the AU Nationals Competition.",
     0,
     "bg-team-award",
@@ -11,7 +11,7 @@ const achievements = [
     "2023-2024",
   ],
   [
-    " Centerstage Australian National Championship",
+    "Centerstage Australian National Championship",
     // "Our team then received the Judge's All-Rounder Award at the Nationals competition. The team received this for exuding contagious courage and energy at the competition, to empower others to go further.",
     1,
     "bg-team",
@@ -34,17 +34,15 @@ const styles = ["md:col-start-2", "md:col-start-3"];
 
 const achievementsList = achievements.map((achievement, key, style) => (
   <div
-    className={`aspect-[5/3] px-4 py-4 rounded-xl text-white border-combatgreen border-4 hover:border-0 w-4/5 sm:w-2/3 lg:max-w-md xl:max-w-small 2xl:max-w-2xl 3xl:max-w-3xl 4xl:max-w-moderate ${achievement[2]} bg-blend-multiply bg-black bg-opacity-70 font-semibold text-xl hover:bg-opacity-0 transition-all child:transition-all bg-cover child:hover:opacity-0 bg-center hover:scale-110 hover:-translate-y-2 hover:shadow-[5px_5px_#739954,_10px_10px_#8F9853,_15px_15px_#998B54] 3xl:hover:shadow-[5px_5px_#739954,_15px_15px_#8F9853,_25px_25px_#998B54]`}
+    className={`aspect-[5/3] px-4 py-4 rounded-xl text-white border-combatgreen border-4 hover:border-0 w-4/5 md:w-3/5 lg:max-w-md xl:max-w-small 2xl:max-w-2xl 3xl:max-w-3xl 4xl:max-w-moderate ${achievement[2]} bg-blend-multiply bg-black bg-opacity-70 font-semibold text-xl hover:bg-opacity-0 transition-all child:transition-all bg-cover child:hover:opacity-0 bg-center hover:scale-110 hover:-translate-y-2 hover:shadow-[5px_5px_#739954,_10px_10px_#8F9853,_15px_15px_#998B54] 3xl:hover:shadow-[5px_5px_#739954,_15px_15px_#8F9853,_25px_25px_#998B54]`}
     key={achievement[1]}
   >
-    <h4 className="mb-2">
-      <span className="font-medium  text-sm">{achievement[4]}</span>
-      <br />
-      {achievement[0]} <br />
-      <span className="combat font-black text-2xl">
-        {" " + achievement[3]}
-      </span>{" "}
-      <br />
+    <h4 className="mb-2 2xl:gap-1 flex flex-col justify-start">
+      <span className="font-medium text-xs ms:text-sm 2xl:text-base 4xl:text-lg">{achievement[4]}</span>
+      <span className="text-base ms:text-lg md:text-xl 2xl:text-2xl 4xl:text-3xl">{achievement[0]}</span>
+      <span className="combat font-black text-base ms:text-lg md:text-xl lg:text-2xl 2xl:text-3xl 4xl:text-4xl">
+        {achievement[3]}
+      </span>
     </h4>
   </div>
 ));
