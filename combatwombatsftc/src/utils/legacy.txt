@@ -410,3 +410,45 @@ let response = await fetch(path.join(`/api/${slug}`), {
 
         <hr className=" text-[0] bg-[url('/images/svgLarge/1.svg')] w-full h-min bg-cover aspect-[600/50] md:aspect-[1800/100] bg-bottom border-none" />
         <hr className=" bg-[url('/images/svgLarge/2.svg')] w-full h-min bg-cover aspect-[600/50] md:aspect-[1800/100] border-none rotate-180" />
+
+function createMap(array: any[]) {
+  return array.map((post) => {
+    return (
+      <Link
+        href={`/docs/${post.slug}`}
+        key={post.slug}
+        className={roboto.className}
+      >
+        <li className="border-2 md:border-4 border-black dark:border-white px-6 py-2 rounded-xl">
+          <h1 className="sm:text-xl md:text-xl lg:text-2xl 2xl:text-3xl font-semibold my-1 md:my-2 xl:my-3">
+            {post.title}
+          </h1>
+          <i className="my-1 md:my-2 lg:my-3 3xl:my-2 block md:text-sm lg:text-base">
+            {post.date}
+          </i>
+          <p className="my-1 md:my-2 lg:my-3 3xl:my-2 md:text-sm lg:text-base">
+            {post.description}
+          </p>
+        </li>
+      </Link>
+    );
+  });
+}
+
+function createSidebar(array: any[]) {
+  return array.map((post) => {
+    return (
+      <Link
+        href={`/docs/${post.slug}`}
+        key={post.slug}
+        className={roboto.className}
+      >
+        <li className="border-l-2 border-black dark:border-white pl-2">
+          <h1 className="sm:text-xs md:text-sm lg:text-base 2xl:text-lg hover:font-medium">
+            {post.title}
+          </h1>
+        </li>
+      </Link>
+    );
+  });
+}

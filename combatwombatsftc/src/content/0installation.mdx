@@ -1,0 +1,73 @@
+---
+title: "Installation"
+author: "Vinay Saravana Ruban"
+image: "/icons/vinay.jfif"
+description: "A simple installation guide for basic FTC resources."
+date: "2024-04-13"
+tags: ["software", "installation", "quickstart", "theory"]
+latex: false
+---
+
+Welcome to programming for the First Tech Challenge! Let's set up your programming environment for basic programming in robotics. Below are the detailed steps to install the necessary tools and software for your programming endeavors.
+
+## System Requirements
+
+Before we begin, ensure that you have enough space on your computer to install the required software. The following tools are necessary for FTC programming:
+
+- Operating System: Windows 10 **\***
+- Python 3.7 or higher
+- Java Development Kit (JDK) 8 or higher
+- Android Studio
+- Git version control system
+
+\***Other platforms can be freely used, but this tutorial is for windows**
+
+## Step-by-Step Installation
+
+### 1. Python Installation
+
+Start by obtaining the latest version of Python from the official website [Python Downloads](https://www.python.org/downloads/). During installation, remember to check the option that adds Python to your system's PATH variable for seamless access.
+
+### 2. Java Development Kit (JDK)
+
+Next, download and install the Java Development Kit (JDK) from [Java SE Downloads](https://www.oracle.com/java/technologies/javase-jdk8-downloads.html). The JDK is essential for Java-based development, including Android app development.
+
+### 3. Android Studio Setup
+
+Proceed to acquire Android Studio, the primary integrated development environment (IDE) for Android app development. Visit [Android Studio Downloads](https://developer.android.com/studio) and follow the installation instructions provided on the official website.
+
+### 4. Git Version Control
+
+Git is a powerful version control system that facilitates collaborative software development. Download Git from [Git Downloads](https://git-scm.com/downloads) and install it on your system.
+
+## Setting Up Your Development Environment
+
+### 1. FTC SDK Repository Cloning
+
+Once the above tools are installed, it's time to clone the FTC Software Development Kit (SDK) repository. Open your command prompt or terminal and navigate to the directory where you want to store the FTC SDK. Use the following command to clone the repository:
+
+```bash
+git clone https://github.com/FIRST-Tech-Challenge/FtcRobotController.git
+```
+
+### 2. Dependency Installation
+
+Navigate to the cloned ```FtcRobotController``` directory and execute the following command to install the required dependencies:
+
+```bash
+./gradlew installSDK
+```
+
+## IDE Configuration and Deployment
+
+### 1. Android Studio Configuration
+
+Launch Android Studio and import the FtcRobotController project into the IDE. Follow any additional setup instructions provided in the First Tech Challenge documentation to configure Android Studio for FTC development.
+
+### 2. Build and Deployment
+
+Connect your Android device to your computer via USB. Build the FTC Robot Controller app in Android Studio and deploy it to your device for testing and deployment.
+
+## Conclusion
+
+Congratulations! You have successfully set up your development environment for programming in the First Tech Challenge.

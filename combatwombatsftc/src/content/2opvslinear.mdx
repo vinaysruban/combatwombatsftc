@@ -1,0 +1,84 @@
+---
+title: "OpMode vs LinearOpMode"
+author: "Vinay Saravana Ruban"
+image: "/icons/vinay.jfif"
+description: "Outlining the difference between OpMode and LinearOpMode in FTC programming and providing examples to illustrate their functionalities."
+date: "2024-04-13"
+tags: ["software", "prerequisites", "quickstart", "java"]
+latex: false
+---
+
+In the world of First Tech Challenge (FTC) programming, choosing between OpMode and LinearOpMode can shape the way you approach robot behaviors. Let's explore the nuances of each and provide unique examples to illustrate their functionalities in FTC programming.
+
+## LinearOpMode
+
+As an FTC programmer, I find LinearOpMode to offer a structured approach to executing robot tasks. Here's why:
+
+- **runOpMode():** This method initiates our robot's operation. It's like the starting line of a race, where all actions wait eagerly for the go signal.
+
+- **waitForStart():** Pausing the Op-Mode until the START button is pressed allows for a synchronized start, crucial for autonomous precision.
+
+- **isStarted() and isStopRequested():** These methods keep us in check, ensuring that our actions align with game progression and safety protocols.
+
+- **idle() and opModeIsActive():** These methods manage our robot's "thinking time," allowing it to pause briefly while remaining active and responsive.
+
+For instance, consider the following example using LinearOpMode for **autonomous code**:
+
+```java
+@Autonomous(name = "AutoBot")
+public class AutoBot extends LinearOpMode {
+    // Runs when the init button is pressed
+    @Override
+    public void runOpMode() {
+        // Initialization code here
+
+        waitForStart(); // Wait for the START button to be pressed
+
+        // See if the robot has been started and not stopped
+        if (isStarted() && !isStopRequested()) {
+            // Autonomous actions executed sequentially
+            doAction()
+        }
+    }
+}
+```
+
+## OpMode
+
+On the other hand, OpMode provides a more dynamic approach, which may suit well for teleoperated control and adaptive strategies (**both modes work for all areas of development however**):
+
+- **init():** This method sets the stage for our robot's performance, initializing hardware and variables like actors preparing for a play.
+
+- **init_loop() and loop():** These continuous loops enable real-time responsiveness to driver inputs, akin to a live orchestra following the conductor's cues.
+
+- **start() and stop():** These methods mark the beginning and end of intense robot actions, giving clear boundaries to our program's execution.
+
+Here's an example showcasing OpMode in action for **tele-operated code**::
+
+```java
+@TeleOp(name = "TeleOpBot")
+public class TeleOpBot extends OpMode {
+    //Runs when the INIT button is pressed
+    @Override
+    public void init() {
+        // Hardware initialization and setup
+    }
+
+    //Runs when the START button is pressed continuously until the STOP button is pressed
+    @Override
+    public void loop() {
+        // Continuous control based on driver inputs
+        double power = -gamepad1.left_stick_y;
+        double rotation = gamepad1.right_stick_x;
+
+        leftMotor.setPower(power + rotation);
+        rightMotor.setPower(power - rotation);
+    }
+}
+```
+
+**Note:** Both LinearOpMode's and OpMode's examples demonstrate different areas of functionality for the robot, as the former demonstrate autonomous actions and the latter demonstrate driver-controlled action. **Both can be used for all areas of development, however.**
+
+## Conclusion: Embracing Diversity in Programming Styles
+
+In my experience, the choice between LinearOpMode and OpMode often comes down to the nature of the task at hand and personal programming preferences. **Personally, when programming our team always uses LinearOpMode**, but it all comes down to personal preferences.

@@ -1,0 +1,130 @@
+---
+title: "Essential Java Concepts"
+author: "Vinay Saravana Ruban"
+image: "/icons/vinay.jfif"
+description: "An introduction to basic Java concepts needed for First Tech Challenge programming."
+date: "2024-04-13"
+tags: ["software", "prerequisites", "quickstart", "java"]
+latex: false
+---
+
+Programming for the First Tech Challenge (FTC) requires a solid understanding of Java concepts. This guide will introduce you to key concepts necessary for effective FTC programming.
+
+***Note that all code snippets are heavily simplified for educational purposes to showcase average usage.***
+
+## 1. Variables and Data Types
+
+- **Variables:** Use variables to store sensor readings, motor powers, and other data temporarily. Examples include:
+
+  ```java
+  int distanceSensorReading;
+  double motorPower;
+  boolean isButtonPressed;
+  ```
+
+- **Data Types:** Java supports various data types essential for FTC, such as:
+
+  ```java
+  int encoderCounts = 1000;
+  double motorSpeed = 0.5;
+  boolean isAllianceRed = true;
+  String message = "Hello FTC!";
+  ```
+
+## 2. Control Flow
+
+- **Conditional Statements (`if`, `else`, `else if`):** Make decisions based on sensor inputs or gamepad commands. Examples:
+
+  ```java
+  if (distanceSensorReading > 100) {
+      moveForward();
+  } else {
+      stopMoving();
+  }
+  ```
+
+- **Looping (`for`, `while`, `do-while`):** Execute code repeatedly for tasks such as motor control. Example:
+
+  ```java
+  for (int i = 0; i < 5; i++) {
+      moveForward();
+  }
+  ```
+
+## 3. Methods
+
+- **Defining Methods:** Create methods to encapsulate robot behaviors. Example:
+  
+  ```java
+  public void moveForward() {
+      leftMotor.setPower(0.5);
+      rightMotor.setPower(0.5);
+  }
+  ```
+
+- **Calling Methods:** Invoke methods to execute robot actions. Example:
+  
+  ```java
+  if (isButtonPressed) {
+      moveArm();
+  }
+  ```
+
+## 4. Arrays and Lists
+
+- **Arrays:** Use arrays to store sensor readings or game data. Example:
+ 
+  ```java
+  int[] distanceReadings = {10, 20, 30, 40, 50};
+  ```
+
+- **Lists (ArrayList):** Dynamically manage lists of data. Example:
+  
+  ```java
+  ArrayList<String> gameActions = new ArrayList<>();
+  gameActions.add("Pick up game piece");
+  gameActions.add("Score in target");
+  ```
+
+## 5. Classes and Objects
+
+- **Class Declaration:** Define classes to represent robot subsystems. Example:
+  
+  ```java
+  public class Drivetrain {
+      public void moveForward() {
+          // Code to move motors forward
+      }
+  }
+  ```
+
+- **Object Creation:** Instantiate objects to interact with robot hardware. Example:
+  
+  ```java
+  Drivetrain robotDrivetrain = new Drivetrain();
+  robotDrivetrain.moveForward();
+  ```
+
+## 6. Data Structures
+
+- **HashMap:** Use HashMaps to store key-value pairs. Example:
+  
+  ```java
+  HashMap<String, Integer> motorEncoderMap = new HashMap<>();
+  motorEncoderMap.put("leftMotor", 1000);
+  motorEncoderMap.put("rightMotor", 800);
+  ```
+
+- **Stack and Queue:** Employ stacks and queues for managing tasks and actions. Example:
+  
+  ```java
+  Stack<String> autonomousTasks = new Stack<>();
+  autonomousTasks.push("Move to starting position");
+  autonomousTasks.push("Collect game piece");
+  ```
+
+## Conclusion
+
+Mastering these Java concepts is crucial for FTC programming success. They enable you to control hardware components, manage data effectively, and implement efficient algorithms for your robot's codebase. Practice these concepts regularly and apply them creatively to solve challenges in FTC matches.
+
+Happy coding, and may your robot achieve great success in FTC competitions!
