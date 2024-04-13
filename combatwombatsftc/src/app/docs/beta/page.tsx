@@ -21,7 +21,7 @@ const authors = [
 
 const authorList = authors.map((author) => {
   return (
-    <span className="inline-flex items-center">
+    <span className="inline-flex items-center" key={author[0]}>
       <Image
         alt={"Icon"}
         height={100}
@@ -44,7 +44,7 @@ export default async function Page() {
     <section
       className={`px-2 sm:px-6 md:px-12 py-12 h-full w-4/5 ${mdstyles} ${roboto.className} `}
     >
-      <GoBack path="/docs" />
+      <GoBack path="/docs/beta" />
       <header>
         <h1 className="mb-4">Welcome to our FTC documentation</h1>
         <hr className="border-t-2 sm:border-t-4 md:border-t-8 mb-3 border-black dark:border-white"></hr>
