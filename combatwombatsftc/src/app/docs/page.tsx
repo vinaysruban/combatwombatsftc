@@ -58,7 +58,7 @@ export default async function Page() {
 
   return (
     <div>
-      <header className="w-full bg-combatgreen text-black text-center text-bold mt-4">
+      <header className="w-full bg-combatgreen text-center text-bold mt-4 py-4 text-xl font-bold ">
       <Link href="/docs/beta">Go to beta docs click here</Link>
       </header>
       <section
