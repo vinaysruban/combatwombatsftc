@@ -42,9 +42,9 @@ export default async function Page() {
 
   return (
     <section
-      className={`px-2 sm:px-6 md:px-12 py-12 h-full w-4/5 ${mdstyles} ${roboto.className} `}
+      className={`px-6 md:px-12 py-2 sm:py-6 md:py-12 h-full w-full md:w-4/5 ${mdstyles} ${roboto.className} `}
     >
-      <GoBack path="/docs/beta" />
+      <GoBack path="/docs/" />
       <header>
         <h1 className="mb-4">Welcome to our FTC documentation</h1>
         <hr className="border-t-2 sm:border-t-4 md:border-t-8 mb-3 border-black dark:border-white"></hr>
@@ -54,26 +54,43 @@ export default async function Page() {
         <div className="flex flex-col md:flex-row gap-4 mb-6">{authorList}</div>
         <ul>
           <li>
-            <strong>Introduction to FTC:</strong> Learn about the FTC
-            competition, its objectives, and how programming plays a crucial
-            role in designing competitive robots.
+            <strong className="text-xl mb-4">Introduction to FTC:</strong>
+            <br /> Learn about the FTC competition, its objectives, and how
+            programming plays a crucial role in designing competitive robots.
           </li>
           <li>
-            <strong>Programming Basics:</strong> Discover the fundamentals of
-            FTC programming, including setting up your environment,
-            understanding OpModes, and using Java for robot control.
+            <strong className="text-xl mb-4">Programming Basics:</strong>
+            <br /> Discover the fundamentals of FTC programming, including
+            setting up your environment, understanding OpModes, and using Java
+            for robot control.
           </li>
           <li>
-            <strong>Resources and Guides:</strong> Access tutorials, guides, and
-            sample code to help you learn and improve your programming
-            techniques for FTC challenges.
+            <strong className="text-xl mb-4">Resources and Guides:</strong>
+            <br /> Access tutorials, guides, and sample code to help you learn
+            and improve your programming techniques for FTC challenges.
           </li>
           <li>
-            <strong>Community Support:</strong> Connect with other FTC
-            programmers, ask questions, and share your experiences to foster a
-            supportive and collaborative learning environment.
+            <strong className="text-xl mb-4">Community Support:</strong>
+            <br /> Connect with other FTC programmers, ask questions, and share
+            your experiences to foster a supportive and collaborative learning
+            environment.
           </li>
         </ul>
+        <div>
+          <h2>Get started now:</h2>
+          <div className="flex flex-col lg:flex-row gap-2">
+            <Link href={"/docs/beta/0installation"} className="w-full ms:w-1/2 h-full max-w-medium">
+              <article className="w-full rounded-xl border-4 border-black dark:border-white px-4 py-4 flex flex-col justify-center">
+                <h1 className="text-base md:text-xl lg:text-2xl 2xl:text-3xl font-semibold my-1 md:my-2 xl:my-3">
+                  Installation
+                </h1>
+                <p className="my-1 md:my-2 lg:my-3 3xl:my-2 text-xs md:text-sm lg:text-base">
+                  A simple installation guide for basic FTC resources.
+                </p>
+              </article>
+            </Link>
+          </div>
+        </div>
       </main>
     </section>
   );
