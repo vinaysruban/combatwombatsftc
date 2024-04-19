@@ -29,7 +29,7 @@ export default function MobileNav() {
           <IoMenu className="z-50" />
         </li>
       </ul>
-      <nav className={`w-56 border-4 rounded-2xl border-combatgreen bg-midbeige dark:bg-lightgrey ${open ? "right-0" : "-right-[100rem]"} transition-all block md:hidden absolute top-0 z-10`}>
+      <nav className={`w-56 border-4 rounded-2xl border-combatgreen bg-midbeige dark:bg-lightgrey ${open ? "translate-x-[0]" : "translate-x-[100%]"} right-0 transition-all block md:hidden absolute top-0 z-10`}>
         <ul className="px-2 py-6 flex flex-col gap-4">
           <li>
             <Link href="/about">About Us</Link>
