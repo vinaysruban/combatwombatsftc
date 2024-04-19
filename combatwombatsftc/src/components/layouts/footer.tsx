@@ -29,7 +29,7 @@ export default function Footer() {
             </li>
             <li>
               <Link href="/docs" className="hover:underline me-4 md:me-6">
-                Robot Docs
+                FTC Docs
               </Link>
             </li>
             <li>

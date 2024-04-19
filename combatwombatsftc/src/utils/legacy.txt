@@ -452,3 +452,69 @@ function createSidebar(array: any[]) {
     );
   });
 }
+
+export function SideNav() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div>
+      <ul className="md:hidden flex flex-row justify-between child:mx-4 py-3">
+        <li>
+          <a href="/">
+            <Image
+              src={"/images/image-transformed.webp"}
+              alt="Team logo of a wombat"
+              width="40"
+              height="40"
+              className="dark:invert aspect-[96/77] w-auto"
+            />
+          </a>
+        </li>
+        <li className=" text-3xl" onClick={() => setOpen(true)}>
+          <IoMenu />
+        </li>
+      </ul>
+      <nav
+        className={`fixed right-0 top-0 bg-gradient-to-r from-darkgrey to-lightgrey text-white transition-all ${
+          open ? "w-56" : "w-0"
+        } h-full z-50 overflow-hidden`}
+      >
+        <ul className="flex flex-col child:my-2 child:py-1 items-center child:px-6 child:border-solid child:border-b-2 h-full">
+          <li
+            className="border-none ml-auto text-2xl mt-3"
+            onClick={() => setOpen(false)}
+          >
+            <RxCross1 />
+          </li>
+          <li>
+            <Link href="/about">About Us</Link>
+          </li>
+          <li>
+            <Link href="/docs">FTC Docs</Link>
+          </li>
+          <li>
+            <Link href="/sponsors">FTC Docs</Link>
+          </li>
+          <li className="mb-auto">
+            <Link href="/outreach">Outreach</Link>
+          </li>
+          <li className="border-none w-full">
+            <ul className="flex flex-row justify-evenly text-2xl">
+              <li className="">
+                <DarkMode />
+              </li>
+              <li className="border-none">
+                <Link
+                  href="https://github.com/vinaysruban/combatwombatsftc"
+                  aria-label="The project's Github"
+                >
+                  <SiGithub />
+                </Link>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
+}

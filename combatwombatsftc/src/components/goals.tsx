@@ -21,8 +21,8 @@ const goalsList = [
     "/icons/mehul.jfif",
     "Mehul Babu",
     "Head of Hardware",
-    "Mehul gotta do this section",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et augue ultricies enim pellentesque vestibulum. Ut ut ex ligula. Duis tincidunt in turpis ac finibus. Nam vitae tincidunt nibh, eget blandit magna. Mauris laoreet gravida est vel fermentum. Curabitur molestie, ex quis molestie rutrum, massa augue semper ante, ut convallis dui quam a nunc.",
+    "Under the skin of our robot",
+    "On the hardware side of things, this season, our team aims to minimise cycle times by employing slides more widely and creatively to maximise extension. We also aim to improve the speed and manoeuvrability of our holonomic drivebase through the implementation of GoBilda hardware.",
     "2",
   ],
   [
