@@ -25,7 +25,6 @@ function createSidebar(array: any[]) {
 
 export default function Sidebar() {
   const postMetadata = getPostMetadata();
-  console.log(postMetadata);
   let quickstart: any[] = [];
   let tutorials: any[] = [];
   let guides: any[] = [];

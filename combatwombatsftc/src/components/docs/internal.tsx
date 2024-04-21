@@ -25,7 +25,6 @@ export default function Internal({ children }: { children: React.ReactNode }) {
     );
   });
 
-  console.log(pathFinal);
   return (
     <div className="w-full md:w-1/5">
       <section className="w-full py-12 px-2 flex-col gap-2 2xl:gap-3 hidden md:flex">

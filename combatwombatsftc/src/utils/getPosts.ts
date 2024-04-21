@@ -8,11 +8,6 @@ const getPostMetadata = (): PageMetadata[] => {
   const files = fs.readdirSync(folder);
   const markdownPages = files.filter((file) => file.endsWith(".mdx"));
 
-
-  //console.log(process.cwd())
-  //console.log(files)
-  //console.log(folder)
-
   const posts = markdownPages.map((fileName) => {
     const fileContents = fs.readFileSync(path.join(process.cwd(), `src/content/${fileName}`), "utf8");
     const result = matter(fileContents);
@@ -28,7 +23,6 @@ const getPostMetadata = (): PageMetadata[] => {
     };
   });
 
-  //console.log(posts);
   return posts;
 };
 

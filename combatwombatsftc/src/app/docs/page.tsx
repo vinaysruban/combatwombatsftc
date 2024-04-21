@@ -17,7 +17,6 @@ const roboto = Roboto_Mono({ subsets: ["latin"] });
 
 export default async function Page() {
   const postMetadata = getPostMetadata();
-  //console.log(postMetadata);
 
   const list = postMetadata.map((post) => {
     return (

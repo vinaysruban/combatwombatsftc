@@ -58,7 +58,6 @@ export default async function Page(params: any) {
     post.latex = false;
   }
 
-  console.log(post.tags)
 
   const mdstyles =
     "descendant:text-wrap descendant:break-words descendant-h1:text-2xl sm:descendant-h1:text-4xl md:descendant-h1:text-6xl descendant-h1:font-bold descendant-h1:mt-8 descendant-h2:text-2xl 2xl:descendant-h2:text-3xl descendant-h2:font-extrabold descendant-h2:my-6 descendant-p:my-4 descendant-p:text-base 2xl:descendant-p:text-lg 3xl:descendant-p:text-xl descendant-img:my-8 descendant-ul:list-disc descendant-blockquote:max-w-small descendant-blockquote:italic descendant-blockquote:px-4 descendant-blockquote:border-l-4 descendant-blockquote:border-black dark:descendant-blockquote:border-white descendant-pre:text-base 2xl:descendant-pre:text-lg 3xl:descendant-pre:text-xl descendant-pre:bg-midbeige dark:descendant-pre:bg-mutegrey descendant-pre:pl-4 descendant-pre:py-2 descendant-pre:rounded-md descendant-pre:text-wrap descendant-h3:font-bold descendant-h3:text-lg";
