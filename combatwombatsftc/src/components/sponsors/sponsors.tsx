@@ -9,7 +9,7 @@ export default function Sponsors() {
           We&apos;re dedicated to our sponsors!
         </h1>
         <p className="text-center italic text-base sm:text-lg md:text-xl xl:text-2xl 3xl:text-3xl">
-          We're putting a lot of work into this page.
+          We&apos;re putting a lot of work into this page.
         </p>
       </div>
       <hr className="mt-12 border-t-4 border-black dark:border-white" />

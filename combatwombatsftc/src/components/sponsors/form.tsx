@@ -132,7 +132,7 @@ export default function Form() {
         Thanks for contacting us!
       </h2>
       <p className="text-lg xl:text-xl">
-        We'll try to get back to you as soon as possible
+        We&apos;ll try to get back to you as soon as possible
       </p>
       <Image
         src="/images/image-transformed.webp"
