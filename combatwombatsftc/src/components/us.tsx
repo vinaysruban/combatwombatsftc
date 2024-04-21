@@ -6,97 +6,98 @@ export default function Us() {
     {
       name: "Hugo Lawler",
       role: (
-        <span className="font-bold text-gray-700 dark:text-gray-400">
+        <span className="font-semibold text-gray-800 dark:text-gray-200">
           Team Captain
         </span>
       ),
-      description: "Neque porro quisquam est, consectetur, adipisci velit...",
+      description: "Causing a ruckus is part of my repertoire!",
       image: "/icons/hugo.webp",
     },
     {
       name: "Mehul Babu",
       role: (
-        <span className="font-medium text-gray-700 dark:text-gray-400">
+        <span className="font-medium text-gray-800 dark:text-gray-200">
           Head of Hardware
         </span>
       ),
-      description: "Neque porro quisquam est, consectetur, adipisci velit...",
+      description: "In charge of building the intake, a vital component...",
       image: "/icons/mehul.jfif",
     },
     {
       name: "Shainthra Birabaharan",
       role: (
         <span>
-          <span className="font-medium text-gray-700 dark:text-gray-400">
+          <span className="font-medium text-gray-800 dark:text-gray-200">
             Head of Outreach
           </span>
           , Engineer
         </span>
       ),
-      description: "Neque porro quisquam est, consectetur, adipisci velit...",
+      description:
+        "Helping design the drone launcher, while managing our socials...",
       image: "/icons/shainthra.jfif",
     },
     {
       name: "Juan Santhosh",
       role: (
-        <span className="font-medium text-gray-700 dark:text-gray-400">
+        <span className="font-medium text-gray-800 dark:text-gray-200">
           Head of Software
         </span>
       ),
-      description: "Neque porro quisquam est, consectetur, adipisci velit...",
+      description: "Currently programming our robot's sensor packages...",
       image: "/icons/juan.jfif",
     },
     {
       name: "Benjamin Crespy-Worth",
       role: "Engineer",
-      description: "Neque porro quisquam est, consectetur, adipisci velit...",
+      description: "Additionally working on the robot's sensors...",
       image: "/icons/ben.jfif",
     },
     {
       name: "Bhasu Madala",
       role: (
-        <span className="font-medium text-gray-700 dark:text-gray-400">
+        <span className="font-medium text-gray-800 dark:text-gray-200">
           Head of Documentation
         </span>
       ),
-      description: "Neque porro quisquam est, consectetur, adipisci velit...",
+      description: "Implementing the drone launcher into our robot...",
       image: "/icons/bhasu.jfif",
     },
     {
       name: "Jack White",
       role: "Engineer",
-      description: "Neque porro quisquam est, consectetur, adipisci velit...",
+      description: "Building and printing the hanging mechanism...",
       image: "/icons/jack.jfif",
     },
     {
       name: "Daniel Laine",
       role: "Engineer, Outreach",
-      description: "Neque porro quisquam est, consectetur, adipisci velit...",
+      description: "Fabricating our claw and transfer system...",
       image: "/icons/daniel.jfif",
     },
     {
       name: "Michael Powers",
       role: "Engineer",
-      description: "Neque porro quisquam est, consectetur, adipisci velit...",
+      description: "Establishing and organising our robot's cabling...",
       image: "/icons/michael.jfif",
     },
     {
       name: "Theo Sun",
       role: "Engineer, Outreach",
-      description: "Neque porro quisquam est, consectetur, adipisci velit...",
+      description: "Assembling the robot's crucial intake system...",
       image: "/icons/theo.jfif",
     },
     {
       name: "Vinay Saravana Ruban",
       role: (
         <span>
-          <span className="font-medium text-gray-700 dark:text-gray-400">
+          <span className="font-semibold text-gray-800 dark:text-gray-200">
             Website Manager
           </span>
           , Software
         </span>
       ),
-      description: "Neque porro quisquam est, consectetur, adipisci velit...",
+      description: "Erecting and managing the website...",
       image: "/icons/vinay.jfif",
     },
   ];
@@ -105,12 +106,16 @@ export default function Us() {
     <div className="relative">
       <section className="py-12 px-8 ">
         <div className="mx-auto">
-          <h1
-            className="font-bold text-3xl ms:text-4xl before:h-2 sm:text-5xl sm:before:h-2 md:text-6xl md:before:h-3 lg:text-7xl lg:before:h-4 mx-auto block w-fit mb-12 popup relative"
-            data-aos="fade-up"
-          >
-            Meet our team!
-          </h1>
+          <div data-aos="fade-up">
+            <h1
+              className="font-bold text-3xl ms:text-4xl before:h-2 sm:text-5xl sm:before:h-2 md:text-6xl md:before:h-3 lg:text-7xl lg:before:h-4 3xl:text-8xl mx-auto block w-fit popup relative"
+            >
+              Meet our team!
+            </h1>
+            <p className="text-center font-semibold text-lg md:text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl my-12">
+              And what we&apos;re working on right now!
+            </p>
+          </div>
           <div className="grid grid-cols-4 lg:grid-cols-8">
             {teamMembers.map((member, index) =>
               index === 10 ? (
@@ -130,7 +135,7 @@ export default function Us() {
                   <h3 className="text-lg 2xl:text-2xl font-semibold">
                     {member.name}
                   </h3>
-                  <p className="text-gray-600 text-sm xs:text-base 2xl:text-xl">
+                  <p className="text-gray-600 dark:text-gray-400 text-sm xs:text-base 2xl:text-xl">
                     {member.role}
                   </p>
                   <p className="text-xs xs:text-base 2xl:text-lg">
@@ -153,7 +158,7 @@ export default function Us() {
                   <h3 className="text-lg 2xl:text-2xl font-semibold">
                     {member.name}
                   </h3>
-                  <p className="text-gray-600 text-sm xs:text-base 2xl:text-xl">
+                  <p className="text-gray-600 dark:text-gray-400 text-sm xs:text-base 2xl:text-xl">
                     {member.role}
                   </p>
                   <p className="text-xs xs:text-base 2xl:text-lg">

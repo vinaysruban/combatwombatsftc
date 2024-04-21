@@ -56,7 +56,7 @@ export default function Form() {
           <input
             type="text"
             id="firstName"
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-slate-300 leading-tight focus:outline-none focus:shadow-outline"
             placeholder="Enter your first name"
             value={firstName}
             required
@@ -74,7 +74,7 @@ export default function Form() {
           <input
             type="text"
             id="lastName"
-            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-slate-300 leading-tight focus:outline-none focus:shadow-outline"
             placeholder="Enter your last name"
             value={lastName}
             required
@@ -93,7 +93,7 @@ export default function Form() {
         <input
           type="email"
           id="email"
-          className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          className="appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-slate-300 leading-tight focus:outline-none focus:shadow-outline"
           placeholder="Enter your email address"
           value={email}
           required
@@ -110,7 +110,7 @@ export default function Form() {
         </label>
         <textarea
           id="message"
-          className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          className="appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-slate-300 leading-tight focus:outline-none focus:shadow-outline"
           rows={5}
           placeholder="Type your message here"
           value={message}
@@ -121,7 +121,7 @@ export default function Form() {
       </div>
       <button
         type="submit"
-        className=" hover:bg-combatgreen border-combatgreen border-2 transition-all text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        className=" hover:bg-combatgreen border-combatgreen border-2 transition-all text-black dark:text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
       >
         Submit
       </button>
