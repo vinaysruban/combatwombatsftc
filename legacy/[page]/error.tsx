@@ -1,4 +1,4 @@
-"use client"
+/* "use client"
 
 export default function Error() {
   const mdstyles =
@@ -13,3 +13,4 @@ export default function Error() {
     </section>
   );
 }
+ */

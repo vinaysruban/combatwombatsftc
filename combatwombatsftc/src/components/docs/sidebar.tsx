@@ -28,6 +28,7 @@ export default function Sidebar() {
   let quickstart: any[] = [];
   let tutorials: any[] = [];
   let guides: any[] = [];
+  let miscellaneous: any[] = [];
 
   postMetadata.forEach((post: any) => {
     if (post.tags.includes("quickstart")) {
@@ -37,13 +38,14 @@ export default function Sidebar() {
     } else if (post.tags.includes("guide")) {
       guides.push(post);
     } else {
-      console.log("No category found");
+      miscellaneous.push(post)
     }
   });
 
   const quickstartSidebar = createSidebar(quickstart);
   const tutorialsSidebar = createSidebar(tutorials);
   const guidesSidebar = createSidebar(guides);
+  const miscellaneousSidebar = createSidebar(miscellaneous);
 
   return (
     <Internal>
@@ -54,6 +56,8 @@ export default function Sidebar() {
       <ul className="flex flex-col gap-1 2xl:gap-2">{tutorialsSidebar}</ul>
       <h1 className="font-bold text-base 2xl:text-lg 4xl:text-xl mt-4">Guides</h1>
       <ul className="flex flex-col gap-1 2xl:gap-2">{guidesSidebar}</ul>
+      <h1 className="font-bold text-base 2xl:text-lg 4xl:text-xl mt-4">Miscellaneous</h1>
+      <ul className="flex flex-col gap-1 2xl:gap-2">{miscellaneousSidebar}</ul>
     </Internal>
   );
 }
