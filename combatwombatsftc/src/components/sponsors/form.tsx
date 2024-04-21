@@ -28,7 +28,7 @@ export default function Form() {
       email: email,
     });
 
-    let response = await fetch("/api/firebase", {
+    let response = await fetch("/api/data", {
       method: "POST",
       body: bodyContent,
       headers: headersList,
