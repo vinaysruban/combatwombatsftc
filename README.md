@@ -1,19 +1,26 @@
-# i dunno why i made this - vinay first commit
+# Combat Wombats (FTC) - Official Website
 
-make sure u got npm
-remember to "cd combatwombatsftc" before running the program
-then run "npm i" to install packages and whatnot
-"npm run dev" to start the server
-then open localhost:3000
+Website for the Combat Wombats FTC team. This website is built using NextJS.
 
-ignore boilerplate and all code is in src/app and images and videos into the public folder and access them via next/nameoffile
+Hosted through Vercel. Push your changes to the `main` branch to deploy the website.
 
-i installed tailwind (like another type of css thing) by default, cos its inbuilt and i like it but feel free to run "npm i bootstrap@5.3.3"
+For development purposes, run `npm run dev` to start the development server.
 
-# from: discord
+Documents are written in Markdown and stored in the `src/content` directory. To add a new document, create a new `.mdx` file in the `src/content` directory and add the necessary frontmatter in the format of:
 
-all u gotta do is use a website like this ![https://dillinger.io/] and create the docs u want in markdown
-i made it parse most of the md styles but if u want more i can make it (eg. i didnt make it parse tables)
-then u gotta put the .md files u want in the contrans (content transfer) folder in the root of the combatwombatsftc
-then u gotta be cd'd into the root folder (not the nextjs subfolder) and run node index.ts
-thatll set up the docs page
+```md
+---
+title: string
+author: string
+image: string (path)
+description: string
+date: string (yyyy-mm-dd)
+tags: string[]
+latex: boolean (if LaTeX is used in the document)
+---
+```
+
+## How to Write Documents
+
+**Markdown documents** can be written using [StackEdit](https://stackedit.io/). To include **LaTeX** math in the document, set the `latex` frontmatter to `true` and edit using [OverLeaf](https://www.overleaf.com/).
+Place LaTeX math in between 2 dollar signs (`$$`) or inline math between single dollar signs (`$`).

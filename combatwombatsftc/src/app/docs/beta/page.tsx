@@ -2,7 +2,7 @@ import "server-only";
 import { redirect } from "next/navigation";
 import Link from "next/link";
 import getPostMetadata from "@/utils/getPosts";
-import GoBack from "@/utils/goBack";
+import GoBack from "@/components/goBack";
 import { Roboto_Mono } from "next/font/google";
 import Image from "next/image";
 import type { Metadata } from "next/";
@@ -17,6 +17,7 @@ const authors = [
   ["Vinay Saravana Ruban", "/icons/vinay.jfif"],
   ["Juan Santhosh", "/icons/juan.jfif"],
   ["Hugo Lawler", "/icons/hugo.webp"],
+  ["Jack White", "/icons/jack.jfif"],
 ];
 
 const authorList = authors.map((author) => {
@@ -45,14 +46,20 @@ export default async function Page() {
       className={`px-6 md:px-12 py-2 sm:py-6 md:py-12 h-full w-full md:w-4/5 ${mdstyles} ${roboto.className} `}
     >
       <GoBack path="/docs/" />
-      <header>
-        <h1 className="mb-4">Welcome to our FTC documentation</h1>
-        <hr className="border-t-2 sm:border-t-4 md:border-t-8 mb-3 border-black dark:border-white"></hr>
+      <header className="flex flex-col gap-12 my-12 xl:my-16 3xl:my-24 sm:w-5/6 mx-auto">
+        <h1 className="text-center text-3xl xs:text-4xl ms:text-5xl md:text-6xl xl:text-7xl">
+          Welcome to our FTC documentation
+        </h1>
+        <hr className="border-t-2 sm:border-t-4 md:border-t-8 border-black dark:border-white"></hr>
       </header>
-      <main>
-        <h2>Meet our authors</h2>
-        <div className="flex flex-col md:flex-row gap-4 mb-6">{authorList}</div>
-        <ul>
+      <main className="">
+        <div className="flex flex-col items-center">
+          <h2>Meet our authors:</h2>
+          <div className="grid md:grid-cols-2 gap-4 gap-x-16 mb-12">
+            {authorList}
+          </div>
+        </div>
+        <ul className="flex flex-col gap-4">
           <li>
             <strong className="text-xl mb-4">Introduction to FTC:</strong>
             <br /> Learn about the FTC competition, its objectives, and how
@@ -79,7 +86,10 @@ export default async function Page() {
         <div>
           <h2>Get started now:</h2>
           <div className="flex flex-col lg:flex-row gap-2">
-            <Link href={"/docs/beta/0installation"} className="w-full ms:w-1/2 h-full max-w-medium">
+            <Link
+              href={"/docs/beta/0installation"}
+              className="w-full sm:w-1/2 h-full max-w-medium"
+            >
               <article className="w-full rounded-xl border-4 border-black dark:border-white px-4 py-4 flex flex-col justify-center">
                 <h1 className="text-base md:text-xl lg:text-2xl 2xl:text-3xl font-semibold my-1 md:my-2 xl:my-3">
                   Installation

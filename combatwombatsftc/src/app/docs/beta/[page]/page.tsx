@@ -3,7 +3,7 @@ import "server-only";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { Roboto_Mono } from "next/font/google";
 import getPostMetadata from "@/utils/getPosts";
-import GoBack from "@/utils/goBack";
+import GoBack from "@/components/goBack";
 import Image from "next/image";
 import fs from "fs";
 import matter from "gray-matter";

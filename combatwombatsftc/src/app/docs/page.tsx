@@ -2,7 +2,7 @@ import "server-only";
 
 import Link from "next/link";
 import getPostMetadata from "@/utils/getPosts";
-import GoBack from "@/utils/goBack";
+import GoBack from "@/components/goBack";
 import { Roboto_Mono } from "next/font/google";
 import Image from "next/image";
 import type { Metadata } from "next/";

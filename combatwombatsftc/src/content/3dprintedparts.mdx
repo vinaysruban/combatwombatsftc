@@ -1,0 +1,44 @@
+---
+title: "How to successfully create 3d printed parts for FTC"
+author: "Jack White"
+image: "/icons/jack.jfif"
+description: "3d printed parts can be created from a variety of materials and filaments. however the most common ones are..."
+date: "2024-04-20"
+tags: ["hardware", "3dprinted", "robot", "guide"]
+latex: false
+---
+
+Part 1, Filaments:
+**TL;DR
+PLA for non structural senarios
+PETG for high strength senarios**
+
+>Also note is that if you printer does not have an ****all metal heatbrea*k*** (ender 3 from 2018-2021 or other similar looking printers from that era **don't** have an all metal heatbreak) **petg or abs or asa or cf filaments are not an option due to ptfe releasing dangerous offgasing at 230C+**
+**DESPITE** what people online would tell you. just don't. stick to pla or pla+ instead for the sake of your health or get an all metal heatbreak. they're like 20 aud.
+
+3d printed parts can be created from a variety of materials and filaments. however the most common ones are
+
+- **PLA:**
+the ideal filament of choice for most non structural parts(spacers that bear no load bearing weight, any simple switch mounts, anything that doesn't need to take alot of weight). quite cheap (about 20 aus per kg for
+decent stuff) and can be printed on any printer. two notes about pla however is that silk pla, which is shiny pla and will often be advertised as shiny or silk pla, should not be used for FTC parts anywhere as they are prone to breaking along layers.
+also a variant of pla exists called pla+, which is better than pla but still not a proper substitude for any of the other filaments on this list.
+
+- **PETG**
+the ideal filament of choice for the vast majority of printers and the vast majority of structural parts. not quite as easy as pla to print but still very easy to print, can be printed on virtually any machine as well and is strong enough for most structural parts.
+note that petg tends to absorb moisture and needs to be dried out before use for best printing, which will be discussed later. perfect for printing intakes, claws, mounts, etc. should NOT be used for bevels.
+
+These two filaments will be enough for the **majority** of FTC 3d printed parts, can be printed with most printers and are relatively cheap (26-40 aud per kg). However there are a variety of more difficult to print filaments that do have advantages over PLA and PETG:
+
+> Note: They are usually **more expensive** and for most printers require **addtional hardware**. some of these include:
+
+- PET: very similar to petg but needs to be printed hotter. stronger version of petg in every single way but not practically printable on alot of printers without an all metal hotend (if have ender 3 or ender 3 clone then you have no all metal hotend) or a high temp probe (PT1000 or PT100). it needs to be printed hot (280C+) for maximum strength, printing it cold will not work do not try. with the correct temp probe (virtually no stock printer has the correct temp probe) can be printed to auto-anneal during the printing process however this is difficult to tune and requires temperatures of 310C+. not recommended for most people due to the additional hardware required, which most printers do not have. however if you KNOW you do have a pt100 or pt1000, it is better in every way than petg and is recommended.
+
+- ABS
+very similar filament to petg but has a couple of key differences. it is usually cheaper than petg, has a higher temperature resistance (it can get hotter before mechanical properities fail). however it releases harmful offgases, requiring an enclosure and filter (again very little stock 3d printers have this) and needs a much higher bed temperature. this leads to it more commonly
+warping on the bed (corners sticking up in the air). it also lacks uv resistance, however this shouldn't be an issue for FTC applications. overall if you have an enclosed printer that is ventilated and you need a high strength filament, this is a good choice otherwise use PET or PETG.
+
+- ASA
+has better temperature resistance and slightly stronger than abs. slightly less hazardous fumes than abs but should still be printed in an enclosure with a filter. warps less than abs. apart from that all the same upsides and downsides as abs. slightly more expensive than abs. overall if you have an enclosed printer that is ventilated and you need a high strength filament, this is a good choice otherwise use PET or PETG.
+- Carbon fibre or CF filaments
+stronger than their non cf counterparts, but require a hardened steel nozzle to print. vary wildly in quality and in some cases offer very little to no advantage to their non cf counterparts (pla-cf) but can be extremely strong (pet-cf). also need to be constantly stored in a filament dehydrator to print well. not really recommended for FTC applications as even for high strength senarios as PETG or PET or ABS or ASA should
+suffice.

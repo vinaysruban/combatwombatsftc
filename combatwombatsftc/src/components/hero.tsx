@@ -3,20 +3,19 @@ import { IoMailOpenOutline } from "react-icons/io5";
 import Link from "next/link";
 import { Line } from "@/components/client";
 import Image from "next/image";
-import Robot from "@/components/robot2.png"
+import Robot from "@/components/robot2.png";
 import blururl from "@/components/blururl";
 
 const baseUrl =
-  process.env.NODE_ENV === 'development'
-    ? 'http://localhost:3000/'
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:3000/"
     : process.env.NEXT_PUBLIC_DOMAIN;
 
 export async function dynamicBlurDataUrl(url: string) {
-
   const base64str = await fetch(
     `${baseUrl}/_next/image?url=${url}&w=16&q=75`
   ).then(async (res) =>
-    Buffer.from(await res.arrayBuffer()).toString('base64')
+    Buffer.from(await res.arrayBuffer()).toString("base64")
   );
 
   const blurSvg = `
@@ -31,8 +30,8 @@ export async function dynamicBlurDataUrl(url: string) {
   `;
 
   const toBase64 = (str: string) =>
-    typeof window === 'undefined'
-      ? Buffer.from(str).toString('base64')
+    typeof window === "undefined"
+      ? Buffer.from(str).toString("base64")
       : window.btoa(str);
 
   return `data:image/svg+xml;base64,${toBase64(blurSvg)}`;
@@ -61,33 +60,50 @@ export default function Hero() {
           <span className="text-wombatbrown font-bold">dedicated</span> STEM
           students aiming to become future{" "}
           <span className="text-wombatbrown font-bold">change-makers</span> and{" "}
-          <br className="block xl:hidden" /><span className="text-combatgreen font-bold">innovators</span>.
+          <br className="block xl:hidden" />
+          <span className="text-combatgreen font-bold">innovators</span>.
         </article>
         <article className="ml-2">
           <hr
             className={`h-1 rounded-xl border-0 w-0 my-6 bg-combatgreen after:content-[''] after:w-2 after:h-2 after:rounded-full after:bg-combatgreen after:absolute animation-line text-center hidden   md:block`}
           />
-          <ul className="flex flex-row mt-6 child:mx-4 text-2xl justify-center sm:justify-normal" data-aos="fade-up">
-            <li className="ml-0">
-              <Link href="https://www.instagram.com/combat_wombats_ftc_aus/" aria-label="Check out our Instagram.">
-                <FaInstagram />
-              </Link>
-            </li>
-            <li>
-              <Link href="https://www.youtube.com/@CombatWombats23335" aria-label="Check out our Youtube.">
-                <FaYoutube />
-              </Link>
-            </li>
-            <li>
-              <Link href="mailto: combatwombatsftc@gmail.com" aria-label="Get in touch via email.">
-                <IoMailOpenOutline />
-              </Link>
-            </li>
-          </ul>
+          <div data-aos="fade-up">
+            <ul
+              className="flex flex-row mt-6 child:mx-4 text-2xl justify-center sm:justify-normal"
+            >
+              <li className="ml-0">
+                <Link
+                  href="https://www.instagram.com/combat_wombats_ftc_aus/"
+                  aria-label="Check out our Instagram."
+                >
+                  <FaInstagram />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://www.youtube.com/@CombatWombats23335"
+                  aria-label="Check out our Youtube."
+                >
+                  <FaYoutube />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="mailto: combatwombatsftc@gmail.com"
+                  aria-label="Get in touch via email."
+                >
+                  <IoMailOpenOutline />
+                </Link>
+              </li>
+            </ul>
+          </div>
         </article>
       </section>
       <hr className="spacer" />
-      <section data-aos="fade-up" className="flex flex-col items-center text-base md:text-xl 2xl:text-2xl 4xl:text-3xl font-medium mb-16 mx-auto px-12 text-center lg:text-left relative">
+      <section
+        data-aos="fade-up"
+        className="flex flex-col items-center text-base md:text-xl 2xl:text-2xl 4xl:text-3xl font-medium mb-16 mx-auto px-12 text-center lg:text-left relative"
+      >
         <span className="mt-12">
           We extend our{" "}
           <span className="text-combatgreen font-bold">heartfelt</span>{" "}
@@ -96,7 +112,13 @@ export default function Hero() {
         </span>
         <ul data-aos="fade-up" className="flex justify-start child:mx-12 mt-20">
           <li>
-            <Image src="/images/sitelogo.png" alt="QASMT" height="250" width="250" className="w-auto h-16 grayscale hover:grayscale-0 transition-all object-cover" />
+            <Image
+              src="/images/sitelogo.png"
+              alt="QASMT"
+              height="250"
+              width="250"
+              className="w-auto h-16 grayscale hover:grayscale-0 transition-all object-cover"
+            />
           </li>
         </ul>
       </section>
