@@ -74,7 +74,7 @@ export default async function Page(params: any) {
       className={`px-6 md:px-12 py-2 sm:py-6 md:py-12 h-full w-full md:w-4/5 ${mdstyles} ${roboto.className} `}
     >
       <PrismProvider />
-      <GoBack path="/docs/beta" />
+      <GoBack path="/docs" />
       <header>
         <h1>{post.title}</h1>
         <span className="flex items-center">

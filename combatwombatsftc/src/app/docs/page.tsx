@@ -39,7 +39,7 @@ export default async function Page() {
     <section
       className={`px-6 md:px-12 py-2 sm:py-6 md:py-12 h-full w-full md:w-4/5 ${mdstyles} ${roboto.className} `}
     >
-      <GoBack path="/docs/" />
+      <GoBack path="/" />
       <header className="flex flex-col gap-12 my-12 xl:my-16 3xl:my-24 sm:w-5/6 mx-auto">
         <h1 className="text-center text-3xl xs:text-4xl ms:text-5xl md:text-6xl xl:text-7xl">
           Welcome to our FTC documentation
@@ -81,7 +81,7 @@ export default async function Page() {
           <h2>Get started now:</h2>
           <div className="flex flex-col lg:flex-row gap-2">
             <Link
-              href={"/docs/beta/0installation"}
+              href={"/docs/0installation"}
               className="w-full sm:w-1/2 h-full max-w-medium"
             >
               <article className="w-full rounded-xl border-4 border-black dark:border-white px-4 py-4 flex flex-col justify-center">

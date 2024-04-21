@@ -9,7 +9,7 @@ function createSidebar(array: any[]) {
   return array.map((post) => {
     return (
       <Link
-        href={`/docs/beta/${post.slug}`}
+        href={`/docs/${post.slug}`}
         key={post.slug}
         className={roboto.className}
       >
@@ -49,7 +49,6 @@ export default function Sidebar() {
 
   return (
     <Internal>
-      <Link href={`/docs/beta/`}><h1 className="font-bold text-base hover:text-combatgreen transition-all">Welcome</h1></Link>
       <h1 className="font-bold text-base 2xl:text-lg 4xl:text-xl">Quickstart</h1>
       <ul className="flex flex-col gap-1 2xl:gap-2">{quickstartSidebar}</ul>
       <h1 className="font-bold text-base 2xl:text-lg 4xl:text-xl mt-4">Tutorials</h1>
