@@ -224,13 +224,14 @@ export default function Outreach() {
              Theo has an exciting upcoming initiative planned...
           </p>
           <p className="sm:w-4/5 3xl:w-1/2 md:text-lg 3xl:text-xl 4xl:text-2xl text- my-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+            <p className="font-bold">Or, shoot us an email/DM to work something we could do together out!</p>
+            {/*Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
             fermentum erat nulla, sed rhoncus augue scelerisque consequat. Donec
             ut egestas ipsum. Cras hendrerit facilisis velit, ut suscipit dui
             vehicula at. Sed ullamcorper ante mauris, eu iaculis tellus dictum
             vitae. Cras ultricies consequat risus nec interdum. Nam tristique
             vulputate neque ut luctus. Proin malesuada orci et lacus elementum,
-            vitae consectetur velit sollicitudin.
+          vitae consectetur velit sollicitudin.*/}
           </p>
         </article>
       </section>
