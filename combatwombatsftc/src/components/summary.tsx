@@ -7,7 +7,7 @@ export default function Summary() {
       <section className="px-12 py-0 bg-[url('/images/circ.svg')] bg-[length:50%_50%] bg-[120%_100%] transition-all hover:bg-[left_122.5%_bottom_-0.5%] bg-no-repeat">
         <h1 className="font-bold text-4xl ms:text-6xl md:text-7xl xl:text-8xl 3xl:text-9xl my-8 text-center">
           Meet the{" "}
-          <span className="text-combatgreen combat font-bold">
+          <span className="text-wombatbrown womat font-bold">
             &apos;Wombat&apos;!
           </span>
         </h1>

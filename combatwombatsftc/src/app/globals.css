@@ -33,6 +33,14 @@
   -webkit-text-fill-color: transparent;
 }
 
+.wombat {
+  /* Fallback: assume this color ON TOP of image */
+  background: url("/images/wombatfur.jpg") repeat 2%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
 .combatsmall {
   /* Fallback: assume this color ON TOP of image */
   background: url("/images/combat.png") repeat 100%;
