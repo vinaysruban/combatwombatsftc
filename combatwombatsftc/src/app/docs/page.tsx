@@ -78,7 +78,7 @@ export default async function Page() {
           <h2>Get started now:</h2>
           <div className="flex flex-col lg:flex-row gap-2">
             <Link
-              href={"/docs/0installation"}
+              href={"/docs/installation"}
               className="w-full sm:w-1/2 h-full max-w-medium"
             >
               <article className="w-full rounded-xl border-4 border-black dark:border-white px-4 py-4 flex flex-col justify-center">
