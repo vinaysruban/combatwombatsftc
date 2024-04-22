@@ -47,19 +47,23 @@ motor = hardwareMap.get(DcMotorEx.class, "Lift Motor");`
 
 ## Methods
 
-Additionally, you can set the direction the motor will turn when given an input. When given as **input of 1, with the shaft facing away the user** when the controller is held normally, this will move towards the player:
+### Direction
 
-```java
-motor.setDirection(DcMotor.Direction.REVERSE);
-```
-
-While this will move away:
+As the programmer, you can set the direction the motor will turn when given an input. When given as **input of 1, with the shaft facing away the user** when the controller is held normally, this will move away the player as expected in the direction of the joystick:
 
 ```java
 motor.setDirection(DcMotor.Direction.FORWARD);
 ```
 
-Additionally, you can choose what will happen when there is no input given. Either you can make the robot slow to a halt, or do nothing if the robot is still:
+While this will move towards the player:
+
+```java
+motor.setDirection(DcMotor.Direction.REVERSE);
+```
+
+### Zero Power Behavior
+
+Additionally, you can choose what will happen when there is no input given. Either you can make the robot slow to a halt manually:
 
 ```java
 motor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
@@ -70,6 +74,8 @@ Or, make friction and air resistance do all the work:
 ```java
 motor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.FLOAT);
 ```
+
+### Mode
 
 Finally, you can set mode/behavior of the the robot. There treat how the encoders, which take your inputs and turn it into outputs will functions. These are:
 
@@ -151,12 +157,13 @@ public class Drive extends LinearOpMode {
         while (opModeIsActive()) {
             //Y stick is reversed
             double  power  =  -gamepad1.left_stick_y;
-			      double  rotation  =  gamepad1.right_stick_x;
+            double  rotation  =  gamepad1.right_stick_x;
 
-			      leftMotor.setPower(power  +  rotation);
-			      rightMotor.setPower(power -  rotation);
+            leftMotor.setPower(power  +  rotation);
+            rightMotor.setPower(power -  rotation);
 
-     }
+        }
+    }
 }
 ```
 
