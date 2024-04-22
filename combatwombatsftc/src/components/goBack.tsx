@@ -8,7 +8,7 @@ export default function GoBack(props: any) {
   return (
     <button className={`italic transition-all hover:font-semibold flex items-center hover:-translate-x-2 md:w-36 w-auto ${roboto.className}`}>
       <FaArrowLeft className="inline text-sm" />
-      <Link href={props.path} className="ml-2">
+      <Link href={props.path} className="ml-2 no-underline text-black dark:text-white">
         Go back.
       </Link>
     </button>
