@@ -91,7 +91,7 @@ export default function Us() {
       name: "Vinay Saravana Ruban",
       role: (
         <span>
-          <span className="font-semibold text-gray-800 dark:text-gray-200">
+          <span className="font-medium text-gray-800 dark:text-gray-200">
             Website Manager
           </span>
           , Software
