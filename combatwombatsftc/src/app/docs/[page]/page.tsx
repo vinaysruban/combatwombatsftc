@@ -2,7 +2,7 @@ import "server-only";
 
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { Roboto_Mono } from "next/font/google";
-import getPostMetadata from "@/utils/getPosts";
+import getPosts from "@/utils/getPosts";
 import GoBack from "@/components/goBack";
 import Image from "next/image";
 import fs from "fs";
@@ -52,7 +52,7 @@ const getPostContent = async (slug: string) => {
 };
 
 export const generateStaticParams = async () => {
-  const posts = getPostMetadata();
+  const posts = getPosts();
   return posts.map((post) => ({
     slug: post.slug,
   }));

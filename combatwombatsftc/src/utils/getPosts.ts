@@ -3,7 +3,7 @@ import matter from "gray-matter";
 import { PageMetadata } from "@/components/types/PageMetadata";
 import path from "path";
 
-const getPostMetadata = (): PageMetadata[] => {
+const getPosts = (): PageMetadata[] => {
   const folder = path.join(process.cwd(), "/src/content/");
   const files = fs.readdirSync(folder);
   const markdownPages = files.filter((file) => file.endsWith(".mdx"));
@@ -19,6 +19,7 @@ const getPostMetadata = (): PageMetadata[] => {
       date: result.data.date,
       tags: result.data.tags,
       latex: result.data.latex,
+      index: result.data.index ? result.data.index : 0,
       slug: fileName.replace(".mdx", ""),
     };
   });
@@ -26,4 +27,4 @@ const getPostMetadata = (): PageMetadata[] => {
   return posts;
 };
 
-export default getPostMetadata;
+export default getPosts;

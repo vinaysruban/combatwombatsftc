@@ -1,4 +1,4 @@
-import getPostMetadata from "@/utils/getPosts";
+import getPosts from "@/utils/getPosts";
 import Link from "next/link";
 import { Roboto_Mono } from "next/font/google";
 import Internal from "./internal";
@@ -24,8 +24,9 @@ function createSidebar(array: any[]) {
 }
 
 export default function Sidebar() {
-  const postMetadata = getPostMetadata();
+  const postMetadata = getPosts();
   let quickstart: any[] = [];
+  let programming: any[] = [];
   let tutorials: any[] = [];
   let guides: any[] = [];
   let miscellaneous: any[] = [];
@@ -37,25 +38,45 @@ export default function Sidebar() {
       tutorials.push(post);
     } else if (post.tags.includes("guide")) {
       guides.push(post);
+    } else if (post.tags.includes("programming")) {
+      programming.push(post);
     } else {
-      miscellaneous.push(post)
+      miscellaneous.push(post);
     }
   });
 
-  const quickstartSidebar = createSidebar(quickstart);
+  const quickstartSidebar = createSidebar(
+    quickstart.sort(function (a, b) {
+      return a.index - b.index;
+    })
+  );
+
   const tutorialsSidebar = createSidebar(tutorials);
+  const programmingSidebar = createSidebar(programming);
   const guidesSidebar = createSidebar(guides);
   const miscellaneousSidebar = createSidebar(miscellaneous);
 
   return (
     <Internal>
-      <h1 className="font-bold text-base 2xl:text-lg 4xl:text-xl">Quickstart</h1>
+      <h1 className="font-bold text-base 2xl:text-lg 4xl:text-xl">
+        Walkthrough
+      </h1>
       <ul className="flex flex-col gap-1 2xl:gap-2">{quickstartSidebar}</ul>
-      <h1 className="font-bold text-base 2xl:text-lg 4xl:text-xl mt-4">Tutorials</h1>
+      <h1 className="font-bold text-base 2xl:text-lg 4xl:text-xl mt-4">
+        Programming
+      </h1>
+      <ul className="flex flex-col gap-1 2xl:gap-2">{programmingSidebar}</ul>
+      <h1 className="font-bold text-base 2xl:text-lg 4xl:text-xl mt-4">
+        Tutorials
+      </h1>
       <ul className="flex flex-col gap-1 2xl:gap-2">{tutorialsSidebar}</ul>
-      <h1 className="font-bold text-base 2xl:text-lg 4xl:text-xl mt-4">Guides</h1>
+      <h1 className="font-bold text-base 2xl:text-lg 4xl:text-xl mt-4">
+        Guides
+      </h1>
       <ul className="flex flex-col gap-1 2xl:gap-2">{guidesSidebar}</ul>
-      <h1 className="font-bold text-base 2xl:text-lg 4xl:text-xl mt-4">Miscellaneous</h1>
+      <h1 className="font-bold text-base 2xl:text-lg 4xl:text-xl mt-4">
+        Miscellaneous
+      </h1>
       <ul className="flex flex-col gap-1 2xl:gap-2">{miscellaneousSidebar}</ul>
     </Internal>
   );

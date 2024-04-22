@@ -36,7 +36,7 @@ export default function Internal({ children }: { children: React.ReactNode }) {
           {pathFinal}
         </span>
       </section>
-      <nav className={`fixed overflow-hidden bg-gradient-to-r from-darkgrey to-lightgrey top-0 left-0 ${open ? "w-56 px-3": "w-0 px-0"} flex flex-col h-full py-4 transition-all`}>
+      <nav className={`text-white fixed overflow-hidden bg-gradient-to-r from-darkgrey to-lightgrey top-0 left-0 ${open ? "w-56 px-3": "w-0 px-0"} flex flex-col h-full py-4 transition-all`}>
         <span className="border-none ml-auto text-2xl mb-8" onClick={() => setOpen(false)}>
           <RxCross1 />
         </span>

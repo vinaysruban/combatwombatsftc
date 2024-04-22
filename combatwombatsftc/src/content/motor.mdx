@@ -1,0 +1,163 @@
+---
+title: "Programming Motors"
+author: "Vinay Saravana Ruban"
+image: "/icons/vinay.jfif"
+description: "A comprehensive guide to understanding and using motors in FTC."
+date: "2024-04-22"
+tags: ["software", "motors", "programming", "java"]
+latex: false
+index: 0
+---
+
+## Introduction
+
+This guide is written assuming that you have completed the installation instructions and have a basic understanding of java.
+
+In FTC robotics, motors serve the crucial purpose of providing mechanical motion to different parts of the robot, such as wheels, arms, and mechanisms. **Note that if you are looking for precise angular movement, servos are recommended, as motors are for continuous and high torque rotation.**
+
+## Instantiating
+
+To begin, create a class, and for this example, will extend LinearOpMode.
+
+```java
+@TeleOp
+public  class  Drive  extends  LinearOpMode {
+  @Override
+  public  void  runOpMode()  throws  InterruptedException  {
+    ...
+  }
+}
+```
+
+> Note: TeleOp refers to tele-operated, meaning that the motors will be operated with a controller.
+
+In FTC, you will be using DC motors. The two classes that can be used to read and write to the motor is `DcMotor` and `DcMotorEx`. The latter provides some extra functionality on top of the former, and as long it is supported there is no downside to using it.
+
+Begin by importing the class. In Android Studio, you can press Alt+Enter if the class is referenced without being imported. Once imported, you can create the object using its class name, like this:
+
+```java
+DcMotorEx motor;
+```
+
+After creating the object, you need to instantiate it using the `hardwareMap` . Here's an example of how to instantiate the motor:
+
+```java
+motor = hardwareMap.get(DcMotorEx.class, "Lift Motor");`
+```
+
+## Methods
+
+Additionally, you can set the direction the motor will turn when given an input. When given as **input of 1, with the shaft facing away the user** when the controller is held normally, this will move towards the player:
+
+```java
+motor.setDirection(DcMotor.Direction.REVERSE);
+```
+
+While this will move away:
+
+```java
+motor.setDirection(DcMotor.Direction.FORWARD);
+```
+
+Additionally, you can choose what will happen when there is no input given. Either you can make the robot slow to a halt, or do nothing if the robot is still:
+
+```java
+motor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+```
+
+Or, make friction and air resistance do all the work:
+
+```java
+motor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.FLOAT);
+```
+
+Finally, you can set mode/behavior of the the robot. There treat how the encoders, which take your inputs and turn it into outputs will functions. These are:
+
+```java
+motor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+```
+
+In the above mode, the Control Hub will not use encoders to to maintain a constant speed. Speed will vary depending on external and real world factors. _Perfect for drivetrain motors, driven using a joystick_
+
+```java
+motor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+```
+
+The encoder will try and regulate the speed to account for external factors. **This will not apply a percentage of the motor's power, but rather a specific velocity.** _Perfect for independent operations that will occur after a button is pressed._
+
+```java
+motor.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+```
+
+Will go to a specified location rather than based on speed. You can specify a maximum speed. _Can be used for various items that have have set positions such as intakes or arms. Inadvisable for drivetrains that have multiple motors_
+
+```java
+motor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+```
+
+Stops the motor and sets it encode value back to zero. Use this to zero your motors at the start of a program, and whenever you want to reach its default position.
+
+## Running a motor
+
+With this code, assuming that you are using RUN_WITHOUT_ENCODER as we will be programming a drivetrain, the motor will be at 50% of its power.
+
+```java
+motor.setPower(0.5)
+```
+
+Direction can be added with two motors, and two inputs from two joysticks:
+
+```java
+leftMotor.setPower(direction  +  rotation);
+rightMotor.setPower(direction -  rotation);
+```
+
+This is possible as the left wheels will spin forward while the right spin backward, causing rotation. The opposite will apply while pushing the stick left.
+To get and input from a joystick, just use `gamepad1` for now. Then access the appropriate property. E.g.
+
+```java
+double  power  =  -gamepad1.left_stick_y;
+```
+
+## Summary
+
+To provide some basic summary code that is super simple.
+
+```java
+@TeleOp
+public class Drive extends LinearOpMode {
+    //Initialise
+    private DcMotorEx LeftMotor;
+    private DcMotorEx RightMotor;
+
+
+    @Override
+    public void runOpMode() {
+        //Instatiate
+        LeftMotor = hardwareMap.get(DcMotorEx.class, "LeftMotor");
+        RightMotor = hardwareMap.get(DcMotorEx.class, "RightMotor");
+
+        //Tell us
+        telemetry.addData("Status", "Initialized");
+        telemetry.update();
+
+        // Wait for START to be pressed
+        waitForStart();
+
+      //Return is STOP is pressed
+        if  (isStopRequested())  return;
+
+        //Run while START is pressed
+        while (opModeIsActive()) {
+            //Y stick is reversed
+            double  power  =  -gamepad1.left_stick_y;
+			      double  rotation  =  gamepad1.right_stick_x;
+
+			      leftMotor.setPower(power  +  rotation);
+			      rightMotor.setPower(power -  rotation);
+
+     }
+}
+```
+
+To acquire more advanced code pertaining to drivetrains visit [gm0's page on mecanum drives](https://gm0.org/en/latest/docs/software/tutorials/mecanum-drive.html), what we recommend as your drivetrain.

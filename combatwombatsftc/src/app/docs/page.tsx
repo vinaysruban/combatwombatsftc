@@ -1,11 +1,8 @@
 import "server-only";
-import { redirect } from "next/navigation";
 import Link from "next/link";
-import getPostMetadata from "@/utils/getPosts";
 import GoBack from "@/components/goBack";
 import { Roboto_Mono } from "next/font/google";
 import Image from "next/image";
-import type { Metadata } from "next/";
 
 const authors = [
   ["Vinay Saravana Ruban", "/icons/vinay.jfif"],
