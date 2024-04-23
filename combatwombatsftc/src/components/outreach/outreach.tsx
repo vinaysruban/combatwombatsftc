@@ -251,7 +251,7 @@ export default function Outreach() {
         </p>
         <div className="flex items-center sm:justify-center flex-col sm:flex-row">
           <Link href="/about#contact">
-            <button className="xs:text-lg font-bold my-2 sm:my-0 mx-4 py-3 px-6 2xl:px-8 hover:bg-combatgreen rounded-3xl hover:-translate-y-1 transition-all border-combatgreen border-2 hover:text-white">
+            <button className="xs:text-lg font-bold my-2 sm:my-0 mx-4 py-3 px-6 2xl:px-8 hover:bg-combatgreen rounded-3xl hover:-translate-y-1 transition-all border-combatgreen border-2 hover:text-white" tabIndex={-1}>
               Get in touch
             </button>
           </Link>

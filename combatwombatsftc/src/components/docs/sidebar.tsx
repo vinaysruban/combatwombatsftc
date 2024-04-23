@@ -71,7 +71,7 @@ export default function Sidebar() {
       </h1>
       <ul className="flex flex-col gap-1 2xl:gap-2">{tutorialsSidebar}</ul>
       <h1 className="font-bold text-base 2xl:text-lg 4xl:text-xl mt-4">
-        Guides
+        Lessons
       </h1>
       <ul className="flex flex-col gap-1 2xl:gap-2">{guidesSidebar}</ul>
       <h1 className="font-bold text-base 2xl:text-lg 4xl:text-xl mt-4">

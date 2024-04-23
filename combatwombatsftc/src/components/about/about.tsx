@@ -153,6 +153,7 @@ export default function About() {
             <Link href="mailto: combatwombatsftc@gmail.com">
               <button
                 className={`xs:text-lg font-bold mt-6 py-3 px-6 rounded-3xl bg-combatgreen tracking-tighter hover:-translate-y-1 transition-all`}
+                tabIndex={-1}
               >
                 <IoMailOpenOutline className="inline w-6 h-6 align-middle child:stroke-[3rem]" />{" "}
                 <span className="inline align-middle ml-2">combatwombats</span>

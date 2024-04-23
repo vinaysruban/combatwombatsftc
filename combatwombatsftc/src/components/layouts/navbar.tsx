@@ -6,7 +6,7 @@ import MobileNav from "@/components/layouts/sidebar";
 
 export default function Navbar() {
     return (
-        <nav className="mx-auto font-bold z-50 static top-0">
+        <nav className="mx-auto font-bold z-10 static top-0">
           <ul className="hidden md:flex flex-row flex-nowrap justify-between items-center child:mx-3 py-3 ">
             <li className="text-xl mx-8"><Link href="https://github.com/vinaysruban/combatwombatsftc" aria-label="The project's Github"><SiGithub /></Link></li>
             <li>

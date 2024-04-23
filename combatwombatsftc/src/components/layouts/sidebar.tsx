@@ -26,22 +26,22 @@ export default function MobileNav() {
           </a>
         </li>
         <li className=" text-3xl z-50 absolute right-0" onClick={() => open ? setOpen(false) : setOpen(true)}>
-          <IoMenu className="z-50" />
+          <IoMenu className={`z-50 transition-transform ${open ? "rotate-45" : ""}`} />
         </li>
       </ul>
       <nav className={`w-56 border-4 rounded-2xl border-combatgreen bg-midbeige dark:bg-lightgrey ${open ? "opacity-100" : "opacity-0"} right-0 transition-all block md:hidden absolute top-0 z-10`}>
         <ul className="px-2 py-6 flex flex-col gap-4">
           <li>
-            <Link href="/about">About Us</Link>
+            <Link className={open ? "" : "pointer-events-none"} tabIndex={open ? 0 : -1} href="/about">About Us</Link>
           </li>
           <li>
-            <Link href="/docs">FTC Docs</Link>
+            <Link className={open ? "" : "pointer-events-none"} tabIndex={open ? 0 : -1} href="/docs">FTC Docs</Link>
           </li>
           <li>
-            <Link href="/sponsors">Sponsors</Link>
+            <Link className={open ? "" : "pointer-events-none"} tabIndex={open ? 0 : -1} href="/sponsors">Sponsors</Link>
           </li>
           <li className="mb-auto">
-            <Link href="/outreach">Outreach</Link>
+            <Link className={open ? "" : "pointer-events-none"} tabIndex={open ? 0 : -1} href="/outreach">Outreach</Link>
           </li>
           <li>
             <hr className="border-black dark:border-white" />

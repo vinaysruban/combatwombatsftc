@@ -20,15 +20,22 @@ export default function CTA() {
           community where everybody can thrive and have a fair go.
           <i className="text-left my-8 block">- Hugo Lawler</i>
         </p>
-        <div className="flex items-center sm:justify-center flex-col sm:flex-row" data-aos="zoom-in-down">
+        <div
+          className="flex items-center sm:justify-center flex-col sm:flex-row"
+          data-aos="zoom-in-down"
+        >
           <Link href="/about">
-            <button className="text-white xs:text-lg font-bold my-2 sm:my-0 mx-4 py-3 px-6 2xl:px-8 bg-combatgreen rounded-3xl hover:-translate-y-1 transition-all">
+            <button
+              className="text-white xs:text-lg font-bold my-2 sm:my-0 mx-4 py-3 px-6 2xl:px-8 bg-combatgreen rounded-3xl hover:-translate-y-1 transition-all"
+              tabIndex={-1}
+            >
               Get in touch
             </button>
           </Link>
           <Link href="/docs">
             <button
               className={`text-white xs:text-lg font-bold my-2 sm:my-0 mx-4 py-3 px-6 rounded-3xl bg-wombatbrown ${roboto.className} tracking-tighter hover:-translate-y-1 transition-all`}
+              tabIndex={-1}
             >
               View our docs
             </button>
