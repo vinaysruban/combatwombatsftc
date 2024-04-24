@@ -9,7 +9,7 @@ import blururl from "@/components/blururl";
 export default function Hero() {
   return (
     <div className="">
-      <section className="pl-12 mr-12 pt-18 mb-12 lg:mb-44 3xl:mb-6 4xl:mb-48 lg:pt-24 relative max-w-7xl bg-parent">
+      <section className="pl-12 mr-12 pt-18 mb-12 lg:mb-44 3xl:mb-6 4xl:mb-48 lg:pt-24 relative max-w-7xl 5xl:max-w-[96rem] bg-parent">
         <Image
           src={Robot}
           alt="An image of the robot"
@@ -18,12 +18,12 @@ export default function Hero() {
           placeholder={`${blururl}`}
           className="mx-auto w-small md:mx-auto md:w-medium lg:absolute lg:-bottom-52 lg:-right-12 lg:mr-4 lg:w-medium 3xl:absolute 3xl:-bottom-24 3xl:-right-xmoderate 3xl:w-large 4xl:-bottom-56 4xl:right-[-60rem] 4xl:w-xlarge bg-plain bg-no-repeat bg-contain bg-slide transition-all"
         />
-        <h1 className="font-bold text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl text-center sm:text-left mt-8 sm:mt-0">
+        <h1 className="font-bold text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl 5xl:text-10xl text-center sm:text-left mt-8 sm:mt-0">
           We&apos;re the
           <br />
           <span className="combat">Combat Wombats</span>
         </h1>
-        <article className="mt-8 ml-2 font-medium 2xl:max-w-3xl max-w-2xl text-base md:text-xl 2xl:text-2xl text-center sm:text-left">
+        <article className="mt-8 ml-2 font-medium max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl 4xl:max-w-5xl text-base md:text-xl 2xl:text-2xl 3xl:text-3xl text-center sm:text-left">
           We&apos;re an Australian team of{" "}
           <span className="text-combatgreen font-bold">driven</span> and{" "}
           <span className="text-wombatbrown font-bold">dedicated</span> STEM
@@ -38,7 +38,7 @@ export default function Hero() {
           />
           <div data-aos="fade-up">
             <ul
-              className="flex flex-row mt-6 child:mx-4 text-2xl justify-center sm:justify-normal"
+              className="flex flex-row mt-6 gap-8 3xl:gap-12 text-2xl 3xl:text-3xl 4xl:text-4xl justify-center sm:justify-normal"
             >
               <li className="ml-0">
                 <Link
