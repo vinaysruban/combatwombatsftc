@@ -145,14 +145,12 @@
 .blob-btn {
   z-index: 1;
   position: relative;
-  padding: 1rem 3rem;
   text-align: center;
   background-color: transparent;
   outline: none;
   border: none;
   transition: color 0.5s;
   cursor: pointer;
-  border-radius: 30px;
 }
 .blob-btn:before {
   content: "";
@@ -316,7 +314,7 @@
 
 .popup::before {
   content: "";
-  background: linear-gradient(to right, #739954e6, #998b54e6);
+  background: #739954e6;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
@@ -325,11 +323,6 @@
   bottom: 0;
   transition: all 0.3s ease-in-out;
   z-index: -1;
-}
-
-.popup:hover::before {
-  bottom: 0;
-  height: 100%;
 }
 
 .popup {
@@ -341,7 +334,7 @@
 }
 
 .bg-slide:hover {
-  background-position: 1rem -0.8rem;
+  background-position: 0.2rem -0.8rem;
 }
 
 .base {

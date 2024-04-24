@@ -8,7 +8,7 @@ import blururl from "@/components/blururl";
 
 export default function Hero() {
   return (
-    <div className="pb-12">
+    <div className="">
       <section className="pl-12 mr-12 pt-18 mb-12 lg:mb-44 3xl:mb-6 4xl:mb-48 lg:pt-24 relative max-w-7xl bg-parent">
         <Image
           src={Robot}

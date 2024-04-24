@@ -113,7 +113,7 @@ export default function Goals() {
     <section data-aos="fade-up" className="my-12">
       <h1 className="font-bold text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl w-max mx-auto my-12 text-wrap">
         What&apos;s{" "}
-        <span className="bg-gradient-to-r from-combatgreen to-wombatbrown rounded-md px-2 pb-1 text-white">
+        <span className="bg-combatgreen rounded-2xl px-2 pb-1 text-white">
           ahead...
         </span>
       </h1>

@@ -130,15 +130,15 @@ export default function Us() {
                     alt={member.name}
                     width={100}
                     height={100}
-                    className={`mx-auto h-24 w-24 sm:h-32 sm:w-32 2xl:w-44 2xl:h-44 4xl:h-64 4xl:w-64 rounded-full mb-4 object-cover transition-shadow hover:shadow-[0px_0px_0px_0.5rem_#8F9853,0px_0px_0px_1rem_#998B54]`}
+                    className={`mx-auto h-24 w-24 sm:h-32 sm:w-32 2xl:w-44 2xl:h-44 4xl:h-48 4xl:w-48 rounded-full mb-4 object-cover transition-shadow hover:shadow-[0px_0px_0px_0.5rem_#8F9853,0px_0px_0px_1rem_#998B54]`}
                   />
-                  <h3 className="text-lg 2xl:text-2xl font-semibold">
+                  <h3 className="text-lg 2xl:text-2xl 5xl:text-3xl font-semibold">
                     {member.name}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm xs:text-base 2xl:text-xl">
+                  <p className="text-gray-600 dark:text-gray-400 text-sm xs:text-base 2xl:text-base 3xl:text-lg 4xl:text-xl">
                     {member.role}
                   </p>
-                  <p className="text-xs xs:text-base 2xl:text-lg">
+                  <p className="text-xs xs:text-base 2xl:text-lg 3xl:text-xl">
                     {member.description}
                   </p>
                 </Link>
@@ -153,15 +153,15 @@ export default function Us() {
                     alt={member.name}
                     width={100}
                     height={100}
-                    className={`mx-auto h-24 w-24 sm:h-32 sm:w-32 2xl:w-44 2xl:h-44 4xl:h-64 4xl:w-64 rounded-full mb-4 object-cover transition-shadow hover:shadow-[0px_0px_0px_0.5rem_#8F9853]`}
+                    className={`mx-auto h-24 w-24 sm:h-32 sm:w-32 2xl:w-44 2xl:h-44 4xl:h-48 4xl:w-48 rounded-full mb-4 object-cover transition-shadow hover:shadow-[0px_0px_0px_0.5rem_#8F9853]`}
                   />
-                  <h3 className="text-lg 2xl:text-2xl font-semibold">
+                  <h3 className="text-lg 2xl:text-2xl 5xl:text-3xl font-semibold">
                     {member.name}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm xs:text-base 2xl:text-xl">
+                  <p className="text-gray-600 dark:text-gray-400 text-sm xs:text-base 2xl:text-base 3xl:text-lg 4xl:text-xl">
                     {member.role}
                   </p>
-                  <p className="text-xs xs:text-base 2xl:text-lg">
+                  <p className="text-xs xs:text-base 2xl:text-lg 3xl:text-xl">
                     {member.description}
                   </p>
                 </div>
