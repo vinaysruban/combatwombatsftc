@@ -1,7 +1,8 @@
+"use client"
+
 import { FaInstagram, FaYoutube } from "react-icons/fa6";
 import { IoMailOpenOutline } from "react-icons/io5";
 import Link from "next/link";
-import { Line } from "@/components/client";
 import Image from "next/image";
 import Robot from "@/components/robot2.png";
 import blururl from "@/components/blururl";
