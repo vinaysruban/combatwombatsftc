@@ -85,6 +85,7 @@ export default function Header() {
     const pictureMap = pictures.map((picture) => {
       return (
         <Image
+          key={picture.path}
           alt="outreach"
           src={picture.path}
           width={1000}
