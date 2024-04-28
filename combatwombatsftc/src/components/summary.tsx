@@ -8,16 +8,16 @@ export default function Summary() {
         <div className="">
           <Image
             src="/images/slideshow/3.webp"
-            className="mx-auto xl:mx-0 rotate-12 xl:rotate-0 relative xl:absolute w-64 sm:w-96 md:w-auto xl:w-medium 2xl:w-xmoderate 3xl:w-large 4xl:w-moderate 5xl:w-[64rem] aspect-auto xl:-left-4 xl:top-10 rounded-3xl pulse"
+            className="mx-auto xl:mx-0 rotate-12 md:rotate-[18deg] xl:rotate-0 relative md:absolute w-64 sm:w-96 md:w-80 xl:w-medium 2xl:w-xmoderate 3xl:w-large 4xl:w-moderate 5xl:w-[64rem] aspect-auto md:left-[54%] lg:left-[60%] xl:-left-4 md:-top-20 lg:-top-10 xl:top-10 rounded-3xl pulse"
             width={500}
             height={500}
             alt="Robot"
           />
           <div className="hidden xl:block absolute top-8 3xl:top-[1.75rem] left-[33.5rem] 2xl:left-[37.5rem] 3xl:left-[45.5rem] 4xl:left-[55.5rem] 5xl:left-[61rem] animate-pulseUpgrade ani h-8 3xl:h-10 5xl:h-12 w-8 3xl:w-10 5xl:w-12 bg-combatgreen rounded-full"></div>
         </div>
-        <div className="mx-auto xl:mr-0 xl:ml-auto max-w-screen-md xl:max-w-full 2xl:mr-4 3xl:mr-8 4xl:mr-12 flex flex-col gap-4 justify-center 3xl:mt-6 5xl:mt-24 4xl:min-h-xmoderate">
-          <h1 className="text-center xl:text-right font-bold text-5xl ms:text-6xl lg:text-7xl xl:text-8xl 2xl:text-8.5xl 3xl:text-9xl 4xl:text-10xl">
-            Meet the <br /> &apos;Wombat&apos;!
+        <div className="py-2 md:py-0 mx-auto xl:mr-0 xl:ml-auto max-w-screen-md xl:max-w-full 2xl:mr-4 3xl:mr-8 4xl:mr-12 flex flex-col gap-4 justify-center 3xl:mt-6 5xl:mt-24 4xl:min-h-xmoderate">
+          <h1 className="text-center md:text-left xl:text-right font-bold text-5xl ms:text-6xl md:text-7xl lg:text-8xl xl:text-8xl 2xl:text-8.5xl 3xl:text-9xl 4xl:text-10xl">
+            Meet the <br /> <span className="ml-0 md:ml-8 xl:ml-0">&apos;Wombat&apos;!</span>
           </h1>
           <p className="text-center xl:text-right text-xl 2xl:text-2xl 3xl:text-3xl xl:w-5/12 ml-auto 4xl:text-3.5xl xl:max-w-screen-5xl">
             In the past year as a rookie team, we have re-iterated our robot
