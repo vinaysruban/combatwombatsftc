@@ -38,7 +38,6 @@
   background: url("/images/wombatfur.jpg") repeat 2%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
 }
 
 .combatsmall {
@@ -204,7 +203,7 @@
   width: 100%;
   height: 100%;
   border-radius: 30px;
-  background: #EBE2D3;
+  background: #ebe2d3;
 }
 .blob-btn__blobs {
   position: relative;
@@ -419,21 +418,6 @@
   transition-duration: 0.5s;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .mini-card-grid {
   max-width: 120rem;
   margin-left: auto;
@@ -443,11 +427,13 @@
   overflow: hidden;
 }
 
-.mini-card:focus-within, .mini-card:hover {
-  -webkit-transform: translate(0,-1rem);
-  transform: translate(0,-1rem);
+.mini-card:focus-within,
+.mini-card:hover {
+  -webkit-transform: translate(0, -1rem);
+  transform: translate(0, -1rem);
 }
-.mini-card:focus-within~.mini-card, .mini-card:hover~.mini-card {
+.mini-card:focus-within ~ .mini-card,
+.mini-card:hover ~ .mini-card {
   -webkit-transform: translateX(130px);
   transform: translateX(130px);
 }
@@ -455,13 +441,28 @@
   margin-left: -130px;
 }
 
+@keyframes shakeX {
+  from,
+  to {
+    transform: translate3d(0, 0, 0);
+  }
 
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate3d(-1.5px, 0, 0);
+  }
 
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate3d(1.5px, 0, 0);
+  }
+}
 
-
-
-
-
-
-
-
+.shakeX {
+  animation: shakeX 1s linear;
+}

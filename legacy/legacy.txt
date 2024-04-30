@@ -868,3 +868,19 @@ export default function InstallPWA() {
       }
     }
   }, [position]);
+
+  import { NextRequest, NextResponse } from "next/server";
+import { getDownloadURL } from "firebase-admin/storage";
+import pdfjsLib from 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.2.67/+esm'
+
+const doc = pdfjsLib.getDocument('../../../public/fusion/1. How to Make Bolts and Nuts Accessible for Fabrication.docx')
+console.log(doc)
+
+export async function POST(req: NextRequest) {
+  return NextResponse.json({ body: "hello" });
+}
+
+const app2 = initApp({
+  credential: cert(ServiceAccountJSON as ServiceAccount),
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+}, `${randomInt(2**47)}`)

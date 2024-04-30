@@ -22,7 +22,7 @@
     }
   },
   "include": [
-    "katex.d.ts",
+    "decs.d.ts",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",

@@ -1,6 +1,6 @@
 import fs from "fs";
 import matter from "gray-matter";
-import { PageMetadata } from "@/components/types/PageMetadata";
+import { PageMetadata } from "@/utils/types/PageMetadata";
 import path from "path";
 
 const getPosts = (): PageMetadata[] => {

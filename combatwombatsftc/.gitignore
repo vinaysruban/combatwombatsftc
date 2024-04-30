@@ -28,6 +28,8 @@ yarn-error.log*
 # local env files
 .env*.local
 
+combat-wombats-766752efd07c.json
+
 # vercel
 .vercel
 

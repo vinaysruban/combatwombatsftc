@@ -58,6 +58,12 @@ export default function Sidebar() {
 
   return (
     <Internal>
+      <div className="my-2 md:my-0 flex flex-row items-center gap-2">
+        <Link className="font-bold text-base md:text-xs lg:text-base 2xl:text-lg 4xl:text-xl cursor-pointer hover:text-combatgreen transition-all" href={"/docs/fusion"}>
+          Fusion Cheat Sheets
+        </Link>
+        <span className="text-xs lg:text-sm 2xl:text-base 4xl:text-lg border-combatgreen border-[1px] px-2 py-[0.125rem] rounded-2xl font-semibold text-combatgreen shakeX">New</span>
+      </div>
       <h1 className="font-bold text-base 2xl:text-lg 4xl:text-xl">
         Walkthrough
       </h1>
