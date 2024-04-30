@@ -53,7 +53,7 @@ export default function Page() {
   };
 
   return (
-    <div className="px-6 md:px-12 py-2 sm:py-6 md:py-12 h-full w-full md:w-4/5">
+    <div className="px-6 md:px-12 py-2 sm:py-6 md:py-12 h-full w-full">
       <GoBack path="/docs" />
       <div className="flex flex-row justify-between my-6 items-center">
         <button onClick={() => updatePage(-1)}>
