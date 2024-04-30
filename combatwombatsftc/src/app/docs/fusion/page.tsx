@@ -1,7 +1,6 @@
 "use client";
 
 import GoBack from "@/components/goBack";
-import Link from "next/link";
 import { BsArrowBarLeft, BsArrowBarRight } from "react-icons/bs";
 import { useState } from "react";
 
