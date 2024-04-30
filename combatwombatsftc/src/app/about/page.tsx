@@ -8,7 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function AboutUs() {
-  return (
-    <About />
-  );
+  return <About />;
 }

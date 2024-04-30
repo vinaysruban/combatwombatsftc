@@ -1,100 +1,99 @@
-"use client";
-
-import Link from "next/link";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Auth() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [user, setUser] = useState(null);
   const [error, setError] = useState(false);
-  const [requests, setRequests] = useState(<div></div>);
+  const [requests, setRequests] = useState([]);
 
-  async function Requests() {
-    let headersList = {
-      Accept: "*/*",
-    };
+  async function fetchRequests() {
+    try {
+      const response = await fetch("/api/data", {
+        headers: {
+          Accept: "*/*"
+        }
+      });
 
-    let response = await fetch("/api/data", {
-      method: "GET",
-      headers: headersList,
-    });
+      if (!response.ok) throw new Error("Failed to fetch requests");
 
-    let data = await response.json();
-    const map = data.body.map((item: any) => {
-      if (item.email) {
-        return (
-          <div key={item.email} className="border w-full text-center">
-            <Link href={`mailto: ${item.email}`}>{item.email}</Link>
-            <p>{item.firstName}</p>
-            <p>{item.lastName}</p>
-            <p className="text-justify">{item.message}</p>
-          </div>
-        );
-      }
-    });
+      const data = await response.json();
+      const mappedRequests = data.body.map((item: any) => (
+        <div key={item.email} className="border w-full text-center">
+          <Link href={`mailto:${item.email}`}>{item.email}</Link>
+          <p>{item.firstName}</p>
+          <p>{item.lastName}</p>
+          <p className="text-justify">{item.message}</p>
+        </div>
+      ));
 
-    setRequests(map);
-    return <div>{map}</div>;
-  }
-
-  async function checkAuth(e: any, email: string, password: string) {
-    e.preventDefault();
-    let headersList = {
-      Accept: "*/*",
-      "Content-Type": "application/json",
-    };
-
-    let bodyContent = JSON.stringify({
-      email: email,
-      password: password,
-    });
-
-    let response = await fetch("/api/auth", {
-      method: "POST",
-      body: bodyContent,
-      headers: headersList,
-    });
-
-    const { result, error } = await response.json();
-
-    if (result) {
-      setUser(result);
-      return;
+      setRequests(mappedRequests);
+    } catch (error) {
+      console.error(error);
     }
-
-    setError(true);
-    return;
   }
 
-  return error ? (
-    <div>error</div>
-  ) : user ? (
+  async function checkAuth(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    try {
+      const response = await fetch("/api/auth", {
+        method: "POST",
+        headers: {
+          Accept: "*/*",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          email,
+          password
+        })
+      });
+
+      if (!response.ok) throw new Error("Authentication failed");
+
+      const { result } = await response.json();
+      setUser(result);
+      setError(false);
+    } catch (error) {
+      console.error(error);
+      setError(true);
+    }
+  }
+
+  return (
     <div>
-      <button onClick={() => Requests()} className="text-white dark:text-black bg-black dark:bg-white rounded-3xl px-2 py-3 mb-6">Generate Requests</button>
-      <div className="flex flex-col gap-6">{requests}</div>
-    </div>
-  ) : (
-    <div>
-      <form onSubmit={async (e) => await checkAuth(e, email, password)}>
-        <label htmlFor="email">Email</label>
-        <input
-          type="text"
-          id="email"
-          value={email}
-          required
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          value={password}
-          required
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button type="submit">submit</button>
-      </form>
+      {error && <div>error</div>}
+      {user ? (
+        <>
+          <button
+            onClick={fetchRequests}
+            className="text-white dark:text-black bg-black dark:bg-white rounded-3xl px-2 py-3 mb-6"
+          >
+            Generate Requests
+          </button>
+          <div className="flex flex-col gap-6">{requests}</div>
+        </>
+      ) : (
+        <form onSubmit={checkAuth}>
+          <label htmlFor="email">Email</label>
+          <input
+            type="text"
+            id="email"
+            value={email}
+            required
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            value={password}
+            required
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button type="submit">Submit</button>
+        </form>
+      )}
     </div>
   );
 }
