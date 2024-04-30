@@ -85,16 +85,3 @@ export default function Page() {
     </div>
   );
 }
-
-export const hello = (
-  <div>
-    <Link target="_blank" href="http://office.com">
-      Microsoft Office
-    </Link>{" "}
-    document, powered by{" "}
-    <Link target="_blank" href="http://office.com/webapps">
-      Office Online
-    </Link>
-    .
-  </div>
-);

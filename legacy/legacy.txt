@@ -884,3 +884,16 @@ const app2 = initApp({
   credential: cert(ServiceAccountJSON as ServiceAccount),
   storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
 }, `${randomInt(2**47)}`)
+
+export const hello = (
+  <div>
+    <Link target="_blank" href="http://office.com">
+      Microsoft Office
+    </Link>{" "}
+    document, powered by{" "}
+    <Link target="_blank" href="http://office.com/webapps">
+      Office Online
+    </Link>
+    .
+  </div>
+);
