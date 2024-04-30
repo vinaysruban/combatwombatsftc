@@ -20,7 +20,6 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-export const app = initializeApp(firebaseConfig, `${randomInt(2**47)}`);
-export const bucket = getStorage().bucket()
+export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
