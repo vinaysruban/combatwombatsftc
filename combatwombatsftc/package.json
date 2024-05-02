@@ -13,6 +13,7 @@
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "^14.1.4",
     "@next/third-parties": "^14.0.5-canary.59",
+    "@splinetool/react-spline": "^2.2.6",
     "@types/mdx": "^2.0.12",
     "@vercel/speed-insights": "^1.0.10",
     "aos": "^2.3.4",

@@ -1,7 +1,9 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram, FaYoutube } from "react-icons/fa6";
 import { IoMailOpenOutline } from "react-icons/io5";
+import Spline from "@splinetool/react-spline";
 
 function Social({
   children,
@@ -25,38 +27,51 @@ export default function About() {
     <div className="">
       <main
         data-aos="fade-up"
-        className="px-2 sm:px-6 md:px-12 pt-6 sm:pt-12 h-full w-5/6 max-w-screen-3xl mx-auto"
+        className="px-2 sm:px-6 md:px-12 pt-6 sm:pt-0 h-full w-5/6 max-w-screen-3xl mx-auto flex flex-col lg:grid lg:grid-cols-2"
       >
-        <h1 className="my-6 sm:my-12 2xl:my-16 text-4xl ms:text-5xl md:text-6xl xl:text-7xl 3xl:text-8xl 4xl:text-9xl font-bold text-center">
-          Let&apos;s build together!
-        </h1>
-        <p className="my-6 sm:my-12 2xl:my-16 text-lg 2xl:text-xl 4xl:text-2xl text-gray-800 dark:text-gray-200 mb-8 text-center max-w-screen-lg mx-auto">
-          Our journey is coming to its climax, and we are excited to share our
-          story with you. Let&apos;s hope you take our learnings and forge your
-          own path to a greater victory.
-        </p>
-        <article className="my-6 sm:mt-12 2xl:mt-16 flex flex-col items-center sm:items-start sm:flex-row justify-evenly child:2/5 md:child:w-1/5 child:max-w-64 child:text-center child:px-4 md:child:px-0">
-          <p className="text-base 2xl:text-xl 4xl:text-2xl sm:mb-6">
-            4{" "}
-            <span className="block text-sm 2xl:text-lg 4xl:text-xl mb-4 sm:mb-8">
-              iterations of our robot, the Wombat
-            </span>
+        <div className="py-4 3xl:py-16 w-fit mx-auto ms:mx-0 md:mx-auto flex flex-col ms:flex-row md:block">
+          <h1 className="my-6 ms:my-12 sm:my-12 2xl:my-16 text-5xl ms:text-6xl md:text-7xl lg:text-7xl xl:text-8xl 2xl:text-8.5xl 4xl:text-9xl font-bold">
+            Come <span className=" ml-10 3xl:ml-16 4xl:ml-24 block">meet us!</span>
+          </h1>
+          <Image
+            src="/images/slideshow/2.webp"
+            height="1000"
+            width="1000"
+            alt=""
+            className="w-2/5 mx-auto right-0 md:right-auto -z-10 md:w-9/12 rounded-3xl -rotate-[4deg] relative ms:absolute md:relative ms:top-6 md:-top-6 aspect-[340/240] h-fit min-w-44 ms:min-w-0 md:min-w-[20rem] max-w-58 lg:max-w-none"
+          />
+          
+        </div>
+        <div className="lg:pt-12 3xl:pb-24 flex flex-col justify-center">
+          <p className="my-6 2xl:my-16 text-lg 2xl:text-xl 3xl:text-2xl 4xl:text-3xl text-gray-800 dark:text-gray-200 mb-8 text-center max-w-screen-lg">
+            Our journey is coming to its climax, and we are excited to share our
+            story with you. Let&apos;s hope you take our learnings and forge
+            your own path to a greater victory.
           </p>
-          <p className="text-base 2xl:text-xl 4xl:text-2xl mb-4 sm:mb-8">
-            2{" "}
-            <span className="block text-sm 2xl:text-lg 4xl:text-xl">
-              awards from official FTC competitions
-            </span>
-          </p>
-          <p className="text-base 2xl:text-xl 4xl:text-2xl mb-4 sm:mb-8 hidden md:block">
-            11{" "}
-            <span className="block text-sm 2xl:text-lg 4xl:text-xl">
-              devoted team members
-            </span>
-          </p>
-        </article>
+          <article className=" text-gray-800 dark:text-gray-200 justify-evenly my-6 2xl:mt-16 md:child:w-4/5 child:max-w-64 flex flex-row lg:flex-col 2xl:flex-row flex-wrap items-center child:text-center child:px-4 md:child:px-0">
+            <p className="text-lg 2xl:text-xl 3xl:text-2xl">
+              4{" "}
+              <span className="block text-lg 2xl:text-xl 4xl:text-2xl">
+                iterations of our robot, the Wombat
+              </span>
+            </p>
+            <p className="text-lg 2xl:text-xl 3xl:text-2xl">
+              2{" "}
+              <span className="block text-lg 2xl:text-xl 4xl:text-2xl">
+                awards from official FTC competitions
+              </span>
+            </p>
+            <p className="text-lg 2xl:textl 3xl:text-2xl hidden md:block">
+              11{" "}
+              <span className="block text-lg 2xl:text-xl 4xl:text-2xl">
+                devoted team members
+              </span>
+            </p>
+          </article>
+        </div>
       </main>
-      <div data-aos="fade-up" className="slider shadow-md overflow-hidden my-6">
+
+      <div className="slider shadow-md overflow-hidden my-6">
         <div className="slide-track flex w-[2625px] sm:w-[3500px] 2xl:w-[5250px] animate-scrolling-short sm:animate-scrolling 2xl:animate-scrolling-long">
           {[...Array(14)].map((_, index) => (
             <div
