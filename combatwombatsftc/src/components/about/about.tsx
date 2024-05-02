@@ -40,7 +40,6 @@ export default function About() {
             alt=""
             className="w-2/5 mx-auto right-0 md:right-auto -z-10 md:w-9/12 rounded-3xl -rotate-[4deg] relative ms:absolute md:relative ms:top-6 md:-top-6 aspect-[340/240] h-fit min-w-44 ms:min-w-0 md:min-w-[20rem] max-w-58 lg:max-w-none"
           />
-          
         </div>
         <div className="lg:pt-12 3xl:pb-24 flex flex-col justify-center">
           <p className="my-6 2xl:my-16 text-lg 2xl:text-xl 3xl:text-2xl 4xl:text-3xl text-gray-800 dark:text-gray-200 mb-8 text-center max-w-screen-lg">
