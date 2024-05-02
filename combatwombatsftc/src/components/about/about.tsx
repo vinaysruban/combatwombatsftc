@@ -27,7 +27,7 @@ export default function About() {
     <div className="">
       <main
         data-aos="fade-up"
-        className="px-2 sm:px-6 md:px-12 pt-6 sm:pt-0 h-full w-5/6 max-w-screen-3xl mx-auto flex flex-col lg:grid lg:grid-cols-2"
+        className="px-2 sm:px-6 md:px-12 xl:px-0 pt-6 sm:pt-0 h-full w-5/6 max-w-screen-3xl mx-auto flex flex-col lg:grid lg:grid-cols-2"
       >
         <div className="py-4 3xl:py-16 w-fit mx-auto ms:mx-0 md:mx-auto flex flex-col ms:flex-row md:block">
           <h1 className="my-6 ms:my-12 sm:my-12 2xl:my-16 text-5xl ms:text-6xl md:text-7xl lg:text-7xl xl:text-8xl 2xl:text-8.5xl 4xl:text-9xl font-bold">
