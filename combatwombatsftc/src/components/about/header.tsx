@@ -6,9 +6,12 @@ import { useState, useEffect } from "react";
 export default function Header() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [loaded, setLoaded] = useState(false);
+  const [transition, setTransition] = useState(150);
   const [picturesElements, setPicturesElements] = useState<JSX.Element>();
+  const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
   useEffect(() => {
+    setTransition(a => a - 2)
     const picture = (
       <Image
         src="/images/slideshow/2.webp"
@@ -19,8 +22,25 @@ export default function Header() {
         style={{
           WebkitTransform: `translate3d(0,0,0) rotate(-6deg)`,
           transform: `translate3d(0,0,0) rotate(-6deg)`,
-          top: `${checkWindow(-1.5, position.y, window.innerHeight, -1, 10, "rem")}`,
-          left: `${checkWindow(1, position.x, window.innerWidth, 1, 15, "rem")}`,
+          transitionProperty: "all",
+          transitionTimingFunction: "linear",
+          transitionDuration: `${transition}ms`,
+          top: `${checkWindow(
+            -1.5,
+            position.y,
+            window.innerHeight,
+            -1,
+            10,
+            "rem"
+          )}`,
+          left: `${checkWindow(
+            1,
+            position.x,
+            window.innerWidth,
+            1,
+            15,
+            "rem"
+          )}`,
         }}
       />
     );

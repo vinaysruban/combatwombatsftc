@@ -66,14 +66,21 @@ const pictures: Picture[] = [
   },
 ];
 
-
-
 export default function Header() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [loaded, setLoaded] = useState(false);
   const [picturesElements, setPicturesElements] = useState<JSX.Element[]>();
+  const [transition, setTransition] = useState(150);
+
+  function isSmall(a: number) {
+    if (a > 1) {
+      return a
+    }
+    return 1
+  }
 
   useEffect(() => {
+    setTransition((a) => isSmall(a - 2));
     const pictureMap = pictures.map((picture) => {
       return (
         <Image
@@ -86,6 +93,9 @@ export default function Header() {
           style={{
             WebkitTransform: `translate3d(0,0,0) rotate(${picture.rotation}deg)`,
             transform: `translate3d(0,0,0) rotate(${picture.rotation}deg)`,
+            transitionProperty: "all",
+            transitionTimingFunction: "linear",
+            transitionDuration: `${transition}ms`,
             [picture.vertical.direction]: checkWindow(
               picture.vertical.amount,
               position.y,
