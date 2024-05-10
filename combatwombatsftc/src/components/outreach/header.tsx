@@ -1,20 +1,18 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { normalise, checkWindow } from "@/utils/drift";
+
+interface Position {
+  direction: string;
+  amount: number;
+}
 
 interface Picture {
   path: string;
   reponsive: string;
   rotation: number;
-  vertical: {
-    direction: string;
-    amount: number;
-  };
-  horizontal: {
-    direction: string;
-    amount: number;
-  };
+  vertical: Position;
+  horizontal: Position;
   magnitude: number;
 }
 
@@ -66,11 +64,21 @@ const pictures: Picture[] = [
   },
 ];
 
-
+function normalise(
+  n: number,
+  max: number,
+  direction: number,
+  magnitude: number
+): number {
+  const result = (direction * (n - max / 2)) / (max / magnitude);
+  const normalised = result / 10 + 1;
+  return normalised;
+}
 
 export default function Header() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [loaded, setLoaded] = useState(false);
+  const [pictureChange, setPictureChange] = useState(0);
   const [picturesElements, setPicturesElements] = useState<JSX.Element[]>();
 
   useEffect(() => {
@@ -123,6 +131,21 @@ export default function Header() {
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
+
+  const checkWindow = (
+    req: number,
+    cursorPosition: number,
+    windowWidth: number,
+    direction: number,
+    magnitude: number
+  ): string => {
+    if (window.innerWidth >= 1024) {
+      return `${
+        req * normalise(cursorPosition, windowWidth, direction, magnitude)
+      }%`;
+    }
+    return "";
+  };
 
   return loaded ? (
     <header

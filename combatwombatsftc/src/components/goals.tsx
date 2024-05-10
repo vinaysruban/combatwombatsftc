@@ -83,7 +83,7 @@ const goalsElement2 = goalsList.map((goal) => {
         <div className="flex items-center">
           <div className="">
             <Image
-              className=" h-10 3xl:h-16 w-10 3xl:w-16 border-2 border-black dark:border-white rounded-full object-cover"
+              className=" h-10 w-10 border-2 border-black dark:border-white rounded-full object-cover"
               width={100}
               height={100}
               src={goal[0]}
@@ -91,8 +91,8 @@ const goalsElement2 = goalsList.map((goal) => {
             />
           </div>
           <div className="ml-4">
-            <h3 className="3xl:text-lg">{goal[1]}</h3>
-            <p className=" opacity-90">{goal[2]}</p>
+            <h3>{goal[1]}</h3>
+            <p className=" opacity-50">{goal[2]}</p>
           </div>
         </div>
       </header>
@@ -100,7 +100,7 @@ const goalsElement2 = goalsList.map((goal) => {
         <div className="mini-article-byline text-pretty">
           <div className="text-pretty -z-10">
             <h4 className="text-2xl pt-4 font-bold">{goal[3]}</h4>
-            <p className="text-base 3xl:text-lg opacity-75 pt-4 font-medium">{goal[4]}</p>
+            <p className="text-base opacity-75 pt-4 font-medium">{goal[4]}</p>
           </div>
         </div>
       </div>
