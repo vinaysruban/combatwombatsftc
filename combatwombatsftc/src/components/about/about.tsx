@@ -1,9 +1,8 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { FaInstagram, FaYoutube } from "react-icons/fa6";
 import { IoMailOpenOutline } from "react-icons/io5";
-import Spline from "@splinetool/react-spline";
+import Header from "./header";
 
 function Social({
   children,
@@ -15,7 +14,7 @@ function Social({
   return (
     <Link
       href={link}
-      className="align-sub border-2 border-black dark:border-white rounded-3xl px-2 py-1 mx-1 md:mx-2 text-sm md:text-base items-center inline-flex gap-1"
+      className="align-sub border-2 border-black dark:border-white rounded-3xl px-2 py-1 mx-1 md:mx-2 text-sm md:text-base 3xl:text-lg items-center inline-flex gap-1"
     >
       {children}
     </Link>
@@ -29,18 +28,7 @@ export default function About() {
         data-aos="fade-up"
         className="px-2 sm:px-6 md:px-12 xl:px-0 pt-6 sm:pt-0 h-full w-5/6 max-w-screen-3xl mx-auto flex flex-col lg:grid lg:grid-cols-2"
       >
-        <div className="py-4 3xl:py-16 w-fit mx-auto ms:mx-0 md:mx-auto flex flex-col ms:flex-row md:block">
-          <h1 className="my-6 ms:my-12 sm:my-12 2xl:my-16 text-5xl ms:text-6xl md:text-7xl lg:text-7xl xl:text-8xl 2xl:text-8.5xl 4xl:text-9xl font-bold">
-            Come <span className=" ml-10 3xl:ml-16 4xl:ml-24 block">meet us!</span>
-          </h1>
-          <Image
-            src="/images/slideshow/2.webp"
-            height="1000"
-            width="1000"
-            alt=""
-            className="w-2/5 mx-auto right-0 md:right-auto -z-10 md:w-9/12 rounded-3xl -rotate-[4deg] relative ms:absolute md:relative ms:top-6 md:-top-6 aspect-[340/240] h-fit min-w-44 ms:min-w-0 md:min-w-[20rem] max-w-58 lg:max-w-none"
-          />
-        </div>
+        <Header />
         <div className="lg:pt-12 3xl:pb-24 flex flex-col justify-center">
           <p className="my-6 2xl:my-16 text-lg 2xl:text-xl 3xl:text-2xl 4xl:text-3xl text-gray-800 dark:text-gray-200 mb-8 text-center max-w-screen-lg">
             Our journey is coming to its climax, and we are excited to share our
@@ -88,18 +76,18 @@ export default function About() {
           ))}
         </div>
       </div>
-      <section className="w-4/5 max-w-screen-xl mx-auto my-12 md:mt-24">
+      <section className="w-4/5 max-w-screen-xl mx-auto my-12 xl:my-24 3xl:my-36 md:mt-24">
         <div id="contact" data-aos="fade-up">
-          <h2 className="font-semibold text-2xl ms:text-3xl md:text-4xl xl:text-5xl 3xl:text-6xl text-center">
+          <h2 className="font-semibold 3xl:font-bold text-2xl ms:text-3xl md:text-4xl xl:text-5xl 3xl:text-6xl 4xl:text-7xl text-center">
             Get in touch with us!
           </h2>
-          <p className="text-base md:text-lg 2xl:text-xl 2xl:leading-8 my-12">
+          <p className="text-base md:text-lg 2xl:text-xl 4xl:text-2xl 2xl:leading-8 my-12">
             Our team would absolutely love to work and network with you! We want
             to portray STEM as a fun way for people to pick up new skills and
             learning, and by contacting us, we could go one step further. Shoot
             us a message at one of the addresses below:
           </p>
-          <p className="font-semibold my-12 text-base md:text-lg text-center leading-8">
+          <p className="font-semibold my-12 text-base md:text-lg 3xl:text-2xl text-center leading-8 3xl:leading-10 3xl:flex justify-center">
             Come contact us on{" "}
             <Social link="https://www.instagram.com/combat_wombats_ftc_aus/">
               <FaInstagram className="inline h-4 w-4" /> Instagram
@@ -114,8 +102,8 @@ export default function About() {
             </Social>
           </p>
         </div>
-        <div data-aos="fade-up">
-          <h2 className="font-semibold text-2xl ms:text-3xl md:text-4xl xl:text-5xl 3xl:text-6xl text-center">
+        <div data-aos="fade-up" className="my-12 xl:my-24 3xl:my-36">
+          <h2 className="font-semibold 3xl:font-bold  text-2xl ms:text-3xl md:text-4xl xl:text-5xl 3xl:text-6xl 4xl:text-7xl text-center">
             Where are we?
           </h2>
           <p className="text-base md:text-lg 2xl:text-xl 2xl:leading-8 my-6 text-center">
@@ -134,8 +122,8 @@ export default function About() {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-        <div data-aos="fade-up">
-          <h3 className="font-semibold text-xl ms:text-2xl md:text-3xl xl:text-4xl 3xl:text-5xl text-center">
+        <div data-aos="fade-up" className="my-12 xl:my-24 3xl:my-36">
+          <h3 className="font-semibold 3xl:font-bold text-xl ms:text-2xl md:text-3xl xl:text-4xl 3xl:text-5xl 4xl:text-7xl text-center">
             Get in touch with the website creator.
           </h3>
           <section
@@ -150,11 +138,11 @@ export default function About() {
                 height={100}
                 className="w-10 h-10 object-cover rounded-full"
               />
-              <p className="font-medium ms:font-semibold text-ms ms:text-base">
+              <p className="font-medium ms:font-semibold text-ms ms:text-base 3xl:text-lg">
                 Vinay Saravana Ruban
               </p>
             </div>
-            <p className="text-base md:text-lg 2xl:text-xl text-left my-6">
+            <p className="text-base md:text-lg 2xl:text-xl 4xl:text-2xl text-left my-6">
               The website was developed using NextJS (TypeScript) + TailwindCSS,
               with scrolling animations through AOS JS. Docs were created using
               MarkDown, formatted through Gray Matter, with the use of KaTeX for
@@ -175,6 +163,7 @@ export default function About() {
             </Link>
           </section>
         </div>
+        <Image src="/images/image-transformed.webp" alt="Combat Wombats logo" className="animate-bounce dark:invert mx-auto" width={100} height={100} />
       </section>
     </div>
   );
