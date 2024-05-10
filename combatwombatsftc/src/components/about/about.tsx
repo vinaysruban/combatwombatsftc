@@ -30,10 +30,12 @@ export default function About() {
       >
         <Header />
         <div className="lg:pt-12 3xl:pb-24 flex flex-col justify-center">
-          <p className="my-6 2xl:my-16 text-lg 2xl:text-xl 3xl:text-2xl 4xl:text-3xl text-gray-800 dark:text-gray-200 mb-8 text-center max-w-screen-lg">
-            Our journey is coming to its climax, and we are excited to share our
-            story with you. Let&apos;s hope you take our learnings and forge
-            your own path to a greater victory.
+          <p className="my-6 2xl:my-16 text-lg font-semibold 2xl:text-xl 3xl:text-2xl 4xl:text-3xl text-gray-800 dark:text-gray-200 mb-8 text-center max-w-screen-lg decoration-combatgreen decoration-wavy underline underline-offset-4 3xl:underline-offset-8">
+            <span className="3xl:leading-[3rem]">
+              Our journey is coming to its climax, and we are excited to share
+              our story with you. Let&apos;s hope you take our learnings and
+              forge your own path to a greater victory.
+            </span>
           </p>
           <article className=" text-gray-800 dark:text-gray-200 justify-evenly my-6 2xl:mt-16 md:child:w-4/5 child:max-w-64 flex flex-row lg:flex-col 2xl:flex-row flex-wrap items-center child:text-center child:px-4 md:child:px-0">
             <p className="text-lg 2xl:text-xl 3xl:text-2xl">
@@ -163,7 +165,13 @@ export default function About() {
             </Link>
           </section>
         </div>
-        <Image src="/images/image-transformed.webp" alt="Combat Wombats logo" className="animate-bounce dark:invert mx-auto" width={100} height={100} />
+        <Image
+          src="/images/image-transformed.webp"
+          alt="Combat Wombats logo"
+          className="animate-bounce dark:invert mx-auto"
+          width={100}
+          height={100}
+        />
       </section>
     </div>
   );
