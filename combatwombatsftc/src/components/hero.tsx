@@ -1,12 +1,9 @@
-"use client";
-
 import { FaInstagram, FaYoutube } from "react-icons/fa6";
 import { IoMailOpenOutline } from "react-icons/io5";
 import Link from "next/link";
 import Image from "next/image";
 import Robot from "@/components/robot2.png";
 import blururl from "@/components/blururl";
-import { useEffect, useRef } from "react";
 import Sponsors from "./sponsors/sponsors";
 
 interface Sponsor {
@@ -42,70 +39,6 @@ const sponsors: Sponsor[] = [
     link: "https://qasmt.eq.edu.au?referrer=qasmt",
   },
 ];
-
-function CustomCarousel(props: any) {
-  const slider = useRef<any>(null);
-  let isDown = useRef<any>(false);
-  let startX = useRef<any>(null);
-  let scrollLeft = useRef<any>(null);
-
-  useEffect(() => {
-    if (slider && slider.current) {
-      let sliderRef: any = slider.current;
-      sliderRef.addEventListener("mousedown", one);
-      sliderRef.addEventListener("mousedown", two);
-      sliderRef.addEventListener("mouseleave", three);
-      sliderRef.addEventListener("mouseup", four);
-      sliderRef.addEventListener("mousemove", five);
-
-      return () => {
-        sliderRef.removeEventListener("mousedown", one);
-        sliderRef.removeEventListener("mousedown", two);
-        sliderRef.removeEventListener("mouseleave", three);
-        sliderRef.removeEventListener("mouseup", four);
-        sliderRef.removeEventListener("mousemove", five);
-      };
-    }
-  }, []);
-
-  function one(e: any) {
-    isDown.current = true;
-    startX.current = e.pageX - slider.current.offsetLeft;
-    scrollLeft.current = slider.current.scrollLeft;
-  }
-
-  function two(e: any) {
-    isDown.current = true;
-    startX.current = e.pageX - slider.current.offsetLeft;
-    scrollLeft.current = slider.current.scrollLeft;
-  }
-
-  function three() {
-    isDown.current = false;
-  }
-
-  function four() {
-    isDown.current = false;
-  }
-
-  function five(e: any) {
-    if (!isDown.current) return;
-    e.preventDefault();
-    const x = e.pageX - slider.current.offsetLeft;
-    const walk = x - startX.current;
-    slider.current.scrollLeft = scrollLeft.current - walk;
-  }
-
-  return (
-    <div className="items" ref={slider}>
-      {props.children}
-    </div>
-  );
-}
-
-function Box(index: number) {
-  return <div className="box">Box {index}</div>;
-}
 
 export default function Hero() {
   return (
@@ -184,7 +117,7 @@ export default function Hero() {
         >
           {sponsors.map((sponsor) => {
             return (
-              <Link href={sponsor.link}>
+              <Link href={sponsor.link} key={sponsor.sponsor}>
                 <Image
                   src={`/sponsors/${sponsor.url}`}
                   alt="QASMT"
