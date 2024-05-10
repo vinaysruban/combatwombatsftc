@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { FaInstagram, FaYoutube } from "react-icons/fa6";
 import { IoMailOpenOutline } from "react-icons/io5";
@@ -6,6 +6,106 @@ import Link from "next/link";
 import Image from "next/image";
 import Robot from "@/components/robot2.png";
 import blururl from "@/components/blururl";
+import { useEffect, useRef } from "react";
+import Sponsors from "./sponsors/sponsors";
+
+interface Sponsor {
+  sponsor: string;
+  url: string;
+  link: string;
+}
+
+const sponsors: Sponsor[] = [
+  {
+    sponsor: "Auscoil",
+    url: "auscoil.png",
+    link: "https://auscoil.com.au/about-us?referrer=qasmt",
+  },
+  {
+    sponsor: "Bilby",
+    url: "bilby.png",
+    link: "https://b3d.com.au/stem?referrer=qasmt",
+  },
+  {
+    sponsor: "BMD",
+    url: "bmd.webp",
+    link: "https://www.bmd.com.au?referrer=qasmt",
+  },
+  {
+    sponsor: "Metal-Tech Industries",
+    url: "mti.png",
+    link: "https://metaltech.com.au?referrer=qasmt",
+  },
+  {
+    sponsor: "QASMT",
+    url: "sitelogo.png",
+    link: "https://qasmt.eq.edu.au?referrer=qasmt",
+  },
+];
+
+function CustomCarousel(props: any) {
+  const slider = useRef<any>(null);
+  let isDown = useRef<any>(false);
+  let startX = useRef<any>(null);
+  let scrollLeft = useRef<any>(null);
+
+  useEffect(() => {
+    if (slider && slider.current) {
+      let sliderRef: any = slider.current;
+      sliderRef.addEventListener("mousedown", one);
+      sliderRef.addEventListener("mousedown", two);
+      sliderRef.addEventListener("mouseleave", three);
+      sliderRef.addEventListener("mouseup", four);
+      sliderRef.addEventListener("mousemove", five);
+
+      return () => {
+        sliderRef.removeEventListener("mousedown", one);
+        sliderRef.removeEventListener("mousedown", two);
+        sliderRef.removeEventListener("mouseleave", three);
+        sliderRef.removeEventListener("mouseup", four);
+        sliderRef.removeEventListener("mousemove", five);
+      };
+    }
+  }, []);
+
+  function one(e: any) {
+    isDown.current = true;
+    startX.current = e.pageX - slider.current.offsetLeft;
+    scrollLeft.current = slider.current.scrollLeft;
+  }
+
+  function two(e: any) {
+    isDown.current = true;
+    startX.current = e.pageX - slider.current.offsetLeft;
+    scrollLeft.current = slider.current.scrollLeft;
+  }
+
+  function three() {
+    isDown.current = false;
+  }
+
+  function four() {
+    isDown.current = false;
+  }
+
+  function five(e: any) {
+    if (!isDown.current) return;
+    e.preventDefault();
+    const x = e.pageX - slider.current.offsetLeft;
+    const walk = x - startX.current;
+    slider.current.scrollLeft = scrollLeft.current - walk;
+  }
+
+  return (
+    <div className="items" ref={slider}>
+      {props.children}
+    </div>
+  );
+}
+
+function Box(index: number) {
+  return <div className="box">Box {index}</div>;
+}
 
 export default function Hero() {
   return (
@@ -38,9 +138,7 @@ export default function Hero() {
             className={`h-1 rounded-xl border-0 w-0 my-6 bg-combatgreen after:content-[''] after:w-2 after:h-2 after:rounded-full after:bg-combatgreen after:absolute animation-line text-center hidden   md:block`}
           />
           <div data-aos="fade-up">
-            <ul
-              className="flex flex-row mt-6 gap-8 3xl:gap-12 text-2xl 3xl:text-3xl 4xl:text-4xl justify-center sm:justify-normal"
-            >
+            <ul className="flex flex-row mt-6 gap-8 3xl:gap-12 text-2xl 3xl:text-3xl 4xl:text-4xl justify-center sm:justify-normal">
               <li className="ml-0">
                 <Link
                   href="https://www.instagram.com/combat_wombats_ftc_aus/"
@@ -72,7 +170,7 @@ export default function Hero() {
       <hr className="spacer" />
       <section
         data-aos="fade-up"
-        className="flex flex-col items-center text-base md:text-xl 2xl:text-2xl 4xl:text-3xl font-medium mb-16 mx-auto px-12 text-center lg:text-left relative"
+        className="flex flex-col items-center text-base md:text-xl 2xl:text-2xl 4xl:text-3xl font-medium mb-24 sm:mb-48 mx-auto px-12 text-center lg:text-left relative"
       >
         <span className="mt-12">
           We extend our{" "}
@@ -80,16 +178,23 @@ export default function Hero() {
           gratitude and love for the support our wonderful sponsors have
           provided to us: 👇
         </span>
-        <ul data-aos="fade-up" className="flex justify-start child:mx-12 mt-20">
-          <li>
-            <Image
-              src="/images/sitelogo.png"
-              alt="QASMT"
-              height="250"
-              width="250"
-              className="w-auto h-16 grayscale hover:grayscale-0 transition-all object-cover"
-            />
-          </li>
+        <ul
+          data-aos="fade-up"
+          className="flex justify-center flex-wrap gap-x-24 gap-y-12 mt-20 overflow-hidden"
+        >
+          {sponsors.map((sponsor) => {
+            return (
+              <Link href={sponsor.link}>
+                <Image
+                  src={`/sponsors/${sponsor.url}`}
+                  alt="QASMT"
+                  height="250"
+                  width="250"
+                  className="w-auto h-10 sm:h-16 md:h-12 lg:h-8 xl:h-12 2xl:h-18 3xl:h-20 4xl:h-24 grayscale hover:grayscale-0 transition-all object-cover"
+                />
+              </Link>
+            );
+          })}
         </ul>
       </section>
     </div>
