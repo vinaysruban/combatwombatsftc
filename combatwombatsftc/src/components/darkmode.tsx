@@ -14,7 +14,7 @@ export default function DarkMode() {
     }, [])
 
     return (
-        <div className="cursor-pointer h-fit max-h-5 3xl:max-h-none">{
+        <div className="cursor-pointer h-fit">{
                 mount ? resolvedTheme === "light" ? <button onClick={() => setTheme("dark")}><FaMoon /></button> : <button onClick={() => setTheme("light")}><FaSun /></button> : <CiNoWaitingSign />
             }
         </div>
