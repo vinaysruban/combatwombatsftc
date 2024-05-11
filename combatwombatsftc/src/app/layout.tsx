@@ -6,6 +6,7 @@ import "./globals.css";
 import Footer from "@/components/layouts/footer";
 import { AOSInit } from "@/components/aos";
 import type { Viewport } from "next";
+import { Analytics } from "@vercel/analytics/react";
 
 const APP_NAME = "Combat Wombats";
 const APP_DEFAULT_TITLE =
@@ -71,6 +72,7 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
+      <Analytics />
       <AOSInit />
       <body className="">
         <Providers>
