@@ -132,24 +132,6 @@ export default function About() {
             id="developer"
             className="text-base md:text-lg 2xl:text-xl 2xl:leading-8 my-6 text-center"
           >
-            <div className="flex justify-center items-center gap-2 ">
-              <Image
-                alt="Website Developer"
-                src={"/icons/vinay.jfif"}
-                width={100}
-                height={100}
-                className="w-10 h-10 object-cover rounded-full"
-              />
-              <p className="font-medium ms:font-semibold text-ms ms:text-base 3xl:text-lg">
-                Vinay Saravana Ruban
-              </p>
-            </div>
-            <p className="text-base md:text-lg 2xl:text-xl 4xl:text-2xl text-left my-6">
-              The website was developed using NextJS (TypeScript) + TailwindCSS,
-              with scrolling animations through AOS JS. Docs were created using
-              MarkDown, formatted through Gray Matter, with the use of KaTeX for
-              LaTeX and PrismJS for syntax highlighting.
-            </p>
             <p className="text-base md:text-lg 2xl:text-xl mt-6 font-bold">
               For any bugs, issues, copyright issues and enquiries, contact us
               through mail:

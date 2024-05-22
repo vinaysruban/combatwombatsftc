@@ -97,7 +97,7 @@ export default function Us() {
           , Software
         </span>
       ),
-      description: "Erecting and managing the website...",
+      description: "Managing the website...",
       image: "/icons/vinay.jfif",
     },
   ];
