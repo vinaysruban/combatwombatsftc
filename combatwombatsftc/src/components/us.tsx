@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FaArrowAltCircleUp } from "react-icons/fa";
 
 export default function Us() {
   const teamMembers = [
@@ -100,6 +101,11 @@ export default function Us() {
       description: "Managing the website...",
       image: "/icons/vinay.jfif",
     },
+    {
+      name: "Learn More",
+      role: "Click here, and learn more about our team!",
+      image: <FaArrowAltCircleUp className="mx-auto h-24 w-24 sm:h-32 sm:w-32 2xl:w-44 2xl:h-44 4xl:h-48 4xl:w-48 rounded-full mb-4 object-cover hover:scale-110 transition-all ease-in-out duration-300 hover:rotate-180" />,
+    },
   ];
 
   return (
@@ -107,9 +113,7 @@ export default function Us() {
       <section className="py-12 px-8 ">
         <div className="mx-auto">
           <div data-aos="fade-up">
-            <h1
-              className="font-bold text-3xl ms:text-4xl before:h-2 sm:text-5xl sm:before:h-2 md:text-6xl md:before:h-3 lg:text-7xl lg:before:h-4 3xl:text-8xl mx-auto block w-fit popup relative"
-            >
+            <h1 className="font-bold text-3xl ms:text-4xl before:h-2 sm:text-5xl sm:before:h-2 md:text-6xl md:before:h-3 lg:text-7xl lg:before:h-4 3xl:text-8xl mx-auto block w-fit popup relative">
               Meet our team!
             </h1>
             <p className="text-center font-semibold text-lg md:text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl my-12">
@@ -120,18 +124,12 @@ export default function Us() {
             {teamMembers.map((member, index) =>
               index === 10 ? (
                 <Link
-                  href="/about#developer"
+                  href="/about"
                   key={index}
                   className={`sm:p-4 py-12 text-center col-span-2 isus`}
                   data-aos="fade-up"
                 >
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    width={100}
-                    height={100}
-                    className={`mx-auto h-24 w-24 sm:h-32 sm:w-32 2xl:w-44 2xl:h-44 4xl:h-48 4xl:w-48 rounded-full mb-4 object-cover transition-shadow hover:shadow-[0px_0px_0px_0.5rem_#8F9853,0px_0px_0px_1rem_#998B54]`}
-                  />
+                  {member.image}
                   <h3 className="text-lg 2xl:text-2xl 5xl:text-3xl font-semibold">
                     {member.name}
                   </h3>
@@ -149,7 +147,7 @@ export default function Us() {
                   data-aos="fade-up"
                 >
                   <Image
-                    src={member.image}
+                    src={member.image as string}
                     alt={member.name}
                     width={100}
                     height={100}
