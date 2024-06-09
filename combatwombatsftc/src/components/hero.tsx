@@ -13,7 +13,7 @@ interface Sponsor {
 }
 
 const sponsors: Sponsor[] = [
-  {
+  /**{
     sponsor: "Auscoil",
     url: "auscoil.png",
     link: "https://auscoil.com.au/about-us?referrer=qasmt",
@@ -22,17 +22,22 @@ const sponsors: Sponsor[] = [
     sponsor: "Bilby",
     url: "bilby.png",
     link: "https://b3d.com.au/stem?referrer=qasmt",
-  },
+  },*/
   {
     sponsor: "BMD",
     url: "bmd.webp",
     link: "https://www.bmd.com.au?referrer=qasmt",
   },
   {
+    sponsor: "Colourup",
+    url: "colourup.png",
+    link: "https://www.colourup.com.au?referrer=qasmt",
+  },
+  /**{
     sponsor: "Metal-Tech Industries",
     url: "mti.png",
     link: "https://metaltech.com.au?referrer=qasmt",
-  },
+  },*/
   {
     sponsor: "QASMT",
     url: "sitelogo.png",
