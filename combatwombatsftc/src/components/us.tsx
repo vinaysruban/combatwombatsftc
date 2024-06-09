@@ -76,12 +76,12 @@ export default function Us() {
       description: "Fabricating our claw and transfer system...",
       image: "/icons/daniel.jfif",
     },
-    {
+    /**{
       name: "Michael Powers",
       role: "Engineer",
       description: "Establishing and organising our robot's cabling...",
       image: "/icons/michael.jfif",
-    },
+    },*/
     {
       name: "Theo Sun",
       role: "Engineer, Outreach",
