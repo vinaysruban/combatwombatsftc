@@ -897,3 +897,10 @@ export const hello = (
     .
   </div>
 );
+
+"@types/aos": "^3.0.7",
+    "@types/katex": "^0.16.7",
+    "@types/node": "^20",
+    "@types/prismjs": "^1.26.3",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
