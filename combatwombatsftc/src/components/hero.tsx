@@ -58,9 +58,9 @@ export default function Hero() {
           className="mx-auto w-small md:mx-auto md:w-medium lg:absolute lg:-bottom-52 lg:-right-12 lg:mr-4 lg:w-medium 3xl:absolute 3xl:-bottom-24 3xl:-right-xmoderate 3xl:w-large 4xl:-bottom-56 4xl:right-[-60rem] 4xl:w-xlarge bg-plain bg-no-repeat bg-contain bg-slide transition-all"
         />
         <h1 className="font-bold text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl 5xl:text-10xl text-center sm:text-left mt-8 sm:mt-0">
-          We&apos;re the
+          mehu mehu
           <br />
-          <span className="combat">Combat Wombats</span>
+          <span className="combat">i luv u mehul</span>
         </h1>
         <article className="mt-8 ml-2 font-medium max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl 4xl:max-w-5xl text-base md:text-xl 2xl:text-2xl 3xl:text-3xl text-center sm:text-left">
           We&apos;re an Australian team of{" "}
